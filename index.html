@@ -37,6 +37,7 @@
     {
       "@type": "Attorney",
       "name": "Lucas Brito Ladeia",
+      "image": "https://lucasladeiaa-art.github.io/medida-protetiva-48h/lucas-ladeia.jpg",
       "description": "Advocacia criminal e de família em Imperatriz-MA. OAB/MA 16.091.",
       "areaServed": { "@type": "City", "name": "Imperatriz", "containedInPlace": { "@type": "State", "name": "Maranhão" } },
       "address": { "@type": "PostalAddress", "addressLocality": "Imperatriz", "addressRegion": "MA", "addressCountry": "BR" },
@@ -139,6 +140,14 @@ h1 .l2{display:inline}
 .btn.primary{border-color:transparent;color:#0a0a14;background:linear-gradient(135deg,#d9d4ff,#9aa4ff)}
 .btn.primary:hover{background:linear-gradient(135deg,#ece9ff,#b3baff);color:#0a0a14}
 
+.portrait{display:flex;align-items:center;gap:1rem;margin:0 0 1.5rem}
+.portrait img{width:5.5rem;height:5.5rem;border-radius:50%;object-fit:cover;object-position:center 18%;border:2px solid rgba(170,170,255,.35);box-shadow:0 0 0 4px rgba(98,72,230,.18),0 12px 28px rgba(0,0,0,.35)}
+.portrait .who{display:flex;flex-direction:column;gap:.15rem}
+.portrait .who strong{font:600 .95rem/1.25 var(--sans);color:#f2f1fa}
+.portrait .who span{font:400 .82rem/1.3 var(--sans);color:var(--muted)}
+@media (min-width:720px){
+  .portrait img{width:6.5rem;height:6.5rem}
+}
 /* seções */
 section{padding:2.6rem 0;border-top:1px solid var(--line)}
 .kicker{font:600 .72rem/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--soft);margin:0 0 .8rem;display:flex;gap:.6rem;align-items:center}
@@ -249,6 +258,13 @@ footer .disc{color:var(--soft);font-size:.84rem;border-top:1px solid var(--line)
         <circle cx="100" cy="100" r="26" fill="url(#eg)" opacity=".5"/>
         <circle cx="100" cy="100" r="3.5" fill="#e6e2ff"/>
       </svg></div>
+      <div class="portrait">
+        <img src="lucas-ladeia.jpg" width="1080" height="1080" alt="Lucas Brito Ladeia, advogado OAB/MA 16.091" decoding="async" fetchpriority="high">
+        <div class="who">
+          <strong>Lucas Brito Ladeia</strong>
+          <span>OAB/MA 16.091 · Imperatriz-MA</span>
+        </div>
+      </div>
       <p class="eyebrow">Medida protetiva · Lei Maria da Penha</p>
       <h1>Recebi uma medida protetiva: <span class="l2">o que fazer nas primeiras 48&nbsp;horas</span></h1>
       <p class="lead measure">Receber essa intimação costuma vir com susto, raiva e muita dúvida ao mesmo tempo. Aqui ninguém vai julgar você, e também não vamos prometer nada. A ideia é explicar, sem complicação, o que evitar e o que fazer agora, para você atravessar esses primeiros dias com a cabeça no lugar e dentro do que a decisão exige.</p>
