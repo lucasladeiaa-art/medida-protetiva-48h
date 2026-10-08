@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lucasladeiaa-art.github.io/medida-protetiva-48h/sitemap.xml
