@@ -331,6 +331,17 @@ footer .disc{color:var(--soft);font-size:.95rem;border-top:1px solid var(--line-
   .js .reveal{opacity:1;transform:none;transition:none}
   .btn{transition:none}
 }
+
+/* navegação do site */
+.top{flex-wrap:wrap}
+.nav{width:100%;order:3}
+.nav ul{list-style:none;margin:0;padding:0;display:flex;gap:.4rem;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.nav ul::-webkit-scrollbar{display:none}
+.nav a{display:inline-flex;align-items:center;min-height:44px;padding:.5rem .95rem;border-radius:999px;white-space:nowrap;text-decoration:none;font:600 .92rem/1.2 var(--sans);color:var(--text);border:1px solid var(--line-2);background:rgba(255,255,255,.02)}
+.nav a:hover{color:#fff;border-color:rgba(201,169,106,.4)}
+.nav a[aria-current="page"]{color:#fff;border-color:var(--gold);background:rgba(201,169,106,.16)}
+.brand{text-decoration:none}
+@media (min-width:900px){.nav{width:auto;order:0}}
 </style>
 </head>
 <body>
@@ -343,6 +354,7 @@ footer .disc{color:var(--soft);font-size:.95rem;border-top:1px solid var(--line-
       Rede de Proteção
     </div>
     <small>Imperatriz-MA</small>
+    <nav class="nav" aria-label="Seções do site"><ul><li><a href="./" aria-current="page">Medida protetiva</a></li><li><a href="./cac/">CAC</a></li><li><a href="./familia/">Família</a></li><li><a href="./materiais/">Materiais</a></li></ul></nav>
   </header>
 
   <main id="conteudo">
