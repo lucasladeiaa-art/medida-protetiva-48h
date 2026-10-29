@@ -199,3 +199,5 @@ body.artigo { background: var(--bg); }
 @media (min-width: 900px) { .site-footer .foot-grid { grid-template-columns: 1fr 2fr; } }
 
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+.nav-mobile.open { max-height: calc(100dvh - 4.5rem); overflow-y: auto; overscroll-behavior: contain; padding-bottom: 2rem; }
+.nav-desktop { min-width: 0; overflow-x: auto; scrollbar-width: none; }

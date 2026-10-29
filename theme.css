@@ -1173,3 +1173,9 @@ img { height: auto; }
   .site-header .brand-meta { font-size: .74rem; }
   .site-header .header-inner { gap: .5rem; }
 }
+
+/* menu: lista completa sempre acessível */
+.nav-mobile.open { max-height: calc(100vh - var(--header-h, 4.5rem)); max-height: calc(100dvh - var(--header-h, 4.5rem)); overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; padding-bottom: 2rem; }
+.nav-desktop { min-width: 0; overflow-x: auto; scrollbar-width: none; }
+.nav-desktop::-webkit-scrollbar { display: none; }
+.header-inner > nav { min-width: 0; }
