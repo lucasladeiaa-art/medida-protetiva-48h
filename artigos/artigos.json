@@ -20,6 +20,26 @@
     "reading": 18
   },
   {
+    "title": "A pensão acaba aos 18 ou aos 21 anos?",
+    "slug": "pensao-acaba-aos-18-ou-aos-21",
+    "area": "familia",
+    "date": "2026-10-29",
+    "summary": "A pensão não termina sozinha em nenhuma idade. O que muda na maioridade e qual é o caminho correto para encerrar a obrigação.",
+    "cover": "img/pensao-acaba-aos-18-ou-aos-21.webp",
+    "coverAlt": "Bolo de aniversário de 18 anos sobre uma mesa de estudos, à noite, com chuva na janela",
+    "reading": 10
+  },
+  {
+    "title": "Guarda compartilhada: ainda preciso pagar pensão?",
+    "slug": "guarda-compartilhada-paga-pensao",
+    "area": "familia",
+    "date": "2026-10-29",
+    "summary": "Guarda compartilhada não é metade para cada um e não elimina a pensão. Entenda como as despesas do filho se dividem.",
+    "cover": "img/guarda-compartilhada-paga-pensao.webp",
+    "coverAlt": "Mochila e tênis de criança junto à porta, com duas chaves penduradas e chuva na janela",
+    "reading": 9
+  },
+  {
     "title": "Recebi uma medida protetiva. Respostas às dúvidas das primeiras 48 horas",
     "slug": "medida-protetiva-primeiras-48-horas",
     "area": "medida-protetiva",
