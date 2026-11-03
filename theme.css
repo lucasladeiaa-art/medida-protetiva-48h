@@ -1179,3 +1179,31 @@ img { height: auto; }
 .nav-desktop { min-width: 0; overflow-x: auto; scrollbar-width: none; }
 .nav-desktop::-webkit-scrollbar { display: none; }
 .header-inner > nav { min-width: 0; }
+
+/* Abertura da Rede de Proteção: fundo de cidade à noite (azul/roxo), sem foto pessoal */
+.hero-rede { background: radial-gradient(ellipse 80% 60% at 85% 10%, rgba(110,80,200,.28), transparent 60%), radial-gradient(ellipse 70% 50% at 0% 100%, rgba(60,90,190,.18), transparent 70%), #0B0D1C; }
+.hero-rede .hv3-media--rede { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; }
+.hero-rede .hv3-bg { width: 100%; height: 100%; object-fit: cover; object-position: 70% 50%; filter: saturate(1.05) brightness(.9); animation: hv3-photo 2.6s cubic-bezier(.2,.7,.2,1) both; }
+.hero-rede .hv3-media--rede::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, rgba(8,9,22,.55) 0%, rgba(8,9,22,.25) 30%, rgba(8,9,22,.72) 72%, #0B0D1C 100%); }
+.hero-rede .hv3-light { background: radial-gradient(circle, rgba(150,130,255,.14), transparent 55%); }
+.hero-rede .hv3-inner { margin-top: 0; padding-top: calc(var(--header-h, 4rem) + 1.75rem); }
+.hero-rede .hv3-brand { display: block; margin: 0 0 .9rem; font-size: .82rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: rgba(231,213,181,.85); animation: hv3-up .9s .15s cubic-bezier(.2,.7,.2,1) both; }
+.hero-rede .hv3-brand span { color: #fff; }
+.hero-rede .hv3-brand::before { content: ""; display: inline-block; width: 2.2rem; height: 1px; margin-right: .8rem; vertical-align: middle; background: var(--champagne); }
+.hero-rede .hv3-trust li { white-space: normal; }
+@media (max-width: 899px) {
+  .hero-rede .hv3-media--rede { height: 100%; }
+  .hero-rede .hv3-media--rede::after { background: linear-gradient(180deg, rgba(8,9,22,.6) 0%, rgba(8,9,22,.35) 28%, rgba(8,9,22,.78) 62%, #0B0D1C 100%); }
+  .hero-rede .hv3-bg { object-position: 50% 40%; }
+  .hero-rede .hv3-inner { margin-top: 0; padding-top: calc(var(--header-h, 4rem) + 1.25rem); }
+  .hero-rede .hv3-brand { order: 0; margin-bottom: .6rem; }
+  .hero-rede .hero-v3 h1, .hero-rede h1 { font-size: clamp(2.1rem, 9.6vw, 3.2rem); }
+}
+@media (min-width: 900px) {
+  .hero-rede .hv3-media--rede { width: 100%; }
+  .hero-rede .hv3-media--rede::after { background: linear-gradient(90deg, rgba(8,9,22,.88) 0%, rgba(8,9,22,.55) 38%, rgba(8,9,22,.12) 70%), linear-gradient(180deg, rgba(8,9,22,.4) 0%, transparent 25%, transparent 55%, rgba(8,9,22,.85) 88%, #0B0D1C 100%); }
+  .hero-rede .hv3-inner { padding-top: 6rem; }
+}
+.hero-rede .hv3-brand { font-size: .95rem; }
+@media (max-width: 899px) { .hero-rede .hv3-brand { font-size: .88rem; } .hero-rede .hv3-trust strong { font-size: 1.02rem; line-height: 1.25; } }
