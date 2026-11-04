@@ -2,14 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lucasladeia.com.br/</loc>
-    <lastmod>2026-11-03</lastmod>
-  </url>
-  <url>
-    <loc>https://lucasladeia.com.br/criminal/</loc>
     <lastmod>2026-11-04</lastmod>
   </url>
   <url>
-    <loc>https://lucasladeia.com.br/passageiro/</loc>
+    <loc>https://lucasladeia.com.br/artigos/</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
   <url>
@@ -17,39 +13,43 @@
     <lastmod>2026-11-03</lastmod>
   </url>
   <url>
+    <loc>https://lucasladeia.com.br/criminal/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
     <loc>https://lucasladeia.com.br/familia/</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
   <url>
     <loc>https://lucasladeia.com.br/materiais/</loc>
-    <lastmod>2026-10-27</lastmod>
-  </url>
-  <url>
-    <loc>https://lucasladeia.com.br/medida-protetiva/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-10-28</lastmod>
   </url>
   <url>
     <loc>https://lucasladeia.com.br/medida-protetiva-48h/</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://lucasladeia.com.br/artigos/</loc>
+    <loc>https://lucasladeia.com.br/medida-protetiva/</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://lucasladeia.com.br/artigos/medida-protetiva-primeiras-48-horas.html</loc>
+    <loc>https://lucasladeia.com.br/passageiro/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://lucasladeia.com.br/privacidade/</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://lucasladeia.com.br/artigos/acusado-falsamente-o-que-fazer-antes-de-depor.html</loc>
     <lastmod>2026-10-28</lastmod>
   </url>
   <url>
-    <loc>https://lucasladeia.com.br/artigos/voo-atrasado-compromisso-perdido-indenizacao.html</loc>
-    <lastmod>2026-10-28</lastmod>
+    <loc>https://lucasladeia.com.br/artigos/cac-investigado-ou-reu-perco-cr-e-armas.html</loc>
+    <lastmod>2026-11-03</lastmod>
   </url>
   <url>
-    <loc>https://lucasladeia.com.br/artigos/medida-protetiva-sai-de-casa-guarda-imovel.html</loc>
-    <lastmod>2026-10-28</lastmod>
-  </url>
-  <url>
-    <loc>https://lucasladeia.com.br/artigos/intimado-depor-delegacia-direito-ao-silencio.html</loc>
+    <loc>https://lucasladeia.com.br/artigos/cac-medida-protetiva-acervo-registro.html</loc>
     <lastmod>2026-10-28</lastmod>
   </url>
   <url>
@@ -57,35 +57,7 @@
     <lastmod>2026-10-29</lastmod>
   </url>
   <url>
-    <loc>https://lucasladeia.com.br/artigos/cac-medida-protetiva-acervo-registro.html</loc>
-    <lastmod>2026-10-29</lastmod>
-  </url>
-  <url>
-    <loc>https://lucasladeia.com.br/artigos/posso-ver-meu-filho-com-medida-protetiva.html</loc>
-    <lastmod>2026-10-28</lastmod>
-  </url>
-  <url>
-    <loc>https://lucasladeia.com.br/artigos/acusado-falsamente-o-que-fazer-antes-de-depor.html</loc>
-    <lastmod>2026-10-28</lastmod>
-  </url>
-  <url>
-    <loc>https://lucasladeia.com.br/artigos/medida-protetiva-aparece-em-antecedentes-concurso-emprego-viagem.html</loc>
-    <lastmod>2026-10-28</lastmod>
-  </url>
-  <url>
     <loc>https://lucasladeia.com.br/artigos/ela-chegou-no-mesmo-lugar-medida-protetiva.html</loc>
-    <lastmod>2026-10-28</lastmod>
-  </url>
-  <url>
-    <loc>https://lucasladeia.com.br/artigos/perdi-o-emprego-e-pago-pensao-o-que-fazer.html</loc>
-    <lastmod>2026-10-28</lastmod>
-  </url>
-  <url>
-    <loc>https://lucasladeia.com.br/artigos/mala-extraviada-ou-danificada-o-que-fazer-no-aeroporto.html</loc>
-    <lastmod>2026-10-28</lastmod>
-  </url>
-  <url>
-    <loc>https://lucasladeia.com.br/artigos/pensao-acaba-aos-18-ou-aos-21.html</loc>
     <lastmod>2026-10-29</lastmod>
   </url>
   <url>
@@ -93,19 +65,47 @@
     <lastmod>2026-10-29</lastmod>
   </url>
   <url>
-    <loc>https://lucasladeia.com.br/artigos/recebi-intimacao-e-mandei-mensagem-medida-protetiva.html</loc>
+    <loc>https://lucasladeia.com.br/artigos/intimado-depor-delegacia-direito-ao-silencio.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://lucasladeia.com.br/artigos/mala-extraviada-ou-danificada-o-que-fazer-no-aeroporto.html</loc>
     <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://lucasladeia.com.br/artigos/medida-protetiva-aparece-em-antecedentes-concurso-emprego-viagem.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://lucasladeia.com.br/artigos/medida-protetiva-primeiras-48-horas.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://lucasladeia.com.br/artigos/medida-protetiva-sai-de-casa-guarda-imovel.html</loc>
+    <lastmod>2026-10-28</lastmod>
   </url>
   <url>
     <loc>https://lucasladeia.com.br/artigos/meu-voo-foi-cancelado-quais-sao-meus-direitos.html</loc>
     <lastmod>2026-10-29</lastmod>
   </url>
   <url>
-    <loc>https://lucasladeia.com.br/artigos/cac-investigado-ou-reu-perco-cr-e-armas.html</loc>
-    <lastmod>2026-11-03</lastmod>
+    <loc>https://lucasladeia.com.br/artigos/pensao-acaba-aos-18-ou-aos-21.html</loc>
+    <lastmod>2026-10-29</lastmod>
   </url>
   <url>
-    <loc>https://lucasladeia.com.br/privacidade/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <loc>https://lucasladeia.com.br/artigos/perdi-o-emprego-e-pago-pensao-o-que-fazer.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://lucasladeia.com.br/artigos/posso-ver-meu-filho-com-medida-protetiva.html</loc>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://lucasladeia.com.br/artigos/recebi-intimacao-e-mandei-mensagem-medida-protetiva.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://lucasladeia.com.br/artigos/voo-atrasado-compromisso-perdido-indenizacao.html</loc>
+    <lastmod>2026-10-29</lastmod>
   </url>
 </urlset>
