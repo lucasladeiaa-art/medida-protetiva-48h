@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#2A1D16">
-<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#07081A">
+<meta name="color-scheme" content="dark">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -27,9 +27,12 @@
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
-<link rel="stylesheet" href="theme.css">
+<link rel="preload" as="image" href="img/hero-rede-cidade-m.webp" media="(max-width: 899px)">
+<link rel="preload" as="image" href="img/hero-rede-cidade-1280.webp" media="(min-width: 900px)">
+<link rel="stylesheet" href="assets/home/home.css">
+<script>document.documentElement.classList.add('js')</script>
 </head>
-<body class="home">
+<body class="hs">
 <a class="skip" href="#conteudo">Ir para o conteúdo</a>
 <header class="site-header">
   <div class="wrap header-inner">
@@ -68,129 +71,87 @@
   </nav>
 </header>
 <main id="conteudo">
-  <section class="hero hero-v3 hero-rede" aria-labelledby="hero-title">
-    <div class="hv3-light" aria-hidden="true"></div>
-    <svg class="hv3-watermark" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 230"><defs><clipPath id="hv3sh"><path d="M100 12 L182 40 V112 C182 162 148 196 100 218 C52 196 18 162 18 112 V40 Z"/></clipPath></defs><path d="M100 12 L182 40 V112 C182 162 148 196 100 218 C52 196 18 162 18 112 V40 Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><g clip-path="url(#hv3sh)" stroke="currentColor" stroke-width="2.5" fill="none"><path d="M-40 82 Q100 150 240 82"/><path d="M-40 140 Q100 208 240 140"/><path d="M58 -10 Q80 120 58 250"/><path d="M100 -10 V250"/><path d="M142 -10 Q120 120 142 250"/></g><circle cx="100" cy="116" r="6" fill="currentColor"/></svg>
-
-    <div class="hv3-media hv3-media--rede" aria-hidden="true">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-media" aria-hidden="true">
       <picture>
         <source media="(max-width: 899px)" type="image/webp" srcset="img/hero-rede-cidade-m.webp">
-        <img class="hv3-photo hv3-bg" src="img/hero-rede-cidade-1280.webp" width="1280" height="720" alt="" loading="eager" fetchpriority="high">
+        <img src="img/hero-rede-cidade-1280.webp" width="1280" height="720" alt="" loading="eager" fetchpriority="high" decoding="async">
       </picture>
     </div>
-
-    <div class="hv3-inner">
-      <div class="hv3-copy">
-        <p class="hv3-name hv3-brand">Rede de <span>Proteção</span></p>
-        <p class="hv3-hook" aria-live="off"><span class="hv3-hook-text" data-hook>Recebeu uma medida protetiva?</span></p>
-        <h1 id="hero-title">Liberdade. Família. <em>Patrimônio.</em></h1>
-        <p class="hv3-lead">Informação, prevenção e orientação jurídica para decisões que envolvem sua liberdade, sua família e seu patrimônio. Presencial em Imperatriz-MA e online em todo o Brasil.</p>
-        <div class="hv3-actions">
-          <a class="btn btn-primary btn-lg btn-wa" href="https://wa.me/5599981703994?text=Vim%20pelo%20site." data-cta="whatsapp-hero" rel="noopener">Conversar no WhatsApp</a>
-          <a class="hv3-ghost" href="#sobre">Quem conduz <span aria-hidden="true">→</span></a>
-        </div>
-        <ul class="hv3-trust" aria-label="Identificação profissional">
-          <li>Conduzida por <strong>Lucas Brito Ladeia</strong></li>
-          <li><strong>OAB/MA 16.091</strong> Imperatriz-MA</li>
-          <li><strong>Online</strong> em todo o Brasil</li>
-        </ul>
+    <canvas class="rain" id="rain" aria-hidden="true"></canvas>
+    <div class="hero-glow" aria-hidden="true"><i></i><i></i></div>
+    <div class="hero-flash" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+      <p class="kicker"><span class="kicker-mark" aria-hidden="true"><svg class="brand-emblem" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 230"><defs><clipPath id="llsh"><path d="M100 12 L182 40 V112 C182 162 148 196 100 218 C52 196 18 162 18 112 V40 Z"/></clipPath></defs><path d="M100 12 L182 40 V112 C182 162 148 196 100 218 C52 196 18 162 18 112 V40 Z" fill="none" stroke="currentColor" stroke-width="15" stroke-linejoin="round"/><g clip-path="url(#llsh)" stroke="currentColor" stroke-width="9" fill="none"><path d="M-40 82 Q100 150 240 82"/><path d="M-40 140 Q100 208 240 140"/><path d="M58 -10 Q80 120 58 250"/><path d="M100 -10 V250"/><path d="M142 -10 Q120 120 142 250"/></g><circle cx="100" cy="116" r="13" fill="currentColor"/></svg></span>Rede de <b>Proteção</b></p>
+      <h1 id="hero-title">Antes de agir, <em>entenda.</em></h1>
+      <p class="hero-tag">Liberdade. Família. Patrimônio.</p>
+      <p class="hero-lead">Informação, prevenção e orientação jurídica para decisões que envolvem sua liberdade, sua família e seu patrimônio. Presencial em Imperatriz-MA e online em todo o Brasil.</p>
+      <p class="hook" aria-hidden="true"><span class="hook-dot"></span><span class="hook-track" data-hooks><span>Recebeu uma medida protetiva?</span><span>Foi intimado ou acusado?</span><span>Separação, guarda ou pensão?</span><span>Voo cancelado ou mala extraviada?</span><span>Quer entender antes de agir?</span></span></p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="#vitrine">Escolha sua situação <span aria-hidden="true">↓</span></a>
+        <a class="btn btn-glass btn-lg btn-wa" href="https://wa.me/5599981703994?text=Vim%20pelo%20site." data-cta="whatsapp-hero" rel="noopener">Conversar no WhatsApp</a>
       </div>
-
-      <nav class="hv3-sit" aria-labelledby="sit-title">
-        <div class="hv3-sit-head">
-          <h2 id="sit-title">Qual é a sua situação?</h2>
-          <span class="hv3-sit-hint" aria-hidden="true">Deslize <span>→</span></span>
-        </div>
-        <ul class="hv3-cards" data-cards>
-          <li><a class="sit-card" href="medida-protetiva-48h/" data-hook-text="Recebeu uma medida protetiva?">
-            <img src="img/hero-sit-protetiva.webp" width="648" height="864" alt="" loading="eager">
-            <span class="sit-tag">Medida protetiva</span>
-            <span class="sit-q">Recebeu uma medida protetiva?</span>
-            <span class="sit-note">As primeiras 48 horas importam.</span>
-            <span class="sit-arrow" aria-hidden="true"></span>
-          </a></li>
-          <li><a class="sit-card" href="https://wa.me/5599981703994?text=Vim%20pelo%20site%2C%20%C3%A1rea%20Criminal." data-cta="whatsapp-hero-criminal" rel="noopener" data-hook-text="Foi intimado ou acusado?">
-            <img src="img/hero-sit-cac.webp" width="648" height="864" alt="" loading="eager">
-            <span class="sit-tag">Criminal</span>
-            <span class="sit-q">Foi intimado ou acusado?</span>
-            <span class="sit-note">Defesa técnica, sob sigilo.</span>
-            <span class="sit-arrow" aria-hidden="true"></span>
-          </a></li>
-          <li><a class="sit-card" href="familia/" data-hook-text="Separação, guarda ou pensão?">
-            <img src="img/hero-sit-familia.webp" width="648" height="864" alt="" loading="lazy">
-            <span class="sit-tag">Família</span>
-            <span class="sit-q">Separação, guarda ou pensão?</span>
-            <span class="sit-note">Decidir com calma e informação.</span>
-            <span class="sit-arrow" aria-hidden="true"></span>
-          </a></li>
-          <li><a class="sit-card" href="passageiro/" data-hook-text="Voo cancelado ou mala extraviada?">
-            <img src="img/hero-sit-passageiro.webp" width="648" height="864" alt="" loading="lazy">
-            <span class="sit-tag">Passageiro</span>
-            <span class="sit-q">Voo cancelado ou mala extraviada?</span>
-            <span class="sit-note">O que registrar e quais caminhos existem.</span>
-            <span class="sit-arrow" aria-hidden="true"></span>
-          </a></li>
-          <li><a class="sit-card sit-card--guias" href="materiais/" data-hook-text="Quer entender antes de agir?">
-            <img src="img/hero-sit-guias.webp" width="750" height="640" alt="" loading="lazy">
-            <span class="sit-tag">Guias de Proteção</span>
-            <span class="sit-q">Quer entender antes de agir?</span>
-            <span class="sit-note">E-books em linguagem acessível.</span>
-            <span class="sit-arrow" aria-hidden="true"></span>
-          </a></li>
-        </ul>
-      </nav>
+      <ul class="trust" aria-label="Identificação profissional">
+        <li>Conduzida por <a href="#sobre"><strong>Lucas Brito Ladeia</strong></a></li>
+        <li><strong>OAB/MA 16.091</strong> Imperatriz-MA</li>
+        <li><strong>Online</strong> em todo o Brasil</li>
+      </ul>
     </div>
+    <a class="scroll-cue" href="#vitrine" aria-label="Ir para as situações"><span></span></a>
   </section>
 
-  <section id="areas" aria-labelledby="areas-title">
+  <div class="vitrine" id="vitrine">
+    <div class="wrap vit-head reveal">
+      <p class="eyebrow">Qual é a sua situação?</p>
+      <h2>Escolha a pergunta que é <em>a sua.</em></h2>
+    </div>
+    <section class="row row--continue" id="fileira-continue" aria-labelledby="t-continue" hidden>
+      <div class="wrap row-head"><h3 id="t-continue"><span class="row-num" aria-hidden="true">▶</span>Continue de onde parou</h3>
+      <span class="row-count">Fica só neste aparelho</span>
+      <button type="button" class="row-clear" id="continueClear">Limpar</button></div>
+      <ul class="rail" role="list" id="continueRail"></ul>
+    </section>
+<section class="row reveal" id="fileira-protetiva" aria-labelledby="t-protetiva">
+  <div class="wrap row-head"><h3 id="t-protetiva"><span class="row-num" aria-hidden="true">01</span>Recebi uma medida protetiva</h3><span class="row-count">9 títulos</span><span class="row-nav"><button type="button" class="rn prev" aria-label="Voltar na fileira Recebi uma medida protetiva" data-dir="-1">‹</button><button type="button" class="rn next" aria-label="Avançar na fileira Recebi uma medida protetiva" data-dir="1">›</button></span></div>
+  <ul class="rail" role="list"><li><a class="poster" href="artigos/medida-protetiva-primeiras-48-horas.html" data-id="medida-protetiva-primeiras-48-horas"><img src="assets/home/capas/medida-protetiva-primeiras-48-horas.webp" width="480" height="640" alt="Envelope de intimação sobre a mesa, em luz baixa" loading="eager" decoding="async"><span class="p-fx" aria-hidden="true"></span><span class="p-body"><span class="p-tag">Artigo · 3 min</span><span class="p-q">Recebi uma medida protetiva. O que faço nas primeiras 48 horas?</span><span class="p-more"><span class="p-line">Contato, armas, descumprimento, filhos, prazo e antecedentes: as perguntas de quem acabou de ser intimado.</span></span><span class="p-go" aria-hidden="true">Ler agora</span></span></a></li><li><a class="poster" href="artigos/posso-ver-meu-filho-com-medida-protetiva.html" data-id="posso-ver-meu-filho-com-medida-protetiva"><img src="assets/home/capas/posso-ver-meu-filho-com-medida-protetiva.webp" width="480" height="640" alt="Tênis de criança no chão de um quarto escuro, ao lado da mão de um homem" loading="eager" decoding="async"><span class="p-fx" aria-hidden="true"></span><span class="p-body"><span class="p-tag">Artigo · 14 min</span><span class="p-q">Ela pediu medida protetiva. E agora, posso ver meus filhos?</span><span class="p-more"><span class="p-line">Quando a medida protetiva alcança os filhos, o que acontece com a convivência e a guarda, e como pedir ao juiz que regule as visitas.</span></span><span class="p-go" aria-hidden="true">Ler agora</span></span></a></li><li><a class="poster" href="artigos/medida-protetiva-sai-de-casa-guarda-imovel.html" data-id="medida-protetiva-sai-de-casa-guarda-imovel"><img src="assets/home/capas/medida-protetiva-sai-de-casa-guarda-imovel.webp" width="480" height="640" alt="Homem de costas saindo de casa à noite com uma bolsa" loading="eager" decoding="async"><span class="p-fx" aria-hidden="true"></span><span class="p-body"><span class="p-tag">Artigo · 4 min</span><span class="p-q">Tive que sair de casa. Perco a guarda ou o imóvel?</span><span class="p-more"><span class="p-line">O afastamento do lar é provisório. Veja o que acontece com o imóvel, a guarda, as visitas e a pensão.</span></span><span class="p-go" aria-hidden="true">Ler agora</span></span></a></li><li><a class="poster" href="artigos/ela-chegou-no-mesmo-lugar-medida-protetiva.html" data-id="ela-chegou-no-mesmo-lugar-medida-protetiva"><img src="assets/home/capas/ela-chegou-no-mesmo-lugar-medida-protetiva.webp" width="480" height="640" alt="Mesa vazia junto à janela chuvosa de um restaurante à noite, com um homem saindo pela porta" loading="lazy" decoding="async"><span class="p-fx" aria-hidden="true"></span><span class="p-body"><span class="p-tag">Artigo · 13 min</span><span class="p-q">Ela chegou onde eu estava. Tenho que ir embora?</span><span class="p-more"><span class="p-line">Chegar primeiro não protege ninguém. O que conta é o que você faz depois de perceber a presença dela.</span></span><span class="p-go" aria-hidden="true">Ler agora</span></span></a></li><li><a class="poster" href="artigos/recebi-intimacao-e-mandei-mensagem-medida-protetiva.html" data-id="recebi-intimacao-e-mandei-mensagem-medida-protetiva"><img src="assets/home/capas/recebi-intimacao-e-mandei-mensagem-medida-protetiva.webp" width="480" height="640" alt="Celular aceso sobre a mesa à noite, com chuva na janela" loading="lazy" decoding="async"><span class="p-fx" aria-hidden="true"></span><span class="p-body"><span class="p-tag">Artigo · 11 min</span><span class="p-q">Fui intimado da medida e mandei mensagem. E agora?</span><span class="p-more"><span class="p-line">Uma mensagem sem ameaça, enviada depois da intimação, pode configurar o crime do art. 24-A da Lei Maria da Penha. Entenda o que a lei diz e o que fazer.</span></span><span class="p-go" aria-hidden="true">Ler agora</span></span></a></li><li><a class="poster" href="artigos/descumpri-medida-protetiva-e-agora.html" data-id="descumpri-medida-protetiva-e-agora"><img src="assets/home/capas/descumpri-medida-protetiva-e-agora.webp" width="480" height="640" alt="Mão segurando um celular à noite, com uma mensagem na tela" loading="lazy" decoding="async"><span class="p-fx" aria-hidden="true"></span><span class="p-body"><span class="p-tag">Artigo · 13 min</span><span class="p-q">Descumpri a medida protetiva. O que pode acontecer?</span><span class="p-more"><span class="p-line">O que diz o art. 24-A da Lei Maria da Penha, o que acontece quando a própria pessoa protegida procura o contato e quais cuidados práticos fazem diferença depois de um descumprimento.</span></span><span class="p-go" aria-hidden="true">Ler agora</span></span></a></li><li><a class="poster" href="artigos/medida-protetiva-aparece-em-antecedentes-concurso-emprego-viagem.html" data-id="medida-protetiva-aparece-em-antecedentes-concurso-emprego-viagem"><img src="assets/home/capas/medida-protetiva-aparece-em-antecedentes-concurso-emprego-viagem.webp" width="480" height="640" alt="Passaporte e certidão sobre uma mesa escura, com luzes de aeroporto ao fundo" loading="lazy" decoding="async"><span class="p-fx" aria-hidden="true"></span><span class="p-body"><span class="p-tag">Artigo · 14 min</span><span class="p-q">A medida protetiva vai aparecer no meu concurso ou emprego?</span><span class="p-more"><span class="p-line">O que a medida protetiva registra, o que aparece numa certidão de antecedentes e como ela pode repercutir em concurso, emprego e viagem.</span></span><span class="p-go" aria-hidden="true">Ler agora</span></span></a></li><li><a class="poster" href="medida-protetiva-48h/" data-id="pg-48h"><img src="assets/home/capas/pg-48h.webp" width="480" height="640" alt="" loading="lazy" decoding="async"><span class="p-fx" aria-hidden="true"></span><span class="p-body"><span class="p-tag">Página · triagem</span><span class="p-q">Recebi uma medida protetiva: o que fazer após a intimação</span><span class="p-more"><span class="p-line">Recebeu uma medida protetiva em Imperatriz-MA? Veja o que fazer após a intimação (Lei Maria da Penha), o que evitar e quando procurar um advogado. Lucas Brito Ladeia, OAB/MA 16.091.</span></span><span class="p-go" aria-hidden="true">Ler agora</span></span></a></li><li><a class="poster" href="medida-protetiva/" data-id="pg-protetiva"><img src="assets/home/capas/pg-protetiva.webp" width="480" height="640" alt="" loading="lazy" decoding="async"><span class="p-fx" aria-hidden="true"></span><span class="p-body"><span class="p-tag">Página</span><span class="p-q">Recebi uma medida protetiva. O que a decisão exige?</span><span class="p-more"><span class="p-line">O que é a medida protetiva da Lei Maria da Penha, o que evitar após a intimação e quais providências ajudam a cumprir a decisão. Conteúdo informativo.</span></span><span class="p-go" aria-hidden="true">Ler agora</span></span></a></li></ul>
+</section>
+<section class="row reveal" id="fileira-acusado" aria-labelledby="t-acusado">
+  <div class="wrap row-head"><h3 id="t-acusado"><span class="row-num" aria-hidden="true">02</span>Fui acusado ou intimado</h3><span class="row-count">2 títulos</span><span class="row-nav"><button type="button" class="rn prev" aria-label="Voltar na fileira Fui acusado ou intimado" data-dir="-1">‹</button><button type="button" class="rn next" aria-label="Avançar na fileira Fui acusado ou intimado" data-dir="1">›</button></span></div>
+  <ul class="rail" role="list"><li><a class="poster" href="artigos/acusado-falsamente-o-que-fazer-antes-de-depor.html" data-id="acusado-falsamente-o-que-fazer-antes-de-depor"><img src="assets/home/capas/acusado-falsamente-o-que-fazer-antes-de-depor.webp" width="480" height="640" alt="Cadeira vazia diante de uma mesa com uma intimação, em sala escura" loading="lazy" decoding="async"><span class="p-fx" aria-hidden="true"></span><span class="p-body"><span class="p-tag">Artigo · 13 min</span><span class="p-q">Fui acusado de algo que não fiz. O que faço antes de depor?</span><span class="p-more"><span class="p-line">Direito ao silêncio, acesso aos autos, preservação de provas e o que não fazer com quem acusou, antes do depoimento na delegacia.</span></span><span class="p-go" aria-hidden="true">Ler agora</span></span></a></li><li><a class="poster" href="artigos/intimado-depor-delegacia-direito-ao-silencio.html" data-id="intimado-depor-delegacia-direito-ao-silencio"><img src="assets/home/capas/intimado-depor-delegacia-direito-ao-silencio.webp" width="480" height="640" alt="Cadeira vazia com uma intimação num corredor de delegacia" loading="lazy" decoding="async"><span class="p-fx" aria-hidden="true"></span><span class="p-body"><span class="p-tag">Artigo · 3 min</span><span class="p-q">Fui intimado a depor. Sou obrigado a ir? Posso ficar calado?</span><span class="p-more"><span class="p-line">Testemunha ou investigado: o que muda, quando é possível ficar em silêncio e por que ir com advogado.</span></span><span class="p-go" aria-hidden="true">Ler agora</span></span></a></li></ul>
+  <div class="wrap row-foot"><a class="row-wa btn-wa" href="https://wa.me/5599981703994?text=Vim%20pelo%20site%2C%20%C3%A1rea%20Criminal." data-cta="whatsapp-hero-criminal" rel="noopener">Foi intimado ou acusado? <span>Defesa técnica, sob sigilo.</span></a></div>
+</section>
+<section class="row reveal" id="fileira-familia" aria-labelledby="t-familia">
+  <div class="wrap row-head"><h3 id="t-familia"><span class="row-num" aria-hidden="true">03</span>Separação e filhos</h3><span class="row-count">4 títulos</span><span class="row-nav"><button type="button" class="rn prev" aria-label="Voltar na fileira Separação e filhos" data-dir="-1">‹</button><button type="button" class="rn next" aria-label="Avançar na fileira Separação e filhos" data-dir="1">›</button></span></div>
+  <ul class="rail" role="list"><li><a class="poster" href="artigos/guarda-compartilhada-paga-pensao.html" data-id="guarda-compartilhada-paga-pensao"><img src="assets/home/capas/guarda-compartilhada-paga-pensao.webp" width="480" height="640" alt="Mochila e tênis de criança junto à porta, com duas chaves penduradas e chuva na janela" loading="lazy" decoding="async"><span class="p-fx" aria-hidden="true"></span><span class="p-body"><span class="p-tag">Artigo · 9 min</span><span class="p-q">A guarda é compartilhada. Ainda preciso pagar pensão?</span><span class="p-more"><span class="p-line">Guarda compartilhada não é metade para cada um e não elimina a pensão. Entenda como as despesas do filho se dividem.</span></span><span class="p-go" aria-hidden="true">Ler agora</span></span></a></li><li><a class="poster" href="artigos/perdi-o-emprego-e-pago-pensao-o-que-fazer.html" data-id="perdi-o-emprego-e-pago-pensao-o-que-fazer"><img src="assets/home/capas/perdi-o-emprego-e-pago-pensao-o-que-fazer.webp" width="480" height="640" alt="Homem de costas numa cozinha escura, com uma caixa de pertences do trabalho sobre a mesa e chuva na janela" loading="lazy" decoding="async"><span class="p-fx" aria-hidden="true"></span><span class="p-body"><span class="p-tag">Artigo · 12 min</span><span class="p-q">Perdi o emprego. Como fica a pensão que eu pago?</span><span class="p-more"><span class="p-line">A obrigação não para sozinha quando o emprego acaba. O caminho é pedir a revisão ao juiz logo e pagar o que for possível enquanto isso.</span></span><span class="p-go" aria-hidden="true">Ler agora</span></span></a></li><li><a class="poster" href="artigos/pensao-acaba-aos-18-ou-aos-21.html" data-id="pensao-acaba-aos-18-ou-aos-21"><img src="assets/home/capas/pensao-acaba-aos-18-ou-aos-21.webp" width="480" height="640" alt="Bolo de aniversário de 18 anos sobre uma mesa de estudos, à noite, com chuva na janela" loading="lazy" decoding="async"><span class="p-fx" aria-hidden="true"></span><span class="p-body"><span class="p-tag">Artigo · 10 min</span><span class="p-q">Meu filho fez 18. Posso parar de pagar a pensão?</span><span class="p-more"><span class="p-line">A pensão não termina sozinha em nenhuma idade. O que muda na maioridade e qual é o caminho correto para encerrar a obrigação.</span></span><span class="p-go" aria-hidden="true">Ler agora</span></span></a></li><li><a class="poster" href="familia/" data-id="pg-familia"><img src="assets/home/capas/pg-familia.webp" width="480" height="640" alt="" loading="lazy" decoding="async"><span class="p-fx" aria-hidden="true"></span><span class="p-body"><span class="p-tag">Página</span><span class="p-q">Família, guarda, pensão e patrimônio</span><span class="p-more"><span class="p-line">Respostas objetivas sobre pensão, alimentos gravídicos, divórcio, guarda, união estável, regime de bens e contrato de namoro. Conteúdo informativo.</span></span><span class="p-go" aria-hidden="true">Ler agora</span></span></a></li></ul>
+</section>
+<section class="row reveal" id="fileira-voo" aria-labelledby="t-voo">
+  <div class="wrap row-head"><h3 id="t-voo"><span class="row-num" aria-hidden="true">04</span>Meu voo deu problema</h3><span class="row-count">4 títulos</span><span class="row-nav"><button type="button" class="rn prev" aria-label="Voltar na fileira Meu voo deu problema" data-dir="-1">‹</button><button type="button" class="rn next" aria-label="Avançar na fileira Meu voo deu problema" data-dir="1">›</button></span></div>
+  <ul class="rail" role="list"><li><a class="poster" href="artigos/meu-voo-foi-cancelado-quais-sao-meus-direitos.html" data-id="meu-voo-foi-cancelado-quais-sao-meus-direitos"><img src="assets/home/capas/meu-voo-foi-cancelado-quais-sao-meus-direitos.webp" width="480" height="640" alt="Painel de embarque à noite com voos cancelados, chuva na vidraça" loading="lazy" decoding="async"><span class="p-fx" aria-hidden="true"></span><span class="p-body"><span class="p-tag">Artigo · 11 min</span><span class="p-q">Meu voo foi cancelado. Quais são meus direitos?</span><span class="p-more"><span class="p-line">Reacomodação, reembolso, alimentação, hotel e overbooking: o que as regras da ANAC em vigor garantem a quem teve o voo cancelado e o que fazer no aeroporto.</span></span><span class="p-go" aria-hidden="true">Ler agora</span></span></a></li><li><a class="poster" href="artigos/voo-atrasado-compromisso-perdido-indenizacao.html" data-id="voo-atrasado-compromisso-perdido-indenizacao"><img src="assets/home/capas/voo-atrasado-compromisso-perdido-indenizacao.webp" width="480" height="640" alt="Passageiro de costas diante do painel do aeroporto com um voo cancelado" loading="lazy" decoding="async"><span class="p-fx" aria-hidden="true"></span><span class="p-body"><span class="p-tag">Artigo · 4 min</span><span class="p-q">O atraso do voo me fez perder trabalho. Posso pedir indenização?</span><span class="p-more"><span class="p-line">Lucros cessantes e perda de uma chance: o que diferencia as duas indenizações, que provas reunir e qual é o prazo em voos nacionais e internacionais.</span></span><span class="p-go" aria-hidden="true">Ler agora</span></span></a></li><li><a class="poster" href="artigos/mala-extraviada-ou-danificada-o-que-fazer-no-aeroporto.html" data-id="mala-extraviada-ou-danificada-o-que-fazer-no-aeroporto"><img src="assets/home/capas/mala-extraviada-ou-danificada-o-que-fazer-no-aeroporto.webp" width="480" height="640" alt="Homem com uma mochila diante da esteira de bagagens vazia, à noite, com chuva na janela do aeroporto" loading="lazy" decoding="async"><span class="p-fx" aria-hidden="true"></span><span class="p-body"><span class="p-tag">Artigo · 13 min</span><span class="p-q">Minha mala sumiu ou chegou quebrada. O que faço no aeroporto?</span><span class="p-more"><span class="p-line">O que registrar antes de sair do aeroporto, os prazos que valem no voo nacional e no internacional e o que a lei diz sobre a indenização.</span></span><span class="p-go" aria-hidden="true">Ler agora</span></span></a></li><li><a class="poster" href="passageiro/" data-id="pg-passageiro"><img src="assets/home/capas/pg-passageiro.webp" width="480" height="640" alt="" loading="lazy" decoding="async"><span class="p-fx" aria-hidden="true"></span><span class="p-body"><span class="p-tag">Página · Guia do Passageiro</span><span class="p-q">Está no aeroporto agora? Toque no que aconteceu com você.</span><span class="p-more"><span class="p-line">Voo cancelado, atrasado, overbooking, mala extraviada ou danificada: o que fazer, o que guardar como prova e quais são os seus direitos. Conforme a Res. ANAC 400/2016 com as alterações da Res. 813/2026 (e Res. 819/2026).</span></span><span class="p-go" aria-hidden="true">Ler agora</span></span></a></li></ul>
+</section>
+<section class="row reveal" id="fileira-cac" aria-labelledby="t-cac">
+  <div class="wrap row-head"><h3 id="t-cac"><span class="row-num" aria-hidden="true">05</span>Sou CAC</h3><span class="row-count">3 títulos</span><span class="row-nav"><button type="button" class="rn prev" aria-label="Voltar na fileira Sou CAC" data-dir="-1">‹</button><button type="button" class="rn next" aria-label="Avançar na fileira Sou CAC" data-dir="1">›</button></span></div>
+  <ul class="rail" role="list"><li><a class="poster" href="artigos/cac-medida-protetiva-acervo-registro.html" data-id="cac-medida-protetiva-acervo-registro"><img src="assets/home/capas/cac-medida-protetiva-acervo-registro.webp" width="480" height="640" alt="Maleta de armas fechada sobre uma mesa escura" loading="lazy" decoding="async"><span class="p-fx" aria-hidden="true"></span><span class="p-body"><span class="p-tag">Artigo · 18 min</span><span class="p-q">Sou CAC e recebi medida protetiva. O que acontece com meu acervo?</span><span class="p-more"><span class="p-line">Suspensão da posse, apreensão do acervo, cassação do CR e restituição: o que dizem a Lei Maria da Penha, o Decreto 11.615/2023 e a IN DG/PF 311/2025.</span></span><span class="p-go" aria-hidden="true">Ler agora</span></span></a></li><li><a class="poster" href="artigos/cac-investigado-ou-reu-perco-cr-e-armas.html" data-id="cac-investigado-ou-reu-perco-cr-e-armas"><img src="assets/home/capas/cac-investigado-ou-reu-perco-cr-e-armas.webp" width="480" height="640" alt="Maleta de arma fechada sobre uma mesa ao lado de um documento oficial, com chuva na janela e a cidade à noite" loading="lazy" decoding="async"><span class="p-fx" aria-hidden="true"></span><span class="p-body"><span class="p-tag">Artigo · 19 min</span><span class="p-q">Sou CAC e virei investigado. Perco meu CR e minhas armas?</span><span class="p-more"><span class="p-line">Inquérito e processo não cancelam o CR sozinhos, mas podem levar a suspensão cautelar e cassação na PF. O que dizem o Estatuto, o Decreto 11.615/2023 e a IN DG/PF 311/2025.</span></span><span class="p-go" aria-hidden="true">Ler agora</span></span></a></li><li><a class="poster" href="cac/" data-id="pg-cac"><img src="assets/home/capas/pg-cac.webp" width="480" height="640" alt="" loading="lazy" decoding="async"><span class="p-fx" aria-hidden="true"></span><span class="p-body"><span class="p-tag">Página</span><span class="p-q">Sou CAC e recebi uma medida protetiva. E o meu acervo?</span><span class="p-more"><span class="p-line">O que a Lei Maria da Penha prevê sobre posse, porte, entrega ou apreensão de arma de CAC e como organizar a documentação do acervo. Conteúdo informativo.</span></span><span class="p-go" aria-hidden="true">Ler agora</span></span></a></li></ul>
+</section>
+  </div>
+
+  <section id="areas" class="areas" aria-labelledby="areas-title">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head reveal">
         <p class="eyebrow">Vitrine de atendimento</p>
         <h2 id="areas-title">Escolha a área que corresponde <em>à sua situação</em></h2>
         <p>Cada área tem página própria, com informações sobre o tema e o contato direto com o advogado. Sem promessa de resultado.</p>
       </div>
-      <div class="vitrine">
-        <article class="card">
-          <img class="card-img" src="img/medida-protetiva.webp" alt="Mesa com documentos e café sob luz suave" width="1200" height="675" loading="lazy">
-          <div class="card-body">
-            <h3>Recebi uma medida protetiva</h3>
+      <div class="area-grid"><article class="acard"><img class="ac-img" src="assets/home/capas/area-protetiva.webp" width="720" height="405" alt="Mesa com documentos e café sob luz suave" loading="lazy" decoding="async"><div class="ac-body"><h3>Recebi uma medida protetiva</h3>
             <p>Intimação, restrições de contato e distância, filhos, casa e as primeiras providências e o que a decisão exige.</p>
-            <div class="card-actions"><a class="card-link" href="medida-protetiva-48h/">Fazer a triagem de medida protetiva →</a><a class="btn btn-primary btn-wa" href="https://wa.me/5599981703994?text=Vim%20pelo%20site%2C%20%C3%A1rea%20Medida%20protetiva." data-cta="whatsapp-card" rel="noopener">Explique sua situação</a></div>
-          </div>
-        </article>
-        <article class="card">
-          <img class="card-img" src="img/cac.webp" alt="Ambiente sóbrio de clube de tiro com estojo fechado" width="1200" height="675" loading="lazy">
-          <div class="card-body">
-            <h3>Sou CAC e a medida alcança o acervo</h3>
+            <div class="card-actions"><a class="card-link" href="medida-protetiva-48h/">Fazer a triagem de medida protetiva →</a><a class="btn btn-primary btn-wa" href="https://wa.me/5599981703994?text=Vim%20pelo%20site%2C%20%C3%A1rea%20Medida%20protetiva." data-cta="whatsapp-card" rel="noopener">Explique sua situação</a></div></div></article><article class="acard"><img class="ac-img" src="assets/home/capas/area-cac.webp" width="720" height="405" alt="Ambiente sóbrio de clube de tiro com estojo fechado" loading="lazy" decoding="async"><div class="ac-body"><h3>Sou CAC e a medida alcança o acervo</h3>
             <p>O que a Lei Maria da Penha prevê sobre posse e porte, entrega ou apreensão de arma, e como organizar a documentação.</p>
-            <div class="card-actions"><a class="card-link" href="cac/">Ler a página de CAC e armas →</a><a class="btn btn-primary btn-wa" href="https://wa.me/5599981703994?text=Vim%20pelo%20site%2C%20%C3%A1rea%20CAC%20e%20armas." data-cta="whatsapp-card" rel="noopener">Explique sua situação</a></div>
-          </div>
-        </article>
-        <article class="card">
-          <img class="card-img" src="img/familia.webp" alt="Mãos com xícaras de café e uma pequena casa de madeira" width="1200" height="675" loading="lazy">
-          <div class="card-body">
-            <h3>Família, guarda, pensão e patrimônio</h3>
+            <div class="card-actions"><a class="card-link" href="cac/">Ler a página de CAC e armas →</a><a class="btn btn-primary btn-wa" href="https://wa.me/5599981703994?text=Vim%20pelo%20site%2C%20%C3%A1rea%20CAC%20e%20armas." data-cta="whatsapp-card" rel="noopener">Explique sua situação</a></div></div></article><article class="acard"><img class="ac-img" src="assets/home/capas/area-familia.webp" width="720" height="405" alt="Mãos com xícaras de café e uma pequena casa de madeira" loading="lazy" decoding="async"><div class="ac-body"><h3>Família, guarda, pensão e patrimônio</h3>
             <p>Separação, união estável, convivência com filhos, pensão alimentícia e divisão de bens — orientação objetiva.</p>
-            <div class="card-actions"><a class="card-link" href="familia/">Ler a página de família →</a><a class="btn btn-primary btn-wa" href="https://wa.me/5599981703994?text=Vim%20pelo%20site%2C%20%C3%A1rea%20Fam%C3%ADlia%20e%20patrim%C3%B4nio." data-cta="whatsapp-card" rel="noopener">Explique sua situação</a></div>
-          </div>
-        </article>
-        <article class="card">
-          <img class="card-img" src="img/passageiro.webp" alt="Saguão de aeroporto com malas junto à janela" width="1200" height="675" loading="lazy">
-          <div class="card-body">
-            <h3>Problema no voo ou com a bagagem</h3>
+            <div class="card-actions"><a class="card-link" href="familia/">Ler a página de família →</a><a class="btn btn-primary btn-wa" href="https://wa.me/5599981703994?text=Vim%20pelo%20site%2C%20%C3%A1rea%20Fam%C3%ADlia%20e%20patrim%C3%B4nio." data-cta="whatsapp-card" rel="noopener">Explique sua situação</a></div></div></article><article class="acard"><img class="ac-img" src="assets/home/capas/area-passageiro.webp" width="720" height="405" alt="Saguão de aeroporto com malas junto à janela" loading="lazy" decoding="async"><div class="ac-body"><h3>Problema no voo ou com a bagagem</h3>
             <p>Cancelamento, atraso, overbooking, mala extraviada ou danificada: o que registrar e quais caminhos a regulamentação contempla.</p>
-            <div class="card-actions"><a class="card-link" href="passageiro/">Abrir o Guia do Passageiro →</a><a class="btn btn-primary btn-wa" href="https://wa.me/5599981703994?text=Vim%20pelo%20site%2C%20%C3%A1rea%20Guia%20do%20Passageiro." data-cta="whatsapp-card" rel="noopener">Explique sua situação</a></div>
-          </div>
-        </article>
-        <article class="card card--guias">
-          <div class="card-guias-media"><img class="card-guias-img" src="img/guias-colecao.webp" alt="Capas da coleção Guias de Proteção, volumes 1 a 4" width="1400" height="648" loading="lazy"></div>
-          <div class="card-body">
-            <h3>Guias de Proteção</h3>
+            <div class="card-actions"><a class="card-link" href="passageiro/">Abrir o Guia do Passageiro →</a><a class="btn btn-primary btn-wa" href="https://wa.me/5599981703994?text=Vim%20pelo%20site%2C%20%C3%A1rea%20Guia%20do%20Passageiro." data-cta="whatsapp-card" rel="noopener">Explique sua situação</a></div></div></article><article class="acard"><img class="ac-img ac-img--guias" src="img/guias-colecao.webp" width="1400" height="648" alt="Capas da coleção Guias de Proteção, volumes 1 a 4" loading="lazy" decoding="async"><div class="ac-body"><h3>Guias de Proteção</h3>
             <p>Guias em e-book sobre medida protetiva, CAC e Direito de Família, em linguagem acessível. Em breve, o Guia do Passageiro nacional e internacional.</p>
-            <div class="card-actions"><a class="card-link" href="materiais/">Conhecer os Guias de Proteção →</a></div>
-          </div>
-        </article>
-      </div>
+            <div class="card-actions"><a class="card-link" href="materiais/">Conhecer os Guias de Proteção →</a></div></div></article></div>
     </div>
   </section>
 
@@ -305,6 +266,6 @@
   </div>
 </footer>
 <a class="fab-wa btn-wa" href="https://wa.me/5599981703994?text=Vim%20pelo%20site." data-cta="whatsapp-fab" aria-label="WhatsApp: explique sua situação">WhatsApp</a>
-<script src="theme.js"></script>
+<script src="assets/home/home.js" defer></script>
 </body>
 </html>
