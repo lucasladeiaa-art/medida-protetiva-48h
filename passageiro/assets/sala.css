@@ -65,7 +65,7 @@
 .sala-hero .eyebrow { display: block; font-size: .8rem; letter-spacing: .06em; line-height: 1.5; color: var(--sky); font-weight: 600; margin: 0 0 1rem; text-transform: none; font-variant: normal; animation: sala-up .9s .2s both; }
 .sala-hero .eyebrow::before { display: none; }
 .sala-hero h1 { font-weight: 400; font-size: clamp(2.3rem, 3.7vw, 3.4rem); line-height: 1.04; letter-spacing: -.025em; margin: 0 0 1.1rem; text-wrap: balance; text-shadow: 0 2px 30px rgba(0,0,0,.45); animation: sala-up 1s .3s both; }
-.sala-hero h1 em { display: block; font-style: italic; color: var(--champ); background: linear-gradient(90deg, #E7D5B5, #C9B8FF); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.sala-hero h1 em { display: block; font-style: italic; color: var(--champ); background: linear-gradient(90deg, #BFD6FF, #C9B8FF); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
 .sala-hero .lead { color: var(--tx2); font-size: 1.1rem; max-width: 32rem; animation: sala-up 1s .42s both; }
 .sala-hero .page-cta-row { display: flex; flex-wrap: wrap; gap: .8rem; margin: 1.8rem 0 0; animation: sala-up 1s .52s both; }
 .sala-trust { list-style: none; display: flex; flex-wrap: wrap; gap: .5rem 1.4rem; padding: 0; margin: 1.5rem 0 0; font-size: .85rem; color: var(--mu); animation: sala-up 1s .62s both; }
