@@ -1,5 +1,55 @@
 [
   {
+    "title": "Recebi um mandado de busca e apreensão. O que a polícia pode fazer dentro da minha casa?",
+    "slug": "mandado-de-busca-e-apreensao-o-que-a-policia-pode-fazer",
+    "area": "criminal",
+    "date": "2026-11-05",
+    "summary": "Com mandado, a polícia pode entrar de dia e apreender o que se relaciona ao fato. Veja o que o mandado deve conter, como a busca deve ser feita, seus direitos durante a diligência e o que evitar.",
+    "cover": "img/mandado-de-busca-e-apreensao-o-que-a-policia-pode-fazer.webp",
+    "coverAlt": "Corredor escuro de uma casa visto por dentro, com silhuetas desfocadas atrás do vidro da porta e reflexos de luz azul e roxa, sob chuva",
+    "reading": 9
+  },
+  {
+    "title": "A polícia levou meu celular durante uma busca. Pode acessar todas as minhas conversas?",
+    "slug": "policia-levou-meu-celular-pode-acessar-minhas-conversas",
+    "area": "criminal",
+    "date": "2026-11-05",
+    "summary": "Apreender o aparelho e acessar o conteúdo são coisas diferentes. Entenda a ordem judicial, a perícia e a cadeia de custódia, a questão da senha e o que a defesa pode pedir.",
+    "cover": "img/policia-levou-meu-celular-pode-acessar-minhas-conversas.webp",
+    "coverAlt": "Celular dentro de um saco plástico transparente lacrado com etiqueta numerada, sobre uma mesa de metal, com chuva na janela ao fundo",
+    "reading": 8
+  },
+  {
+    "title": "Como demonstrar que uma conversa de WhatsApp foi apresentada fora de contexto?",
+    "slug": "whatsapp-fora-de-contexto-como-demonstrar",
+    "area": "criminal",
+    "date": "2026-11-05",
+    "summary": "Um print mostra só um recorte. Veja como preservar a conversa original, exportar o histórico, usar ata notarial ou perícia e impugnar o trecho de forma específica, sem comprometer a defesa.",
+    "cover": "img/whatsapp-fora-de-contexto-como-demonstrar.webp",
+    "coverAlt": "Mãos segurando um celular com uma conversa desfocada, ao lado de recortes impressos de mensagens sobre a mesa, com chuva na janela",
+    "reading": 7
+  },
+  {
+    "title": "Como consultar um inquérito policial e descobrir o que já existe contra mim?",
+    "slug": "como-consultar-inquerito-policial",
+    "area": "criminal",
+    "date": "2026-11-05",
+    "summary": "A defesa tem direito de examinar e copiar os elementos já documentados na investigação. Veja onde o inquérito fica, o que pode ser consultado, o que pode ficar em sigilo e o que fazer depois.",
+    "cover": "img/como-consultar-inquerito-policial.webp",
+    "coverAlt": "Mão sobre uma pasta grossa de autos com marcadores, em um balcão de madeira iluminado por luminária, com chuva na janela ao fundo",
+    "reading": 8
+  },
+  {
+    "title": "Recebi uma citação criminal. O que acontece agora e qual é o prazo para a defesa?",
+    "slug": "citacao-criminal-o-que-acontece-prazo-para-defesa",
+    "area": "criminal",
+    "date": "2026-11-05",
+    "summary": "A citação chama a pessoa acusada a se defender em um processo que já começou. Entenda a diferença para a intimação, o prazo de 10 dias da resposta à acusação e o que vem depois.",
+    "cover": "img/citacao-criminal-o-que-acontece-prazo-para-defesa.webp",
+    "coverAlt": "Pessoa de costas no corredor de casa, à noite, segurando um documento oficial com brasão, ao lado de uma porta entreaberta e de uma janela com chuva",
+    "reading": 7
+  },
+  {
     "title": "Como contestar uma medida protetiva? Existe prazo para apresentar minha defesa?",
     "slug": "como-contestar-medida-protetiva-prazo-para-defesa",
     "area": "medida-protetiva",
