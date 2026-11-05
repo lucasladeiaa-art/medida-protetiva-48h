@@ -1,5 +1,55 @@
 [
   {
+    "title": "Existe audiência para discutir uma medida protetiva? O que acontece nela?",
+    "slug": "existe-audiencia-na-medida-protetiva",
+    "area": "medida-protetiva",
+    "date": "2026-11-05",
+    "summary": "A medida pode ser concedida sem audiência. Veja quando o juiz costuma ouvir as partes, a audiência de retratação da representação, como se preparar e por que não é preciso esperar audiência para se manifestar.",
+    "cover": "img/existe-audiencia-na-medida-protetiva.webp",
+    "coverAlt": "Sala de audiência vazia com mesa de madeira, duas cadeiras em lados opostos, microfone e tela desligada, com chuva na janela",
+    "reading": 6
+  },
+  {
+    "title": "O que acontece se a pessoa que pediu a medida desistir? Dá para retirar na delegacia?",
+    "slug": "pessoa-que-pediu-a-medida-protetiva-desistiu",
+    "area": "medida-protetiva",
+    "date": "2026-11-05",
+    "summary": "Só o juiz revoga a medida protetiva. Entenda a diferença entre a medida e o processo criminal, a retratação da representação, por que a reconciliação não encerra a medida e o que nunca fazer.",
+    "cover": "img/pessoa-que-pediu-a-medida-protetiva-desistiu.webp",
+    "coverAlt": "Mulher de costas sentada em um banco diante de uma delegacia ao anoitecer, segurando um papel dobrado, sob chuva",
+    "reading": 6
+  },
+  {
+    "title": "Como recuperar um celular, computador ou documento apreendido em uma investigação?",
+    "slug": "como-recuperar-bens-apreendidos",
+    "area": "criminal",
+    "date": "2026-11-05",
+    "summary": "Objetos apreendidos voltam quando deixam de interessar ao processo. Veja como pedir a restituição, o que não é devolvido, o que acontece com bens que se deterioram e o prazo depois do fim do processo.",
+    "cover": "img/como-recuperar-bens-apreendidos.webp",
+    "coverAlt": "Depósito de objetos apreendidos com estantes de caixas etiquetadas e um notebook lacrado em saco plástico sobre a mesa",
+    "reading": 6
+  },
+  {
+    "title": "Meu ex ficou com a casa depois da separação. Posso pedir aluguel pelo uso exclusivo?",
+    "slug": "ex-ficou-com-a-casa-aluguel-uso-exclusivo",
+    "area": "familia",
+    "date": "2026-11-05",
+    "summary": "Quem usa sozinho um imóvel comum pode ter de compensar o outro. Veja quando cabe, o que pesa na análise, como ficam filhos e despesas e os caminhos de acordo, notificação, ação e venda do imóvel.",
+    "cover": "img/ex-ficou-com-a-casa-aluguel-uso-exclusivo.webp",
+    "coverAlt": "Pessoa de costas sob guarda-chuva, segurando chaves, diante de um prédio residencial à noite com uma única janela acesa",
+    "reading": 6
+  },
+  {
+    "title": "Terminamos a união estável sem contrato nem documentos. O que acontece com o patrimônio?",
+    "slug": "uniao-estavel-sem-contrato-o-que-acontece-com-o-patrimonio",
+    "area": "familia",
+    "date": "2026-11-05",
+    "summary": "União estável não depende de papel. Sem contrato, vale a comunhão parcial. Veja o que caracteriza a união, como provar sem documentos, o que entra na partilha e os caminhos em cartório e na Justiça.",
+    "cover": "img/uniao-estavel-sem-contrato-o-que-acontece-com-o-patrimonio.webp",
+    "coverAlt": "Caixa com fotografias antigas de um casal de costas e contas espalhadas sobre a cama, com chuva na janela",
+    "reading": 6
+  },
+  {
     "title": "Casei em comunhão parcial de bens. O que efetivamente entra na partilha?",
     "slug": "comunhao-parcial-o-que-entra-na-partilha",
     "area": "familia",
