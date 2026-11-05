@@ -1,5 +1,55 @@
 [
   {
+    "title": "Casei em comunhão parcial de bens. O que efetivamente entra na partilha?",
+    "slug": "comunhao-parcial-o-que-entra-na-partilha",
+    "area": "familia",
+    "date": "2026-11-05",
+    "summary": "Entra o que foi adquirido durante o casamento, mesmo no nome de um só. Ficam fora bens anteriores, heranças e doações. Veja benfeitorias, dívidas, a data do fim da comunhão e como se preparar.",
+    "cover": "img/comunhao-parcial-o-que-entra-na-partilha.webp",
+    "coverAlt": "Mesa à noite com caderno aberto, chaves de carro e de casa e uma pilha de documentos, sob luz de luminária e chuva na janela",
+    "reading": 7
+  },
+  {
+    "title": "Ele não paga a pensão dos filhos. Como exigir na Justiça?",
+    "slug": "pensao-nao-paga-como-exigir-na-justica",
+    "area": "familia",
+    "date": "2026-11-05",
+    "summary": "Sem valor fixado, o caminho é a ação de alimentos. Com decisão ou acordo, pede-se o cumprimento: rito da prisão, penhora, desconto em folha e protesto. Veja também prescrição e o que evitar.",
+    "cover": "img/pensao-nao-paga-como-exigir-na-justica.webp",
+    "coverAlt": "Mochila escolar e lancheira infantil sobre uma cadeira ao lado de contas e calculadora, com uma pessoa de costas segurando o celular e chuva na janela",
+    "reading": 7
+  },
+  {
+    "title": "Minha ex-companheira não permite que eu veja meu filho. Como exigir o direito de convivência?",
+    "slug": "convivencia-com-o-filho-como-exigir",
+    "area": "familia",
+    "date": "2026-11-05",
+    "summary": "A convivência é um direito da criança. Veja como pedir a regulamentação ou o cumprimento do acordo, o que a lei prevê quando o contato é dificultado e o que evitar para não prejudicar o filho.",
+    "cover": "img/convivencia-com-o-filho-como-exigir.webp",
+    "coverAlt": "Pessoa de costas diante de um portão residencial fechado em manhã de chuva, segurando um bichinho de pelúcia",
+    "reading": 7
+  },
+  {
+    "title": "Posso ser preso preventivamente mesmo sem ter sido condenado?",
+    "slug": "prisao-preventiva-sem-condenacao",
+    "area": "criminal",
+    "date": "2026-11-05",
+    "summary": "A preventiva não é pena antecipada. Entenda os fundamentos e as hipóteses da lei, a exigência de fatos concretos, as medidas alternativas, a revisão a cada 90 dias e como questionar a prisão.",
+    "cover": "img/prisao-preventiva-sem-condenacao.webp",
+    "coverAlt": "Corredor longo e vazio de um fórum à noite, com porta entreaberta, banco de madeira e chuva nas janelas altas",
+    "reading": 7
+  },
+  {
+    "title": "Como preservar conversas, áudios e arquivos e documentar ameaças sem comprometer a autenticidade?",
+    "slug": "como-preservar-conversas-e-documentar-ameacas",
+    "area": "medida-protetiva",
+    "date": "2026-11-05",
+    "summary": "Guardar o original e o contexto faz diferença. Veja como exportar conversas, manter arquivos intactos, registrar episódios com datas, guardar cópias em lugar seguro e o que nunca fazer.",
+    "cover": "img/como-preservar-conversas-e-documentar-ameacas.webp",
+    "coverAlt": "Mãos anotando datas em um caderno ao lado de um celular com conversa desfocada e um pen drive, sob luz de luminária e chuva na janela",
+    "reading": 6
+  },
+  {
     "title": "Recebi um mandado de busca e apreensão. O que a polícia pode fazer dentro da minha casa?",
     "slug": "mandado-de-busca-e-apreensao-o-que-a-policia-pode-fazer",
     "area": "criminal",
