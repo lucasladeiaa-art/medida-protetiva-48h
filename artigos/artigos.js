@@ -48,11 +48,15 @@
   /* Listagem */
   var listing = document.querySelector('[data-artigos-listagem]');
   if (listing) {
+    if (listing.querySelector('[data-row]')) bindRowNav(listing);
     load().then(function (list) {
       var featured = document.querySelector('[data-destaque]');
       var empty = document.querySelector('[data-vazio]');
       var chips = document.querySelector('[data-chips]');
-      if (!list.length) { empty.hidden = false; listing.hidden = true; if (featured) featured.hidden = true; return; }
+      if (!list.length) {
+        if (!listing.querySelector('[data-row]')) { empty.hidden = false; listing.hidden = true; if (featured) featured.hidden = true; }
+        return;
+      }
       var f = list[0], fa = AREA[f.area];
       featured.innerHTML = '<a class="featured" href="' + esc(f.slug) + '.html">' +
         '<img src="' + esc(cover(f)) + '" alt="" width="1600" height="900" loading="eager" fetchpriority="high">' +
