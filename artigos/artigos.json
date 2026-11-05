@@ -1,5 +1,55 @@
 [
   {
+    "title": "Como contestar uma medida protetiva? Existe prazo para apresentar minha defesa?",
+    "slug": "como-contestar-medida-protetiva-prazo-para-defesa",
+    "area": "medida-protetiva",
+    "date": "2026-11-05",
+    "summary": "A Lei Maria da Penha não fixa um prazo próprio: vale o que está na sua decisão. Como contar o prazo, a diferença entre manifestação e recurso e o que uma defesa costuma conter.",
+    "cover": "img/como-contestar-medida-protetiva-prazo-para-defesa.webp",
+    "coverAlt": "Mãos segurando um documento judicial sob a luz de uma luminária numa mesa de cozinha à noite, com chuva na janela",
+    "reading": 10
+  },
+  {
+    "title": "Fui ameaçada hoje: como pedir uma medida protetiva e em quanto tempo o juiz decide?",
+    "slug": "fui-ameacada-como-pedir-medida-protetiva",
+    "area": "medida-protetiva",
+    "date": "2026-11-05",
+    "summary": "Onde pedir, sem advogado e sem boletim de ocorrência como condição, o que levar, o que pode ser pedido e os prazos de 48 horas previstos na Lei Maria da Penha.",
+    "cover": "img/fui-ameacada-como-pedir-medida-protetiva.webp",
+    "coverAlt": "Mulher de costas sentada na cama olhando o celular à noite, com janela chuvosa e porta fechada com luz por baixo",
+    "reading": 9
+  },
+  {
+    "title": "Posso apresentar provas depois que a medida protetiva já foi concedida?",
+    "slug": "posso-apresentar-provas-depois-da-medida-protetiva",
+    "area": "medida-protetiva",
+    "date": "2026-11-05",
+    "summary": "Sim: a defesa vem depois da decisão urgente. Que provas costumam ajudar, o que pode contaminá-las e por que a demora pesa, mesmo sem tirar o direito de provar.",
+    "cover": "img/posso-apresentar-provas-depois-da-medida-protetiva.webp",
+    "coverAlt": "Mão retirando um celular antigo de uma gaveta com papéis e um caderno, à noite, sob luz azulada da janela",
+    "reading": 7
+  },
+  {
+    "title": "Ele descumpriu a medida protetiva: e agora?",
+    "slug": "ele-descumpriu-a-medida-protetiva-o-que-fazer",
+    "area": "medida-protetiva",
+    "date": "2026-11-05",
+    "summary": "Do ponto de vista de quem pediu a proteção: o que conta como descumprimento, como registrar sem perder a prova e o que o juiz pode determinar, da ampliação das medidas à monitoração eletrônica.",
+    "cover": "img/ele-descumpriu-a-medida-protetiva-o-que-fazer.webp",
+    "coverAlt": "Vista de dentro de casa, por uma janela com cortina, de uma rua molhada à noite com as luzes traseiras de um carro ao fundo",
+    "reading": 8
+  },
+  {
+    "title": "Como pedir a revogação ou a revisão de uma medida protetiva? O que precisa ser demonstrado?",
+    "slug": "como-pedir-revogacao-ou-revisao-de-medida-protetiva",
+    "area": "medida-protetiva",
+    "date": "2026-11-05",
+    "summary": "A medida vale enquanto houver risco. O pedido de revogação ou de ajuste parcial gira em torno disso: o que mudou, como provar e o que nunca fazer enquanto o juiz não decide.",
+    "cover": "img/como-pedir-revogacao-ou-revisao-de-medida-protetiva.webp",
+    "coverAlt": "Homem de costas subindo a escadaria de um prédio clássico do fórum ao anoitecer, com pasta de documentos, sob chuva fina",
+    "reading": 8
+  },
+  {
     "title": "Atrasei a pensão: posso ser preso? Em quantos dias?",
     "slug": "pensao-atrasada-posso-ser-preso-em-quantos-dias",
     "area": "familia",
