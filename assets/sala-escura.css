@@ -1,0 +1,106 @@
+/* =========================================================
+   Rede de Proteção · Salas escuras (Família, Medida protetiva, CAC)
+   Mesmo padrão visual da Sala do Passageiro: noite, azul e roxo.
+   Escopo: body.sala-escura (carregado depois de theme.css)
+   ========================================================= */
+.sala-escura {
+  --n0: #06071280; --n1: #0B0D1C; --n2: #10132A; --n3: #171B37;
+  --ln: rgba(150,160,255,.14); --ln2: rgba(160,170,255,.26);
+  --tx: #EEF0FF; --tx2: #CDD1EE; --mu: #A3A9CF;
+  --sky: #8DB8FF; --vio: #B9A2FF; --amb: #F5C977; --champ: #E7D5B5;
+  --mono: ui-monospace, "SFMono-Regular", "JetBrains Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --ink: var(--tx); --ink-2: var(--tx2); --muted: var(--mu); --muted-2: var(--mu); --line: var(--ln); --line-strong: var(--ln2);
+  background: var(--n1); color: var(--tx2);
+  color-scheme: dark;
+}
+.sala-escura a { color: var(--sky); }
+.sala-escura a:hover { color: #fff; }
+.sala-escura :focus-visible { outline: 2px solid var(--amb); outline-offset: 3px; }
+.sala-escura h1, .sala-escura h2, .sala-escura h3 { color: var(--tx); }
+
+/* ---------- Header / toolbar ---------- */
+.sala-escura .site-header { background: rgba(9,10,24,.82); border-bottom: 1px solid var(--ln); backdrop-filter: blur(16px) saturate(1.2); -webkit-backdrop-filter: blur(16px) saturate(1.2); }
+.sala-escura .brand-name { color: var(--tx); }
+.sala-escura .brand-meta { color: var(--mu); }
+.sala-escura .brand-mark { background: linear-gradient(145deg, #2A2F66, #3B2A6E); color: var(--champ); box-shadow: inset 0 0 0 1px rgba(255,255,255,.08); }
+.sala-escura .nav-desktop a { color: var(--tx2); }
+.sala-escura .nav-desktop a:hover, .sala-escura .nav-desktop a[aria-current="page"] { color: #fff; background: rgba(140,150,255,.12); }
+.sala-escura .menu-btn { background: rgba(255,255,255,.05); border-color: var(--ln2); color: var(--tx); }
+.sala-escura .nav-mobile { border-top-color: var(--ln); }
+.sala-escura .nav-mobile a { color: var(--tx); border-bottom-color: var(--ln); }
+.sala-escura .nav-mobile a[aria-current="page"] { color: var(--amb); }
+.sala-escura .page-toolbar { background: #090B19; border-bottom: 1px solid var(--ln); }
+.sala-escura .btn-back { background: rgba(255,255,255,.04); color: var(--tx); border-color: var(--ln2); }
+.sala-escura .btn-back:hover { background: rgba(255,255,255,.08); border-color: var(--vio); color: #fff; }
+.sala-escura .page-toolbar .crumb { color: var(--mu); }
+.sala-escura .page-toolbar .crumb strong { color: var(--tx); }
+
+/* ---------- Buttons ---------- */
+.sala-escura .btn-primary, .sala-escura .header-cta .btn-primary {
+  background: linear-gradient(135deg, #5B6CFF 0%, #7A55E8 100%); color: #fff; border: 0;
+  box-shadow: 0 12px 30px rgba(98,86,240,.35), inset 0 1px 0 rgba(255,255,255,.18);
+}
+.sala-escura .btn-primary:hover { background: linear-gradient(135deg, #6A7AFF 0%, #8964F0 100%); color: #fff; }
+.sala-escura .btn-secondary { background: rgba(255,255,255,.04); color: var(--tx); border-color: var(--ln2); }
+.sala-escura .btn-secondary:hover { background: rgba(255,255,255,.08); border-color: var(--vio); color: #fff; }
+.sala-escura .fab-wa { background: linear-gradient(135deg, #5B6CFF, #7A55E8); box-shadow: 0 14px 32px rgba(40,30,120,.5); }
+
+/* ---------- CTA final + rodapé ---------- */
+.sala-escura .final-cta { position: relative; background: radial-gradient(ellipse 70% 90% at 90% 0%, rgba(122,85,232,.28), transparent 60%), radial-gradient(ellipse 60% 80% at 0% 100%, rgba(91,108,255,.18), transparent 60%), #0D0F24; border-top: 1px solid var(--ln); }
+.sala-escura .final-cta h2 { color: var(--tx); }
+.sala-escura .final-cta p { color: var(--tx2); }
+.sala-escura .final-cta .eyebrow { color: var(--amb); }
+.sala-escura .final-cta .eyebrow::before { background: var(--amb); }
+.sala-escura .final-cta .btn-back { color: var(--tx); }
+.sala-escura .site-footer { background: #07081A; border-top: 1px solid var(--ln); color: var(--mu); }
+.sala-escura .footer-grid h3 { color: var(--mu); }
+.sala-escura .footer-grid a { color: var(--tx2); }
+.sala-escura .footer-grid a:hover { color: #fff; }
+.sala-escura .footer-id { color: var(--tx2); }
+.sala-escura .footer-id strong { color: var(--tx); }
+.sala-escura .footer-grid .footer-contact a.btn-secondary { color: var(--tx); }
+.sala-escura .footer-grid .footer-contact a.btn-secondary:hover { color: #fff; }
+.sala-escura .footer-legal { border-top-color: var(--ln); }
+
+/* ---------- Hero cinematográfico: imagem em tela cheia ---------- */
+.sala-escura .page-hero { background: var(--n1); color: var(--tx); isolation: isolate; }
+.sala-escura .page-hero::before { opacity: 0; }
+.sala-escura .page-hero .wrap { position: relative; display: block; min-height: 0; padding: 0 0 3rem; }
+.sala-escura .page-hero .page-hero-img { display: block; width: 100%; aspect-ratio: 16/10; max-height: 52vh; margin: 0; object-fit: cover; filter: saturate(.75) brightness(.62) hue-rotate(-8deg); }
+.sala-escura .page-hero .wrap::after { content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: linear-gradient(180deg, rgba(7,8,21,.15) 0%, rgba(11,13,28,.55) 35%, var(--n1) 52%); }
+.sala-escura .page-hero .wrap > :not(img) { position: relative; z-index: 1; padding-inline: 1.25rem; }
+.sala-escura .page-hero .eyebrow { margin-top: -5rem; color: var(--amb); font-family: var(--mono); font-size: .72rem; letter-spacing: .24em; }
+.sala-escura .page-hero .eyebrow::before { background: var(--amb); }
+.sala-escura .page-hero h1 { color: var(--tx); text-shadow: 0 2px 30px rgba(0,0,0,.5); }
+.sala-escura .page-hero .lead { color: var(--tx2); }
+@media (min-width: 900px) {
+  .sala-escura .page-hero .wrap { display: flex; flex-direction: column; justify-content: center; min-height: 600px; padding: 0; }
+  .sala-escura .page-hero .page-hero-img { position: absolute; inset: 0; width: 100%; height: 100%; max-height: none; aspect-ratio: auto; }
+  .sala-escura .page-hero .wrap::after { background: linear-gradient(90deg, rgba(8,9,22,.94) 0%, rgba(10,12,28,.78) 38%, rgba(10,12,28,.2) 75%, rgba(10,12,28,.35) 100%), linear-gradient(0deg, var(--n1) 0%, transparent 30%); }
+  .sala-escura .page-hero .wrap > :not(img) { max-width: calc(36rem + max(2rem, (100vw - var(--max)) / 2)); padding-left: max(2rem, calc((100vw - var(--max)) / 2)); padding-right: 2rem; }
+  .sala-escura .page-hero .eyebrow { margin-top: 4.5rem; }
+}
+
+/* ---------- Conteúdo ---------- */
+.sala-escura main, .sala-escura .page-content { background: transparent; }
+.sala-escura .page-content > p:first-child { color: var(--tx); }
+.sala-escura .page-content p, .sala-escura .page-content li { color: var(--tx2); }
+.sala-escura .page-content strong { color: var(--tx); }
+.sala-escura .page-content li::marker { color: var(--vio); }
+.sala-escura .page-content .page-cta-row { border-top-color: var(--ln); }
+.sala-escura .eyebrow { color: var(--amb); }
+.sala-escura .eyebrow::before { background: var(--amb); }
+.sala-escura .callout { background: rgba(23,27,55,.6); border: 1px solid var(--ln); border-left: 3px solid var(--vio); border-radius: 12px; }
+.sala-escura .steps-list li::before { color: var(--amb); }
+.sala-escura .toc-chip { background: rgba(23,27,55,.6); border-color: var(--ln2); color: var(--tx); }
+.sala-escura .toc-chip:hover { border-color: var(--vio); color: #fff; }
+.sala-escura details.faq-item { background: rgba(23,27,55,.55); border: 1px solid var(--ln); border-radius: 12px; padding-inline: 1.2rem; margin-bottom: .7rem; }
+.sala-escura details.faq-item summary { color: var(--tx); }
+.sala-escura details.faq-item summary::after { color: var(--vio); }
+.sala-escura details.faq-item .faq-a, .sala-escura details.fam .faq-a p, .sala-escura details.fam .faq-a li { color: var(--tx2); }
+.sala-escura .kh { color: var(--amb); }
+.sala-escura .keep { background: rgba(245,201,119,.07); border: 1px solid rgba(245,201,119,.25); border-radius: 12px; color: var(--tx); }
+.sala-escura .small-note { color: var(--mu); }
+.sala-escura .page-portrait { border-radius: 14px; filter: saturate(.85); }
+.sala-escura .site-header .brand-meta { color: var(--mu); }
