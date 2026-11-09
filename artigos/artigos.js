@@ -94,3 +94,13 @@
     });
   }
 })();
+
+(function () {
+  function load() {
+    var s = document.createElement("script");
+    s.src = "../assets/refugio.js";
+    document.body.appendChild(s);
+  }
+  if (document.readyState === "complete") load();
+  else addEventListener("load", load);
+})();
