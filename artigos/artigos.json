@@ -1,0 +1,390 @@
+[
+ {
+  "title": "Existe audiência para discutir uma medida protetiva? O que acontece nela?",
+  "slug": "existe-audiencia-na-medida-protetiva",
+  "area": "medida-protetiva",
+  "date": "2026-11-05",
+  "summary": "A medida pode ser concedida sem audiência. Veja quando o juiz costuma ouvir as partes, a audiência de retratação da representação, como se preparar e por que não é preciso esperar audiência para se manifestar.",
+  "cover": "img/existe-audiencia-na-medida-protetiva.webp",
+  "coverAlt": "Sala de audiência vazia com mesa de madeira, duas cadeiras em lados opostos, microfone e tela desligada, com chuva na janela",
+  "reading": 6
+ },
+ {
+  "title": "O que acontece se a pessoa que pediu a medida desistir? Dá para retirar na delegacia?",
+  "slug": "pessoa-que-pediu-a-medida-protetiva-desistiu",
+  "area": "medida-protetiva",
+  "date": "2026-11-05",
+  "summary": "Só o juiz revoga a medida protetiva. Entenda a diferença entre a medida e o processo criminal, a retratação da representação, por que a reconciliação não encerra a medida e o que nunca fazer.",
+  "cover": "img/pessoa-que-pediu-a-medida-protetiva-desistiu.webp",
+  "coverAlt": "Mulher de costas sentada em um banco diante de uma delegacia ao anoitecer, segurando um papel dobrado, sob chuva",
+  "reading": 6
+ },
+ {
+  "title": "Como recuperar um celular, computador ou documento apreendido em uma investigação?",
+  "slug": "como-recuperar-bens-apreendidos",
+  "area": "criminal",
+  "date": "2026-11-05",
+  "summary": "Objetos apreendidos voltam quando deixam de interessar ao processo. Veja como pedir a restituição, o que não é devolvido, o que acontece com bens que se deterioram e o prazo depois do fim do processo.",
+  "cover": "img/como-recuperar-bens-apreendidos.webp",
+  "coverAlt": "Depósito de objetos apreendidos com estantes de caixas etiquetadas e um notebook lacrado em saco plástico sobre a mesa",
+  "reading": 6
+ },
+ {
+  "title": "Meu ex ficou com a casa depois da separação. Posso pedir aluguel pelo uso exclusivo?",
+  "slug": "ex-ficou-com-a-casa-aluguel-uso-exclusivo",
+  "area": "familia",
+  "date": "2026-11-05",
+  "summary": "Quem usa sozinho um imóvel comum pode ter de compensar o outro. Veja quando cabe, o que pesa na análise, como ficam filhos e despesas e os caminhos de acordo, notificação, ação e venda do imóvel.",
+  "cover": "img/ex-ficou-com-a-casa-aluguel-uso-exclusivo.webp",
+  "coverAlt": "Pessoa de costas sob guarda-chuva, segurando chaves, diante de um prédio residencial à noite com uma única janela acesa",
+  "reading": 6
+ },
+ {
+  "title": "Terminamos a união estável sem contrato nem documentos. O que acontece com o patrimônio?",
+  "slug": "uniao-estavel-sem-contrato-o-que-acontece-com-o-patrimonio",
+  "area": "familia",
+  "date": "2026-11-05",
+  "summary": "União estável não depende de papel. Sem contrato, vale a comunhão parcial. Veja o que caracteriza a união, como provar sem documentos, o que entra na partilha e os caminhos em cartório e na Justiça.",
+  "cover": "img/uniao-estavel-sem-contrato-o-que-acontece-com-o-patrimonio.webp",
+  "coverAlt": "Caixa com fotografias antigas de um casal de costas e contas espalhadas sobre a cama, com chuva na janela",
+  "reading": 6
+ },
+ {
+  "title": "Casei em comunhão parcial de bens. O que efetivamente entra na partilha?",
+  "slug": "comunhao-parcial-o-que-entra-na-partilha",
+  "area": "familia",
+  "date": "2026-11-05",
+  "summary": "Entra o que foi adquirido durante o casamento, mesmo no nome de um só. Ficam fora bens anteriores, heranças e doações. Veja benfeitorias, dívidas, a data do fim da comunhão e como se preparar.",
+  "cover": "img/comunhao-parcial-o-que-entra-na-partilha.webp",
+  "coverAlt": "Mesa à noite com caderno aberto, chaves de carro e de casa e uma pilha de documentos, sob luz de luminária e chuva na janela",
+  "reading": 7
+ },
+ {
+  "title": "Ele não paga a pensão dos filhos. Como exigir na Justiça?",
+  "slug": "pensao-nao-paga-como-exigir-na-justica",
+  "area": "familia",
+  "date": "2026-11-05",
+  "summary": "Sem valor fixado, o caminho é a ação de alimentos. Com decisão ou acordo, pede-se o cumprimento: rito da prisão, penhora, desconto em folha e protesto. Veja também prescrição e o que evitar.",
+  "cover": "img/pensao-nao-paga-como-exigir-na-justica.webp",
+  "coverAlt": "Mochila escolar e lancheira infantil sobre uma cadeira ao lado de contas e calculadora, com uma pessoa de costas segurando o celular e chuva na janela",
+  "reading": 7
+ },
+ {
+  "title": "Minha ex-companheira não permite que eu veja meu filho. Como exigir o direito de convivência?",
+  "slug": "convivencia-com-o-filho-como-exigir",
+  "area": "familia",
+  "date": "2026-11-05",
+  "summary": "A convivência é um direito da criança. Veja como pedir a regulamentação ou o cumprimento do acordo, o que a lei prevê quando o contato é dificultado e o que evitar para não prejudicar o filho.",
+  "cover": "img/convivencia-com-o-filho-como-exigir.webp",
+  "coverAlt": "Pessoa de costas diante de um portão residencial fechado em manhã de chuva, segurando um bichinho de pelúcia",
+  "reading": 7
+ },
+ {
+  "title": "Posso ser preso preventivamente mesmo sem ter sido condenado?",
+  "slug": "prisao-preventiva-sem-condenacao",
+  "area": "criminal",
+  "date": "2026-11-05",
+  "summary": "A preventiva não é pena antecipada. Entenda os fundamentos e as hipóteses da lei, a exigência de fatos concretos, as medidas alternativas, a revisão a cada 90 dias e como questionar a prisão.",
+  "cover": "img/prisao-preventiva-sem-condenacao.webp",
+  "coverAlt": "Corredor longo e vazio de um fórum à noite, com porta entreaberta, banco de madeira e chuva nas janelas altas",
+  "reading": 7
+ },
+ {
+  "title": "Como preservar conversas, áudios e arquivos e documentar ameaças sem comprometer a autenticidade?",
+  "slug": "como-preservar-conversas-e-documentar-ameacas",
+  "area": "medida-protetiva",
+  "date": "2026-11-05",
+  "summary": "Guardar o original e o contexto faz diferença. Veja como exportar conversas, manter arquivos intactos, registrar episódios com datas, guardar cópias em lugar seguro e o que nunca fazer.",
+  "cover": "img/como-preservar-conversas-e-documentar-ameacas.webp",
+  "coverAlt": "Mãos anotando datas em um caderno ao lado de um celular com conversa desfocada e um pen drive, sob luz de luminária e chuva na janela",
+  "reading": 6
+ },
+ {
+  "title": "Recebi um mandado de busca e apreensão. O que a polícia pode fazer dentro da minha casa?",
+  "slug": "mandado-de-busca-e-apreensao-o-que-a-policia-pode-fazer",
+  "area": "criminal",
+  "date": "2026-11-05",
+  "summary": "Com mandado, a polícia pode entrar de dia e apreender o que se relaciona ao fato. Veja o que o mandado deve conter, como a busca deve ser feita, seus direitos durante a diligência e o que evitar.",
+  "cover": "img/mandado-de-busca-e-apreensao-o-que-a-policia-pode-fazer.webp",
+  "coverAlt": "Corredor escuro de uma casa visto por dentro, com silhuetas desfocadas atrás do vidro da porta e reflexos de luz azul e roxa, sob chuva",
+  "reading": 9
+ },
+ {
+  "title": "A polícia levou meu celular durante uma busca. Pode acessar todas as minhas conversas?",
+  "slug": "policia-levou-meu-celular-pode-acessar-minhas-conversas",
+  "area": "criminal",
+  "date": "2026-11-05",
+  "summary": "Apreender o aparelho e acessar o conteúdo são coisas diferentes. Entenda a ordem judicial, a perícia e a cadeia de custódia, a questão da senha e o que a defesa pode pedir.",
+  "cover": "img/policia-levou-meu-celular-pode-acessar-minhas-conversas.webp",
+  "coverAlt": "Celular dentro de um saco plástico transparente lacrado com etiqueta numerada, sobre uma mesa de metal, com chuva na janela ao fundo",
+  "reading": 8
+ },
+ {
+  "title": "Como demonstrar que uma conversa de WhatsApp foi apresentada fora de contexto?",
+  "slug": "whatsapp-fora-de-contexto-como-demonstrar",
+  "area": "criminal",
+  "date": "2026-11-05",
+  "summary": "Um print mostra só um recorte. Veja como preservar a conversa original, exportar o histórico, usar ata notarial ou perícia e impugnar o trecho de forma específica, sem comprometer a defesa.",
+  "cover": "img/whatsapp-fora-de-contexto-como-demonstrar.webp",
+  "coverAlt": "Mãos segurando um celular com uma conversa desfocada, ao lado de recortes impressos de mensagens sobre a mesa, com chuva na janela",
+  "reading": 7
+ },
+ {
+  "title": "Como consultar um inquérito policial e descobrir o que já existe contra mim?",
+  "slug": "como-consultar-inquerito-policial",
+  "area": "criminal",
+  "date": "2026-11-05",
+  "summary": "A defesa tem direito de examinar e copiar os elementos já documentados na investigação. Veja onde o inquérito fica, o que pode ser consultado, o que pode ficar em sigilo e o que fazer depois.",
+  "cover": "img/como-consultar-inquerito-policial.webp",
+  "coverAlt": "Mão sobre uma pasta grossa de autos com marcadores, em um balcão de madeira iluminado por luminária, com chuva na janela ao fundo",
+  "reading": 8
+ },
+ {
+  "title": "Recebi uma citação criminal. O que acontece agora e qual é o prazo para a defesa?",
+  "slug": "citacao-criminal-o-que-acontece-prazo-para-defesa",
+  "area": "criminal",
+  "date": "2026-11-05",
+  "summary": "A citação chama a pessoa acusada a se defender em um processo que já começou. Entenda a diferença para a intimação, o prazo de 10 dias da resposta à acusação e o que vem depois.",
+  "cover": "img/citacao-criminal-o-que-acontece-prazo-para-defesa.webp",
+  "coverAlt": "Pessoa de costas no corredor de casa, à noite, segurando um documento oficial com brasão, ao lado de uma porta entreaberta e de uma janela com chuva",
+  "reading": 7
+ },
+ {
+  "title": "Como contestar uma medida protetiva? Existe prazo para apresentar minha defesa?",
+  "slug": "como-contestar-medida-protetiva-prazo-para-defesa",
+  "area": "medida-protetiva",
+  "date": "2026-11-05",
+  "summary": "A Lei Maria da Penha não fixa um prazo próprio: vale o que está na sua decisão. Como contar o prazo, a diferença entre manifestação e recurso e o que uma defesa costuma conter.",
+  "cover": "img/como-contestar-medida-protetiva-prazo-para-defesa.webp",
+  "coverAlt": "Mãos segurando um documento judicial sob a luz de uma luminária numa mesa de cozinha à noite, com chuva na janela",
+  "reading": 10
+ },
+ {
+  "title": "Fui ameaçada hoje: como pedir uma medida protetiva e em quanto tempo o juiz decide?",
+  "slug": "fui-ameacada-como-pedir-medida-protetiva",
+  "area": "medida-protetiva",
+  "date": "2026-11-05",
+  "summary": "Onde pedir, sem advogado e sem boletim de ocorrência como condição, o que levar, o que pode ser pedido e os prazos de 48 horas previstos na Lei Maria da Penha.",
+  "cover": "img/fui-ameacada-como-pedir-medida-protetiva.webp",
+  "coverAlt": "Mulher de costas sentada na cama olhando o celular à noite, com janela chuvosa e porta fechada com luz por baixo",
+  "reading": 9
+ },
+ {
+  "title": "Posso apresentar provas depois que a medida protetiva já foi concedida?",
+  "slug": "posso-apresentar-provas-depois-da-medida-protetiva",
+  "area": "medida-protetiva",
+  "date": "2026-11-05",
+  "summary": "Sim: a defesa vem depois da decisão urgente. Que provas costumam ajudar, o que pode contaminá-las e por que a demora pesa, mesmo sem tirar o direito de provar.",
+  "cover": "img/posso-apresentar-provas-depois-da-medida-protetiva.webp",
+  "coverAlt": "Mão retirando um celular antigo de uma gaveta com papéis e um caderno, à noite, sob luz azulada da janela",
+  "reading": 7
+ },
+ {
+  "title": "Ele descumpriu a medida protetiva: e agora?",
+  "slug": "ele-descumpriu-a-medida-protetiva-o-que-fazer",
+  "area": "medida-protetiva",
+  "date": "2026-11-05",
+  "summary": "Do ponto de vista de quem pediu a proteção: o que conta como descumprimento, como registrar sem perder a prova e o que o juiz pode determinar, da ampliação das medidas à monitoração eletrônica.",
+  "cover": "img/ele-descumpriu-a-medida-protetiva-o-que-fazer.webp",
+  "coverAlt": "Vista de dentro de casa, por uma janela com cortina, de uma rua molhada à noite com as luzes traseiras de um carro ao fundo",
+  "reading": 8
+ },
+ {
+  "title": "Como pedir a revogação ou a revisão de uma medida protetiva? O que precisa ser demonstrado?",
+  "slug": "como-pedir-revogacao-ou-revisao-de-medida-protetiva",
+  "area": "medida-protetiva",
+  "date": "2026-11-05",
+  "summary": "A medida vale enquanto houver risco. O pedido de revogação ou de ajuste parcial gira em torno disso: o que mudou, como provar e o que nunca fazer enquanto o juiz não decide.",
+  "cover": "img/como-pedir-revogacao-ou-revisao-de-medida-protetiva.webp",
+  "coverAlt": "Homem de costas subindo a escadaria de um prédio clássico do fórum ao anoitecer, com pasta de documentos, sob chuva fina",
+  "reading": 8
+ },
+ {
+  "title": "Atrasei a pensão: posso ser preso? Em quantos dias?",
+  "slug": "pensao-atrasada-posso-ser-preso-em-quantos-dias",
+  "area": "familia",
+  "date": "2026-11-05",
+  "summary": "O atraso da pensão pode levar à prisão civil, mas ela não é automática: depende de execução pelo rito da prisão, de intimação ou citação e do prazo de 3 dias para pagar, provar que pagou ou justificar.",
+  "cover": "img/pensao-atrasada-posso-ser-preso-em-quantos-dias.webp",
+  "coverAlt": "Rua noturna sob chuva, reflexos em azul e roxo, homem de costas caminhando perante porta de prédio clássico",
+  "reading": 12
+ },
+ {
+  "title": "Sou CAC e virei investigado ou réu. Perco meu CR e minhas armas?",
+  "slug": "cac-investigado-ou-reu-perco-cr-e-armas",
+  "area": "cac",
+  "date": "2026-11-03",
+  "summary": "Inquérito e processo não cancelam o CR sozinhos, mas podem levar a suspensão cautelar e cassação na PF. O que dizem o Estatuto, o Decreto 11.615/2023 e a IN DG/PF 311/2025.",
+  "cover": "img/cac-investigado-ou-reu-perco-cr-e-armas.webp",
+  "coverAlt": "Maleta de arma fechada sobre uma mesa ao lado de um documento oficial, com chuva na janela e a cidade à noite",
+  "reading": 19
+ },
+ {
+  "title": "Descumpri a medida protetiva. E agora?",
+  "slug": "descumpri-medida-protetiva-e-agora",
+  "area": "medida-protetiva",
+  "date": "2026-10-29",
+  "summary": "O que diz o art. 24-A da Lei Maria da Penha, o que acontece quando a própria pessoa protegida procura o contato e quais cuidados práticos fazem diferença depois de um descumprimento.",
+  "cover": "img/descumpri-medida-protetiva-e-agora.webp",
+  "coverAlt": "Mão segurando um celular à noite, com uma mensagem na tela",
+  "reading": 13
+ },
+ {
+  "title": "Sou CAC, tenho porte ou registro e recebi uma medida protetiva. O que acontece com minhas armas e com meu CR?",
+  "slug": "cac-medida-protetiva-acervo-registro",
+  "area": "cac",
+  "date": "2026-10-29",
+  "summary": "Suspensão da posse, apreensão do acervo, cassação do CR e restituição: o que dizem a Lei Maria da Penha, o Decreto 11.615/2023 e a IN DG/PF 311/2025.",
+  "cover": "img/cac-medida-protetiva-acervo-registro.webp",
+  "coverAlt": "Maleta de armas fechada sobre uma mesa escura",
+  "reading": 18
+ },
+ {
+  "title": "A pensão acaba aos 18 ou aos 21 anos?",
+  "slug": "pensao-acaba-aos-18-ou-aos-21",
+  "area": "familia",
+  "date": "2026-10-29",
+  "summary": "A pensão não termina sozinha em nenhuma idade. O que muda na maioridade e qual é o caminho correto para encerrar a obrigação.",
+  "cover": "img/pensao-acaba-aos-18-ou-aos-21.webp",
+  "coverAlt": "Bolo de aniversário de 18 anos sobre uma mesa de estudos, à noite, com chuva na janela",
+  "reading": 10
+ },
+ {
+  "title": "Guarda compartilhada: ainda preciso pagar pensão?",
+  "slug": "guarda-compartilhada-paga-pensao",
+  "area": "familia",
+  "date": "2026-10-29",
+  "summary": "Guarda compartilhada não é metade para cada um e não elimina a pensão. Entenda como as despesas do filho se dividem.",
+  "cover": "img/guarda-compartilhada-paga-pensao.webp",
+  "coverAlt": "Mochila e tênis de criança junto à porta, com duas chaves penduradas e chuva na janela",
+  "reading": 9
+ },
+ {
+  "title": "Fui intimado da medida protetiva e mandei mensagem. E agora?",
+  "slug": "recebi-intimacao-e-mandei-mensagem-medida-protetiva",
+  "area": "criminal",
+  "date": "2026-10-29",
+  "summary": "Uma mensagem sem ameaça, enviada depois da intimação, pode configurar o crime do art. 24-A da Lei Maria da Penha. Entenda o que a lei diz e o que fazer.",
+  "cover": "img/recebi-intimacao-e-mandei-mensagem-medida-protetiva.webp",
+  "coverAlt": "Celular aceso sobre a mesa à noite, com chuva na janela",
+  "reading": 11
+ },
+ {
+  "title": "Recebi uma medida protetiva. Respostas às dúvidas das primeiras 48 horas",
+  "slug": "medida-protetiva-primeiras-48-horas",
+  "area": "medida-protetiva",
+  "date": "2026-10-28",
+  "summary": "Contato, armas, descumprimento, filhos, prazo e antecedentes: as perguntas de quem acabou de ser intimado.",
+  "cover": "img/medida-protetiva-primeiras-48-horas.webp",
+  "coverAlt": "Envelope de intimação sobre a mesa, em luz baixa",
+  "reading": 3
+ },
+ {
+  "title": "Saí de casa por causa de uma medida protetiva. Perco a guarda dos meus filhos ou o meu imóvel?",
+  "slug": "medida-protetiva-sai-de-casa-guarda-imovel",
+  "area": "familia",
+  "date": "2026-10-28",
+  "summary": "O afastamento do lar é provisório. Veja o que acontece com o imóvel, a guarda, as visitas e a pensão.",
+  "cover": "img/medida-protetiva-sai-de-casa-guarda-imovel.webp",
+  "coverAlt": "Homem de costas saindo de casa à noite com uma bolsa",
+  "reading": 4
+ },
+ {
+  "title": "Fui intimado para depor na delegacia. Sou obrigado a ir e posso ficar calado?",
+  "slug": "intimado-depor-delegacia-direito-ao-silencio",
+  "area": "criminal",
+  "date": "2026-10-28",
+  "summary": "Testemunha ou investigado: o que muda, quando é possível ficar em silêncio e por que ir com advogado.",
+  "cover": "img/intimado-depor-delegacia-direito-ao-silencio.webp",
+  "coverAlt": "Cadeira vazia com uma intimação num corredor de delegacia",
+  "reading": 3
+ },
+ {
+  "title": "Posso ver meu filho com medida protetiva?",
+  "slug": "posso-ver-meu-filho-com-medida-protetiva",
+  "area": "medida-protetiva",
+  "date": "2026-10-28",
+  "summary": "Quando a medida protetiva alcança os filhos, o que acontece com a convivência e a guarda, e como pedir ao juiz que regule as visitas.",
+  "cover": "img/posso-ver-meu-filho-com-medida-protetiva.webp",
+  "coverAlt": "Tênis de criança no chão de um quarto escuro, ao lado da mão de um homem",
+  "reading": 14
+ },
+ {
+  "title": "Fui acusado falsamente: o que fazer antes de depor",
+  "slug": "acusado-falsamente-o-que-fazer-antes-de-depor",
+  "area": "criminal",
+  "date": "2026-10-28",
+  "summary": "Direito ao silêncio, acesso aos autos, preservação de provas e o que não fazer com quem acusou, antes do depoimento na delegacia.",
+  "cover": "img/acusado-falsamente-o-que-fazer-antes-de-depor.webp",
+  "coverAlt": "Cadeira vazia diante de uma mesa com uma intimação, em sala escura",
+  "reading": 13
+ },
+ {
+  "title": "Medida protetiva aparece em antecedentes? Atrapalha concurso, emprego ou viagem?",
+  "slug": "medida-protetiva-aparece-em-antecedentes-concurso-emprego-viagem",
+  "area": "medida-protetiva",
+  "date": "2026-10-28",
+  "summary": "O que a medida protetiva registra, o que aparece numa certidão de antecedentes e como ela pode repercutir em concurso, emprego e viagem.",
+  "cover": "img/medida-protetiva-aparece-em-antecedentes-concurso-emprego-viagem.webp",
+  "coverAlt": "Passaporte e certidão sobre uma mesa escura, com luzes de aeroporto ao fundo",
+  "reading": 14
+ },
+ {
+  "title": "Tenho medida protetiva e ela chegou no mesmo lugar que eu: e agora?",
+  "slug": "ela-chegou-no-mesmo-lugar-medida-protetiva",
+  "area": "medida-protetiva",
+  "date": "2026-10-28",
+  "summary": "Chegar primeiro não protege ninguém. O que conta é o que você faz depois de perceber a presença dela.",
+  "cover": "img/ela-chegou-no-mesmo-lugar-medida-protetiva.webp",
+  "coverAlt": "Mesa vazia junto à janela chuvosa de um restaurante à noite, com um homem saindo pela porta",
+  "reading": 13
+ },
+ {
+  "title": "Perdi o emprego e pago pensão. O que fazer?",
+  "slug": "perdi-o-emprego-e-pago-pensao-o-que-fazer",
+  "area": "familia",
+  "date": "2026-10-28",
+  "summary": "A obrigação não para sozinha quando o emprego acaba. O caminho é pedir a revisão ao juiz logo e pagar o que for possível enquanto isso.",
+  "cover": "img/perdi-o-emprego-e-pago-pensao-o-que-fazer.webp",
+  "coverAlt": "Homem de costas numa cozinha escura, com uma caixa de pertences do trabalho sobre a mesa e chuva na janela",
+  "reading": 12
+ },
+ {
+  "title": "Depp x Heard: o mesmo casamento, dois tribunais e dois veredictos opostos",
+  "slug": "depp-heard-dois-tribunais-dois-veredictos",
+  "area": "mundo-em-disputa",
+  "date": "2026-11-09",
+  "summary": "Em Londres, a Justiça concluiu que um jornal podia chamar Johnny Depp de agressor. Na Virgínia, um júri decidiu que Amber Heard o difamou. Como as regras do processo explicam dois resultados opostos, e o que mudaria no Brasil.",
+  "cover": "img/depp-heard-dois-tribunais-dois-veredictos.webp",
+  "coverAlt": "Cartaz em estilo de cinema com os rostos de Johnny Depp e Amber Heard separados por uma linha de luz, o fórum de Fairfax ao fundo e o advogado Lucas Brito Ladeia em primeiro plano, de braços abertos",
+  "reading": 7,
+  "linha": "B",
+  "tagline": "Um casamento. Dois países. Dois veredictos opostos.",
+  "posterTitle": "Duas Verdades",
+  "related": [
+   "whatsapp-fora-de-contexto-como-demonstrar",
+   "como-preservar-conversas-e-documentar-ameacas",
+   "acusado-falsamente-o-que-fazer-antes-de-depor"
+  ],
+  "ordem": 1
+ },
+ {
+  "title": "Caso Nvidia: o CEO sob investigação interna e a pergunta que decide qualquer prova digital",
+  "slug": "caso-nvidia-cadeia-de-custodia-prova-digital",
+  "area": "mundo-em-disputa",
+  "date": "2026-11-09",
+  "summary": "O conselho da Nvidia abriu investigação para apurar se Jensen Huang foi alvo de inteligência estrangeira. Ninguém foi acusado de crime. O caso ilumina a regra que decide o destino de mensagens, prints e celulares: a cadeia de custódia, e o que o direito brasileiro faz com prova que perdeu o rastro.",
+  "cover": "img/caso-nvidia-cadeia-de-custodia-prova-digital.webp",
+  "coverAlt": "Cartaz em estilo de cinema com a sede de uma empresa de tecnologia em Santa Clara ao entardecer, uma linha luminosa ligando as etapas coleta, lacre, hash e perícia, e o advogado Lucas Brito Ladeia em primeiro plano, sério",
+  "reading": 9,
+  "linha": "B",
+  "tagline": "Na prova digital, o lacre é um número. Se ele muda, a história muda.",
+  "posterTitle": "O Lacre",
+  "related": [
+   "como-preservar-conversas-e-documentar-ameacas",
+   "whatsapp-fora-de-contexto-como-demonstrar",
+   "policia-levou-meu-celular-pode-acessar-minhas-conversas"
+  ],
+  "ordem": 2
+ }
+]
