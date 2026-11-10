@@ -561,12 +561,19 @@
     }
     function startCarry() {
       var c = document.querySelector(".hero-chama");
+      var nx, ny;
       if (c) {
         var r = c.getBoundingClientRect();
-        kick(r.left + r.width / 2, r.top + r.height * 0.62);
+        nx = r.left + r.width / 2;
+        ny = r.top + r.height * 0.62;
       } else if (W) {
-        kick(W * 0.76, Math.min(H * 0.68, H * 0.72));
-      }
+        nx = W * 0.76;
+        ny = Math.min(H * 0.68, H * 0.72);
+      } else return;
+      x = tx = nx;
+      y = ty = ny;
+      root.style.setProperty("--rx", x + "px");
+      root.style.setProperty("--ry", y + "px");
     }
     afterCss(function () { startArrival(); startCarry(); });
 
