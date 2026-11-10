@@ -239,6 +239,10 @@ html:not(.js) .hook-track span:first-child { opacity: 1; transform: none; }
 .footer-grid a:hover { color: #fff; }
 .footer-id { margin: 0; line-height: 1.6; color: var(--tx2); }
 .footer-id strong { color: var(--tx); }
+.footer-ig { display:flex; flex-wrap:wrap; gap:.3rem 1rem; margin:.7rem 0 0; padding:0; font-size:.82rem; line-height:1.45; }
+.footer-ig a { color:inherit; text-decoration:none; opacity:.88; }
+.footer-ig a:hover, .footer-ig a:focus-visible { opacity:1; text-decoration:underline; text-underline-offset:.15em; }
+
 .footer-contact { display: flex; flex-wrap: wrap; gap: .55rem; margin-top: 1rem; }
 .footer-contact .btn { min-height: 2.5rem; padding: .5rem 1rem; font-size: .88rem; }
 .footer-legal { margin-top: 2rem; padding-top: 1.2rem; border-top: 1px solid var(--ln); font-size: .85rem; color: var(--mu2); }
