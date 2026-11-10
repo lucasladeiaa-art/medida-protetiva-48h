@@ -10,13 +10,23 @@
     "reading": 13
   },
   {
+    "title": "Moro no exterior e preciso resolver um problema jurídico no Brasil. Preciso voltar?",
+    "slug": "moro-no-exterior-preciso-voltar-brasil",
+    "area": "familia",
+    "date": "2026-11-10",
+    "summary": "Nem sempre é preciso voltar ao Brasil para começar ou acompanhar um processo. Veja o que a procuração permite, o que o juiz brasileiro pode decidir mesmo com você longe e quando o comparecimento pessoal pode ser exigido.",
+    "cover": "img/moro-no-exterior-preciso-voltar-brasil.webp",
+    "coverAlt": "Mala fechada e sapatos ao lado de uma porta entreaberta, chaves na parede e, sobre a mesa, papéis sob a luz de uma luminária, com chuva e luzes de uma cidade desconhecida na janela",
+    "reading": 13
+  },
+  {
     "title": "Depp x Heard: o mesmo casamento, dois tribunais e dois veredictos opostos",
     "slug": "depp-heard-dois-tribunais-dois-veredictos",
     "area": "mundo-em-disputa",
     "date": "2026-11-09",
     "summary": "Em Londres, a Justiça concluiu que um jornal podia chamar Johnny Depp de agressor. Na Virgínia, um júri decidiu que Amber Heard o difamou. Como as regras do processo explicam dois resultados opostos, e o que mudaria no Brasil.",
     "cover": "img/depp-heard-dois-tribunais-dois-veredictos.webp",
-    "coverAlt": "Cartaz em estilo de cinema com os rostos de Johnny Depp e Amber Heard separados por uma linha de luz, o fórum de Fairfax ao fundo e o advogado Lucas Brito Ladeia em primeiro plano, de braços abertos",
+    "coverAlt": "Duas salas vazias ligadas por uma porta aberta: à esquerda uma cadeira sob luz vermelha, à direita outra cadeira junto a uma janela com chuva",
     "reading": 7,
     "linha": "B",
     "tagline": "Um casamento. Dois países. Dois veredictos opostos.",
@@ -35,7 +45,7 @@
     "date": "2026-11-09",
     "summary": "O conselho da Nvidia abriu investigação para apurar se Jensen Huang foi alvo de inteligência estrangeira. Ninguém foi acusado de crime. O caso ilumina a regra que decide o destino de mensagens, prints e celulares: a cadeia de custódia, e o que o direito brasileiro faz com prova que perdeu o rastro.",
     "cover": "img/caso-nvidia-cadeia-de-custodia-prova-digital.webp",
-    "coverAlt": "Cartaz em estilo de cinema com a sede de uma empresa de tecnologia em Santa Clara ao entardecer, uma linha luminosa ligando as etapas coleta, lacre, hash e perícia, e o advogado Lucas Brito Ladeia em primeiro plano, sério",
+    "coverAlt": "Aparelho lacrado em saco plástico transparente, com etiqueta de evidência em branco, sobre uma mesa escura",
     "reading": 9,
     "linha": "B",
     "tagline": "Na prova digital, o lacre é um número. Se ele muda, a história muda.",
