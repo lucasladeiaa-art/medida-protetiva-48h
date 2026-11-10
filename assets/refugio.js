@@ -10,13 +10,14 @@
       return n;
     }
     var sheet = document.querySelector('link[href*="home-v2.css"]') || document.querySelector('link[href*="artigos.css"]');
-    if (sheet && !document.querySelector('link[href*="refugio.css"]')) {
-      var link = document.createElement("link");
-      link.rel = "stylesheet";
-      link.href = sheet.href.indexOf("home-v2.css") >= 0
+    var cssLink = document.querySelector('link[href*="refugio.css"]');
+    if (sheet && !cssLink) {
+      cssLink = document.createElement("link");
+      cssLink.rel = "stylesheet";
+      cssLink.href = sheet.href.indexOf("home-v2.css") >= 0
         ? new URL("../refugio.css", sheet.href).href
         : new URL("../assets/refugio.css", sheet.href).href;
-      document.head.appendChild(link);
+      document.head.appendChild(cssLink);
     }
     document.body.appendChild(el("div", "refugio-fog"));
     document.body.appendChild(el("div", "refugio-grain"));
@@ -32,27 +33,6 @@
     var cv = el("canvas", "refugio-dust");
     document.body.appendChild(cv);
 
-    try {
-      if (!sessionStorage.getItem("refugio-chegou")) {
-        sessionStorage.setItem("refugio-chegou", "1");
-        document.body.classList.add("refugio-in");
-        setTimeout(function () { document.body.classList.remove("refugio-in"); }, 980);
-      }
-    } catch (err) {}
-
-    function once(sel, cls, th) {
-      var nodes = document.querySelectorAll(sel);
-      if (!nodes.length || !("IntersectionObserver" in window)) return;
-      var io = new IntersectionObserver(function (ents) {
-        ents.forEach(function (en) {
-          if (en.isIntersecting) { en.target.classList.add(cls); io.unobserve(en.target); }
-        });
-      }, { threshold: th });
-      for (var i = 0; i < nodes.length; i++) io.observe(nodes[i]);
-    }
-    once(".art-hero h1, .post-head h1", "refugio-wake", 0.35);
-    once(".refugio-farol", "is-sweep", 0.4);
-
     var ctx = cv.getContext("2d", { alpha: true });
     var W = 0, H = 0, parts = [];
     var tx = 0, ty = 0, x = 0, y = 0;
@@ -64,16 +44,16 @@
       cv.width = W;
       cv.height = H;
       tx = x = W * 0.5;
-      ty = y = H * 0.16;
+      ty = y = Math.min(150, H * 0.18);
       parts = [];
-      for (var i = 0; i < 18; i++) {
+      for (var i = 0; i < 32; i++) {
         parts.push({
           x: Math.random() * W,
           y: Math.random() * H,
-          r: 0.5 + Math.random() * 1.25,
-          vx: -0.12 + Math.random() * 0.24,
-          vy: -0.16 - Math.random() * 0.3,
-          a: 0.16 + Math.random() * 0.34
+          r: 0.7 + Math.random() * 1.7,
+          vx: -0.14 + Math.random() * 0.28,
+          vy: -0.18 - Math.random() * 0.32,
+          a: 0.28 + Math.random() * 0.5
         });
       }
     }
@@ -82,7 +62,7 @@
 
     function draw() {
       ctx.clearRect(0, 0, W, H);
-      var reach = Math.min(W, H) * 0.7;
+      var reach = Math.min(W, H) * 0.85;
       for (var i = 0; i < parts.length; i++) {
         var p = parts[i];
         p.x += p.vx;
@@ -94,7 +74,7 @@
         var vis = 1 - d / reach;
         if (vis <= 0) continue;
         ctx.beginPath();
-        ctx.fillStyle = "rgba(232,214,255," + (p.a * vis * 0.5) + ")";
+        ctx.fillStyle = "rgba(236,220,255," + (p.a * vis * 0.85) + ")";
         ctx.arc(p.x, p.y, p.r, 0, 6.283185307179586);
         ctx.fill();
       }
@@ -109,6 +89,7 @@
       draw();
       if (performance.now() - last > 2400 && Math.abs(tx - x) < 0.6 && Math.abs(ty - y) < 0.6) {
         document.body.classList.remove("refugio-lit");
+        ctx.clearRect(0, 0, W, H);
         running = false;
         raf = 0;
         return;
@@ -124,6 +105,38 @@
       if (!running) { running = true; raf = requestAnimationFrame(loop); }
     }
 
+    function startArrival() {
+      try {
+        if (sessionStorage.getItem("refugio-chegou")) return;
+        sessionStorage.setItem("refugio-chegou", "1");
+      } catch (err) {}
+      document.body.classList.add("refugio-in");
+      setTimeout(function () { document.body.classList.remove("refugio-in"); }, 1600);
+    }
+
+    function afterCss(fn) {
+      if (!cssLink) { fn(); return; }
+      var done = false;
+      function go() { if (done) return; done = true; fn(); }
+      cssLink.addEventListener("load", go);
+      if (cssLink.sheet) go();
+      setTimeout(go, 400);
+    }
+    afterCss(startArrival);
+
+    function once(sel, cls, th) {
+      var nodes = document.querySelectorAll(sel);
+      if (!nodes.length || !("IntersectionObserver" in window)) return;
+      var io = new IntersectionObserver(function (ents) {
+        ents.forEach(function (en) {
+          if (en.isIntersecting) { en.target.classList.add(cls); io.unobserve(en.target); }
+        });
+      }, { threshold: th });
+      for (var i = 0; i < nodes.length; i++) io.observe(nodes[i]);
+    }
+    once("#hero-title, .art-hero h1, .post-head h1", "refugio-wake", 0.35);
+    once(".refugio-farol", "is-sweep", 0.4);
+
     addEventListener("pointermove", function (e) { kick(e.clientX, e.clientY); }, { passive: true });
     document.addEventListener("visibilitychange", function () {
       if (document.hidden) {
@@ -131,6 +144,7 @@
         running = false;
         if (raf) cancelAnimationFrame(raf);
         raf = 0;
+        if (ctx) ctx.clearRect(0, 0, W, H);
       }
     });
 
