@@ -6,7 +6,8 @@
     "medida-protetiva": "Medida protetiva",
     familia: "Família",
     criminal: "Criminal",
-    cac: "CAC"
+    cac: "CAC",
+    "mundo-em-disputa": "Mundo em Disputa"
   };
   function read() {
     try {

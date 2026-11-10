@@ -363,7 +363,8 @@ footer .disc{color:var(--soft);font-size:.95rem;border-top:1px solid var(--line-
       Rede de Proteção
     </a>
     <small>Imperatriz-MA</small>
-    <nav class="nav" aria-label="Seções do site"><ul><li><a href="../">Início</a></li><li><a href="../medida-protetiva-48h/">Medida protetiva</a></li><li><a href="../cac/">CAC</a></li><li><a href="../familia/">Família</a></li><li><a href="./" aria-current="page">Pensão</a></li><li><a href="../artigos/">Artigos</a></li></ul></nav>
+    <button type="button" class="busca-btn" id="buscaBtn" style="width:2.6rem;height:2.6rem;display:inline-grid;place-items:center;padding:0;flex:none;border-radius:12px" aria-label="Buscar" aria-expanded="false" aria-controls="busca-painel" aria-haspopup="dialog"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button>
+    <nav class="nav" aria-label="Seções do site"><ul><li><a href="../">Início</a></li><li><a href="../medida-protetiva/">Medida protetiva</a></li><li><a href="../criminal/">Criminal</a></li><li><a href="../cac/">CAC</a></li><li><a href="../familia/">Família</a></li><li><a href="../materiais/">Guias de Proteção</a></li><li><a href="../mundo-em-disputa/">Mundo em Disputa</a></li><li><a href="../artigos/">Artigos</a></li></ul></nav>
   </header>
 
   <main id="conteudo">
@@ -619,5 +620,6 @@ footer .disc{color:var(--soft);font-size:.95rem;border-top:1px solid var(--line-
   if (location.hash) { els.forEach(function (el) { el.classList.add("in"); }); }
 })();
 </script>
+<script src="../assets/busca.js" defer></script>
 </body>
 </html>

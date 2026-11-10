@@ -4,7 +4,8 @@
     { key: 'medida-protetiva', label: 'Medida protetiva', fallback: '../img/medida-protetiva.webp' },
     { key: 'familia', label: 'Família', fallback: '../img/familia.webp' },
     { key: 'criminal', label: 'Criminal', fallback: '../img/hero-sit-cac.webp' },
-    { key: 'cac', label: 'CAC', fallback: '../img/cac.webp' }
+    { key: 'cac', label: 'CAC', fallback: '../img/cac.webp' },
+    { key: 'mundo-em-disputa', label: 'Mundo em Disputa', fallback: 'img/depp-heard-dois-tribunais-dois-veredictos.webp' }
   ];
   var AREA = {}; AREAS.forEach(function (a) { AREA[a.key] = a; });
 
