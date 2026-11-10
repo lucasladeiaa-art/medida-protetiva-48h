@@ -417,10 +417,16 @@
 
     document.body.appendChild(el("div", "refugio-lamp"));
     document.body.appendChild(el("div", "refugio-lantern"));
+    var chama = el("div", "refugio-chama");
+    chama.setAttribute("aria-hidden", "true");
+    chama.appendChild(document.createElement("i"));
+    document.body.appendChild(chama);
+    var useDust = !coarse && innerWidth >= 720;
     var cv = el("canvas", "refugio-dust");
-    document.body.appendChild(cv);
+    if (useDust) document.body.appendChild(cv);
+    else cv = null;
 
-    var ctx = cv.getContext("2d", { alpha: true });
+    var ctx = cv ? cv.getContext("2d", { alpha: true }) : null;
     var W = 0, H = 0, parts = [];
     var tx = 0, ty = 0, x = 0, y = 0;
     var running = false, last = 0, raf = 0;
@@ -428,8 +434,8 @@
     function resize() {
       W = innerWidth;
       H = innerHeight;
-      cv.width = W;
-      cv.height = H;
+      useDust = !coarse && W >= 720;
+      if (cv) { cv.width = W; cv.height = H; }
       tx = x = W * 0.5;
       ty = y = Math.min(150, H * 0.18);
       parts = [];
@@ -488,6 +494,7 @@
     addEventListener("scroll", onScrollBloom, { passive: true });
 
     function draw() {
+      if (!ctx || !useDust) return;
       ctx.clearRect(0, 0, W, H);
       var reach = Math.min(W, H) * 0.85;
       for (var i = 0; i < parts.length; i++) {
@@ -501,7 +508,7 @@
         var vis = 1 - d / reach;
         if (vis <= 0) continue;
         ctx.beginPath();
-        ctx.fillStyle = "rgba(236,220,255," + (p.a * vis * 0.85) + ")";
+        ctx.fillStyle = "rgba(255,200,120," + (p.a * vis * 0.8) + ")";
         ctx.arc(p.x, p.y, p.r, 0, 6.283185307179586);
         ctx.fill();
       }
@@ -517,7 +524,7 @@
       bloomAt(x, y, false);
       if (performance.now() - last > 2400 && Math.abs(tx - x) < 0.6 && Math.abs(ty - y) < 0.6) {
         document.body.classList.remove("refugio-lit");
-        ctx.clearRect(0, 0, W, H);
+        if (ctx) ctx.clearRect(0, 0, W, H);
         running = false;
         raf = 0;
         if (!coarse) clearBloom();
@@ -552,7 +559,16 @@
       if (cssLink.sheet) go();
       setTimeout(go, 400);
     }
-    afterCss(startArrival);
+    function startCarry() {
+      var c = document.querySelector(".hero-chama");
+      if (c) {
+        var r = c.getBoundingClientRect();
+        kick(r.left + r.width / 2, r.top + r.height * 0.62);
+      } else if (W) {
+        kick(W * 0.76, Math.min(H * 0.68, H * 0.72));
+      }
+    }
+    afterCss(function () { startArrival(); startCarry(); });
 
     function once(sel, cls, th) {
       var nodes = document.querySelectorAll(sel);
@@ -566,6 +582,28 @@
     }
     once("#hero-title, .art-hero h1, .post-head h1", "refugio-wake", 0.35);
     once(".refugio-farol", "is-sweep", 0.4);
+
+    function lightCovers() {
+      var nodes = document.querySelectorAll(".poster,.a-card,.loop-card,.featured,.loop-prox-card");
+      if (!nodes.length || !("IntersectionObserver" in window)) return;
+      var io = new IntersectionObserver(function (ents) {
+        ents.forEach(function (en) {
+          if (!en.isIntersecting) return;
+          var card = en.target;
+          var lume = card.querySelector(".capa-lume");
+          if (!lume) {
+            lume = document.createElement("span");
+            lume.className = "capa-lume";
+            lume.setAttribute("aria-hidden", "true");
+            card.appendChild(lume);
+          }
+          requestAnimationFrame(function () { lume.classList.add("is-on"); });
+          io.unobserve(card);
+        });
+      }, { threshold: 0.22, rootMargin: "0px 0px -8% 0px" });
+      for (var i = 0; i < nodes.length; i++) io.observe(nodes[i]);
+    }
+    lightCovers();
 
     addEventListener("pointermove", function (e) { kick(e.clientX, e.clientY); }, { passive: true });
     document.addEventListener("visibilitychange", function () {
