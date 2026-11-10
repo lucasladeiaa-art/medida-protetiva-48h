@@ -45,7 +45,11 @@
   function bindRowNav(root) {
     root.querySelectorAll('[data-row]').forEach(function (row) {
       var track = row.querySelector('.row-track'), nav = row.querySelector('.row-nav');
-      var fit = function () { if (nav) nav.style.visibility = track.scrollWidth > track.clientWidth + 4 ? '' : 'hidden'; };
+      var fit = function () {
+        var room = track.scrollWidth <= track.clientWidth + 4;
+        track.classList.toggle('is-centered', room);
+        if (nav) nav.style.visibility = room ? 'hidden' : '';
+      };
       fit(); window.addEventListener('resize', fit);
       row.querySelectorAll('[data-dir]').forEach(function (b) {
         b.addEventListener('click', function () { track.scrollBy({ left: track.clientWidth * 0.9 * Number(b.dataset.dir), behavior: 'smooth' }); });

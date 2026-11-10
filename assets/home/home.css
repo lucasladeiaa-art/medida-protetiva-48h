@@ -127,6 +127,8 @@ html:not(.js) .hook-track span:first-child { opacity: 1; transform: none; }
 .rail { --cw: min(60vw, 16rem); list-style: none; display: flex; gap: .8rem; margin: 0; padding: .6rem max(var(--gut), (100% - var(--max)) / 2) 1.4rem; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scroll-padding-inline: max(var(--gut), (100% - var(--max)) / 2); scrollbar-width: none; -webkit-overflow-scrolling: touch; }
 .rail::-webkit-scrollbar { display: none; }
 .rail > li { flex: 0 0 var(--cw); scroll-snap-align: start; }
+.rail.is-centered { justify-content: center; }
+.row:has(.rail.is-centered) .row-nav { visibility: hidden; }
 @media (min-width: 900px) { .rail { --cw: clamp(14rem, 17vw, 16.5rem); gap: 1rem; } }
 
 .poster { position: relative; display: block; aspect-ratio: 3 / 4; border-radius: 14px; overflow: hidden; isolation: isolate; text-decoration: none; color: var(--tx); background: var(--p1);

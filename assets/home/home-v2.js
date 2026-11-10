@@ -64,9 +64,17 @@
 
   function arrows(row) {
     var rail = row.querySelector('.rail'), p = row.querySelector('.rn.prev'), n = row.querySelector('.rn.next');
-    if (!rail || !p || !n) return;
-    function upd() { p.disabled = rail.scrollLeft < 8; n.disabled = rail.scrollLeft + rail.clientWidth > rail.scrollWidth - 8; }
-    [p, n].forEach(function (b) { b.addEventListener('click', function () { rail.scrollBy({ left: +b.dataset.dir * rail.clientWidth * .8, behavior: reduce ? 'auto' : 'smooth' }); }); });
+    if (!rail) return;
+    function upd() {
+      var room = rail.scrollWidth <= rail.clientWidth + 4;
+      rail.classList.toggle('is-centered', room);
+      if (!p || !n) return;
+      p.disabled = rail.scrollLeft < 8;
+      n.disabled = rail.scrollLeft + rail.clientWidth > rail.scrollWidth - 8;
+    }
+    if (p && n) {
+      [p, n].forEach(function (b) { b.addEventListener('click', function () { rail.scrollBy({ left: +b.dataset.dir * rail.clientWidth * .8, behavior: reduce ? 'auto' : 'smooth' }); }); });
+    }
     rail.addEventListener('scroll', function () { requestAnimationFrame(upd); }, { passive: true }); upd();
     w.addEventListener('resize', upd);
   }
@@ -119,6 +127,9 @@
       railC.appendChild(li); html++;
     });
     rowC.hidden = html === 0;
+    requestAnimationFrame(function () {
+      railC.classList.toggle('is-centered', html > 0 && railC.scrollWidth <= railC.clientWidth + 4);
+    });
   }
   d.addEventListener('click', function (e) {
     var p = e.target.closest && e.target.closest('.poster'); if (!p) return;
