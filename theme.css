@@ -948,7 +948,7 @@ img { height: auto; }
 @media (min-width: 900px) { .gp-hero-grid { grid-template-columns: .9fr 1.1fr; gap: 3rem; } }
 
 .brand-mark { width: 2.7rem; height: 2.7rem; border-radius: 12px; background: var(--espresso); color: var(--champagne); font-style: normal; }
-.brand-emblem { display: block; width: 62%; height: auto; }
+.brand-emblem { display: block; width: 90%; height: auto; }
 @media (min-width: 980px) { .brand-mark { width: 2.5rem; height: 2.5rem; } }
 
 .home .site-header { position: fixed; inset: 0 0 auto 0; background: transparent; border-bottom-color: transparent; backdrop-filter: none; -webkit-backdrop-filter: none; transition: background .35s ease, border-color .35s ease, backdrop-filter .35s ease; }

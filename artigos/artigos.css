@@ -27,7 +27,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--champagne); out
 .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: var(--header-h); }
 .brand { display: flex; align-items: center; gap: .7rem; color: var(--cream); text-decoration: none; min-width: 0; }
 .brand-mark { color: var(--champagne); display: inline-flex; }
-.brand-emblem { width: 1.75rem; height: auto; }
+.brand-emblem { width: 2.2rem; height: auto; }
 .brand-text { display: flex; flex-direction: column; line-height: 1.1; }
 .brand-name { font-family: var(--font-display); font-size: 1.12rem; color: #fff; white-space: nowrap; }
 .brand-meta { font-size: .72rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--champagne); white-space: nowrap; }
