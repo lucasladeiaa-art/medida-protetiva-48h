@@ -29,8 +29,6 @@
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
-<link rel="preload" as="image" href="img/hero-rede-cidade-m.webp" media="(max-width: 899px)">
-<link rel="preload" as="image" href="img/hero-rede-cidade-1280.webp" media="(min-width: 900px)">
 <link rel="stylesheet" href="assets/home/home.css">
 <link rel="stylesheet" href="assets/home/home-v2.css">
 <script>document.documentElement.classList.add('js')</script>
@@ -38,16 +36,33 @@
 {"@context":"https://schema.org","@graph":[{"@type":["Attorney","LegalService"],"@id":"https://lucasladeia.com.br/#advogado","name":"Lucas Brito Ladeia","alternateName":"Lucas Ladeia","url":"https://lucasladeia.com.br/","image":"https://lucasladeia.com.br/og-lucas-ladeia-2026-11.jpg","logo":"https://lucasladeia.com.br/icon-512.png","description":"Advocacia em medida protetiva, criminal, família e CAC. Imperatriz-MA, com atendimento presencial e online. OAB/MA 16.091.","identifier":{"@type":"PropertyValue","propertyID":"OAB/MA","value":"16.091"},"telephone":"+55 99 98170-3994","address":{"@type":"PostalAddress","streetAddress":"Rua Coronel Manoel Bandeira, 1774, Centro","addressLocality":"Imperatriz","addressRegion":"MA","postalCode":"65900-010","addressCountry":"BR"},"areaServed":[{"@type":"City","name":"Imperatriz","containedInPlace":{"@type":"State","name":"Maranhão"}},{"@type":"Country","name":"Brasil"}],"knowsAbout":["Medida protetiva de urgência","Lei Maria da Penha","Direito penal","Direito de família","Armas de fogo e CAC"],"sameAs":["https://www.instagram.com/lucasladeiadvogado/","https://www.instagram.com/ladeiadvogadosfamilia/","https://www.instagram.com/rededeprotecaoficial/"]},{"@type":"WebSite","@id":"https://lucasladeia.com.br/#site","url":"https://lucasladeia.com.br/","name":"Rede de Proteção · Lucas Brito Ladeia","inLanguage":"pt-BR","publisher":{"@id":"https://lucasladeia.com.br/#advogado"}},{"@type":"FAQPage","@id":"https://lucasladeia.com.br/#faq","mainEntity":[{"@type":"Question","name":"O atendimento é só em Imperatriz?","acceptedAnswer":{"@type":"Answer","text":"O escritório fica em Imperatriz-MA, com atendimento presencial. Também há atendimento online para pessoas em outras cidades do Brasil, conforme a natureza do caso."}},{"@type":"Question","name":"Preciso contar o caso inteiro por escrito?","acceptedAnswer":{"@type":"Answer","text":"Não. Na primeira mensagem, basta indicar a área e o essencial. Detalhes sensíveis ficam para o atendimento, sob sigilo profissional."}},{"@type":"Question","name":"Vocês prometem resultado?","acceptedAnswer":{"@type":"Answer","text":"Não. A publicidade da advocacia é informativa. Cada caso depende dos fatos, das provas e da decisão judicial."}},{"@type":"Question","name":"Como falo pelo WhatsApp?","acceptedAnswer":{"@type":"Answer","text":"Use o botão WhatsApp nesta página. Informe a área de interesse para agilizar a triagem."}}]}]}
 </script>
 <style id="topo-sobrio">
-.hero{background:#14110f}
-.hero .rain{opacity:.12!important}
-.hero-glow,.hero-flash{opacity:.15!important}
-.hero-media img{filter:sepia(.35) saturate(.6) brightness(.55)}
-.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,20,16,.55),rgba(20,16,13,.85))}
 #hero-title em{text-shadow:none!important;filter:none!important;animation:none!important;color:#c9b8a0!important;background:none!important;-webkit-text-fill-color:#c9b8a0!important}
-.hero-lead{color:#e6ddd2!important;max-width:38rem}
-.hero-tag{color:#b9a68c!important;letter-spacing:.08em;text-shadow:none!important;margin-top:.9rem}
+.hero-lead{color:#E6E3F2!important;max-width:38rem}
+.hero-tag{color:#C9B8A0!important;letter-spacing:.08em;text-shadow:none!important;margin-top:.9rem}
 .hero .btn-primary{box-shadow:0 10px 28px rgba(0,0,0,.28)!important;background:#fff!important;border-color:#fff!important;color:#2A1A5E!important}.hero .btn-primary:hover,.hero .btn-primary:focus-visible{background:#EEEAFF!important;color:#1E1247!important}
-.hero-note{font-size:.8rem;color:#a39888;margin-top:.9rem}
+.hero-note{font-size:.8rem;color:#B7B3C9;margin-top:.9rem}
+</style>
+<style id="hero-abrigo">
+.hero{background:#05060E}
+.hero .rain{opacity:.08!important}
+.hero-glow,.hero-flash{opacity:.08!important}
+.hero-media img{filter:none;object-position:70% 100%}
+.hero-media::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    linear-gradient(90deg, rgba(5,6,14,.62) 0%, rgba(5,6,14,.28) 38%, rgba(5,6,14,.04) 68%),
+    linear-gradient(180deg, rgba(5,6,14,.42) 0%, rgba(5,6,14,.12) 26%, rgba(5,6,14,0) 52%, rgba(5,6,14,.22) 86%, #06070F 100%)}
+.hero::after{background:
+    linear-gradient(90deg, rgba(5,6,14,.28) 0%, rgba(5,6,14,.08) 40%, transparent 70%),
+    linear-gradient(180deg, rgba(5,6,14,.18) 0%, transparent 22%, transparent 70%, #06070F 100%)}
+@media (max-width:899px){
+  .hero{align-items:flex-start;min-height:100vh;min-height:100svh;padding-top:calc(var(--hh) + 1.35rem);padding-bottom:6.2rem}
+  .hero-media img{object-position:72% 100%}
+  .hero-inner{padding-bottom:0}
+  .scroll-cue{opacity:.55}
+}
+@media (min-width:900px){
+  .hero-media img{object-position:100% 58%}
+}
 </style>
 </head>
 <body class="hs">
@@ -94,8 +109,8 @@
   <section class="hero" aria-labelledby="hero-title">
     <div class="hero-media" aria-hidden="true">
       <picture>
-        <source media="(max-width: 899px)" type="image/webp" srcset="img/hero-rede-cidade-m.webp">
-        <img src="img/hero-rede-cidade-1280.webp" width="1280" height="720" alt="" loading="eager" fetchpriority="high" decoding="async">
+        <source media="(max-width: 899px)" type="image/webp" srcset="img/hero-abrigo-m.webp" width="1080" height="2337">
+        <img src="img/hero-abrigo.webp" width="2400" height="1500" alt="" decoding="async">
       </picture>
     </div>
     <canvas class="rain" id="rain" aria-hidden="true"></canvas>
