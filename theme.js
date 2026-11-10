@@ -69,7 +69,8 @@ document.querySelectorAll('[data-cta^="whatsapp"]').forEach((el) => {
   function load() {
     var tag = document.querySelector('script[src*="theme.js"]');
     var s = document.createElement("script");
-    s.src = tag && tag.src ? new URL("assets/refugio.js", tag.src).href : "/assets/refugio.js";
+    var href = tag && tag.src ? new URL("assets/refugio.js", tag.src).href : "/assets/refugio.js";
+    s.src = href.split("?")[0] + "?v=20261110acesa";
     document.body.appendChild(s);
   }
   if (document.readyState === "complete") load();

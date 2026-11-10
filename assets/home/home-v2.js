@@ -80,35 +80,6 @@
   }
   d.querySelectorAll('.row').forEach(arrows);
 
-  var posters = function () { return [].slice.call(d.querySelectorAll('.rail .poster')); };
-  if (touch && 'IntersectionObserver' in w) {
-    var active = null, queued = false;
-    function setOn(p) {
-      if (p === active) return;
-      if (active) active.classList.remove('is-on');
-      active = p; if (p) p.classList.add('is-on');
-    }
-    function pickCenter() {
-      queued = false;
-      var vh = w.innerHeight, vw = w.innerWidth, cy = vh * .5, cx = vw * .5, best = null, bs = 1e9;
-      posters().forEach(function (p) {
-        var r = p.getBoundingClientRect();
-        if (r.bottom < 0 || r.top > vh || r.right < 0 || r.left > vw || !r.width) return;
-        var visW = Math.min(r.right, vw) - Math.max(r.left, 0);
-        if (visW / r.width < .7) return;
-        var dy = Math.abs((r.top + r.bottom) / 2 - cy);
-        if (dy > r.height * .55) return;
-        var sc = dy + Math.abs((r.left + r.right) / 2 - cx) * .5;
-        if (sc < bs) { bs = sc; best = p; }
-      });
-      setOn(best);
-    }
-    function queue() { if (!queued) { queued = true; requestAnimationFrame(pickCenter); } }
-    w.addEventListener('scroll', queue, { passive: true });
-    w.addEventListener('resize', queue);
-    d.querySelectorAll('.rail').forEach(function (rail) { rail.addEventListener('scroll', queue, { passive: true }); });
-    w.addEventListener('load', queue); queue();
-  }
 
   var KEY = 'rp-continue', rowC = d.getElementById('fileira-continue'), railC = d.getElementById('continueRail');
   function load() { try { var v = JSON.parse(localStorage.getItem(KEY) || '[]'); return Array.isArray(v) ? v : []; } catch (e) { return []; } }

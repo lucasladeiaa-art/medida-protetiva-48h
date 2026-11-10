@@ -41,11 +41,11 @@ body.artigos .refugio-grain{opacity:.05}
   outline:1px solid rgba(224,210,255,.34);
   outline-offset:-1px
 }
-.poster:hover,.poster:focus-visible,.poster:active,.poster.is-on,
-.a-card:hover,.a-card:focus-visible,.a-card:active,
-.loop-card:hover,.loop-card:focus-visible,.loop-card:active,
-.featured:hover,.featured:focus-visible,.featured:active,
-.loop-prox-card:hover,.loop-prox-card:focus-visible,.loop-prox-card:active{
+.poster:focus-visible,
+.a-card:focus-visible,
+.loop-card:focus-visible,
+.featured:focus-visible,
+.loop-prox-card:focus-visible{
   outline-color:rgba(236,224,255,.78)
 }
 #hero-title,.art-hero h1,.post-head h1{
@@ -118,7 +118,7 @@ body.artigos .refugio-grain{opacity:.05}
 .loop-card,
 .featured,
 .loop-prox-card{
-  transition:transform .25s ease,box-shadow .25s ease,outline-color .25s ease
+  transition:box-shadow .5s ease,outline-color .5s ease
 }
 .poster img,
 .a-card img,
@@ -126,7 +126,7 @@ body.artigos .refugio-grain{opacity:.05}
 .featured img,
 .loop-prox-card img{
   filter:saturate(.75) contrast(1.18) brightness(1.16);
-  transition:filter .25s ease,transform .25s ease
+  transition:filter .5s ease
 }
 .poster::before{
   background:
@@ -184,16 +184,14 @@ body.artigos .refugio-grain{opacity:.05}
 .featured.refugio-bloom,
 .loop-prox-card.refugio-bloom{
   z-index:4;
-  transform:scale(1.04)!important;
-  outline:2px solid rgba(var(--capa-rgb),.95);
-  outline-offset:-2px;
+  outline:2px solid rgba(var(--capa-rgb),.98);
+  outline-offset:0;
   box-shadow:
-    inset 0 0 0 2px rgba(var(--capa-rgb),.98),
-    inset 0 0 36px rgba(var(--capa-rgb),.55),
-    0 0 0 2px rgba(var(--capa-rgb),.92),
-    0 0 22px rgba(var(--capa-rgb),.8),
-    0 0 48px rgba(var(--capa-rgb),.48),
-    0 16px 36px rgba(0,0,0,.5)!important
+    0 0 0 2px rgba(var(--capa-rgb),.95),
+    0 0 18px rgba(var(--capa-rgb),.9),
+    0 0 42px rgba(var(--capa-rgb),.62),
+    0 0 72px rgba(var(--capa-rgb),.38),
+    0 16px 36px rgba(0,0,0,.5)
 }
 .poster.refugio-bloom::after,
 .a-card.refugio-bloom::after,
@@ -206,7 +204,7 @@ body.artigos .refugio-grain{opacity:.05}
 .loop-card.refugio-bloom img,
 .featured.refugio-bloom img,
 .loop-prox-card.refugio-bloom img{
-  filter:saturate(1.9) contrast(1.3) brightness(1.15) drop-shadow(0 0 18px rgba(var(--capa-rgb),.75))
+  filter:saturate(1.45) contrast(1.22) brightness(1.16)
 }
 @media (hover:hover) and (pointer:fine){
   .poster:hover,
@@ -214,30 +212,14 @@ body.artigos .refugio-grain{opacity:.05}
   .loop-card:hover,
   .featured:hover,
   .loop-prox-card:hover{
-    z-index:4;
-    transform:scale(1.04)!important;
-    outline:2px solid rgba(var(--capa-rgb),.95);
-    outline-offset:-2px;
-    box-shadow:
-      inset 0 0 0 2px rgba(var(--capa-rgb),.98),
-      inset 0 0 36px rgba(var(--capa-rgb),.55),
-      0 0 0 2px rgba(var(--capa-rgb),.92),
-      0 0 22px rgba(var(--capa-rgb),.8),
-      0 0 48px rgba(var(--capa-rgb),.48),
-      0 16px 36px rgba(0,0,0,.5)!important
+    z-index:4
   }
-  .poster:hover::after,
-  .a-card:hover::after,
-  .loop-card:hover::after,
-  .featured:hover::after,
-  .loop-prox-card:hover::after{opacity:.88}
-  .poster.capa-grafica:hover::after{opacity:0!important}
   .poster:hover img,
   .a-card:hover img,
   .loop-card:hover img,
   .featured:hover img,
   .loop-prox-card:hover img{
-    filter:saturate(1.9) contrast(1.3) brightness(1.15) drop-shadow(0 0 18px rgba(var(--capa-rgb),.75))
+    filter:saturate(1.45) contrast(1.22) brightness(1.16)
   }
 }
 .poster.capa-grafica img{
@@ -245,7 +227,7 @@ body.artigos .refugio-grain{opacity:.05}
 }
 .poster.capa-grafica.refugio-bloom img,
 .poster.capa-grafica:hover img{
-  filter:saturate(1.25) contrast(1.18) brightness(1.1) drop-shadow(0 0 16px rgba(var(--capa-rgb),.6))
+  filter:saturate(1.2) contrast(1.14) brightness(1.1)
 }
 @media (prefers-reduced-motion:reduce){
   .poster,
@@ -304,7 +286,7 @@ body.artigos .refugio-grain{opacity:.05}
   display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden
 }
 .poster.capa-grafica .p-marca{display:none}
-.poster.is-on .p-marca,.poster:hover .p-marca,.poster.refugio-bloom .p-marca{opacity:1}
+.poster.is-on .p-marca,.poster:hover .p-marca{opacity:1}
 .p-badge{
   position:absolute;top:.65rem;left:.65rem;z-index:4;pointer-events:none;
   padding:.28rem .5rem;border-radius:4px;
@@ -317,7 +299,6 @@ body.artigos .refugio-grain{opacity:.05}
 .poster:has(.p-badge) .p-seal,
 .poster:has(.p-marca).is-on .p-seal,
 .poster:has(.p-marca):hover .p-seal,
-.poster:has(.p-marca).refugio-bloom .p-seal,
 .poster:has(.p-marca):focus-visible .p-seal{display:none}
 .row-head h3{max-width:18rem}
 @media (prefers-reduced-motion:reduce){
@@ -328,15 +309,13 @@ body.artigos .refugio-grain{opacity:.05}
 .poster:has(.p-marca) .p-tag{display:none}
 
 .poster:has(.p-marca).is-on .p-marca,
-.poster:has(.p-marca):hover .p-marca,
-.poster:has(.p-marca).refugio-bloom .p-marca{
+.poster:has(.p-marca):hover .p-marca{
   top:2.15rem;
   font-size:clamp(.88rem,9.6cqw,1.18rem);
   line-height:1.08
 }
 .poster:has(.p-marca).is-on .p-body,
-.poster:has(.p-marca):hover .p-body,
-.poster:has(.p-marca).refugio-bloom .p-body{
+.poster:has(.p-marca):hover .p-body{
   top:6.05rem;
   right:0;bottom:0;left:0;
   overflow:hidden;
@@ -344,38 +323,32 @@ body.artigos .refugio-grain{opacity:.05}
   max-height:none
 }
 .poster:has(.p-marca).is-on .p-body,
-.poster:has(.p-marca):hover .p-body,
-.poster:has(.p-marca).refugio-bloom .p-body{
+.poster:has(.p-marca):hover .p-body{
   display:grid;
   gap:.7rem;
   padding-top:.7rem;
   align-content:start
 }
 .poster:has(.p-marca).is-on .p-q,
-.poster:has(.p-marca):hover .p-q,
-.poster:has(.p-marca).refugio-bloom .p-q{
+.poster:has(.p-marca):hover .p-q{
   display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;
   text-wrap:wrap;
   margin:0
 }
 .poster:has(.p-marca).is-on .p-tease,
-.poster:has(.p-marca):hover .p-tease,
-.poster:has(.p-marca).refugio-bloom .p-tease{
+.poster:has(.p-marca):hover .p-tease{
   margin-top:.2rem;
   padding-top:.15rem
 }
 .poster:has(.p-marca).is-on .p-more,
-.poster:has(.p-marca):hover .p-more,
-.poster:has(.p-marca).refugio-bloom .p-more{
+.poster:has(.p-marca):hover .p-more{
   display:none
 }
 @media (max-width:699px){
-  .poster:has(.p-marca).is-on .p-marca,
-  .poster:has(.p-marca).refugio-bloom .p-marca{
+  .poster:has(.p-marca).is-on .p-marca{
     top:2.3rem
   }
-  .poster:has(.p-marca).is-on .p-body,
-  .poster:has(.p-marca).refugio-bloom .p-body{
+  .poster:has(.p-marca).is-on .p-body{
     position:absolute;
     top:5.95rem;
     right:0;bottom:0;left:0;
@@ -386,32 +359,27 @@ body.artigos .refugio-grain{opacity:.05}
     gap:.5rem;
     overflow:hidden
   }
-  .poster:has(.p-marca).is-on .p-more,
-  .poster:has(.p-marca).refugio-bloom .p-more{display:none}
-  .poster:has(.p-marca).is-on .p-tease,
-  .poster:has(.p-marca).refugio-bloom .p-tease{
+  .poster:has(.p-marca).is-on .p-more{display:none}
+  .poster:has(.p-marca).is-on .p-tease{
     max-height:2.5rem;
     display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;
     overflow:hidden;
     flex:0 1 auto;
     min-height:0
   }
-  .poster:has(.p-marca).is-on .p-go,
-  .poster:has(.p-marca).refugio-bloom .p-go{
+  .poster:has(.p-marca).is-on .p-go{
     flex:0 0 auto;
     margin-top:.15rem;
     position:relative;
     z-index:4
   }
-  .poster:has(.p-marca).is-on .p-q,
-  .poster:has(.p-marca).refugio-bloom .p-q{
+  .poster:has(.p-marca).is-on .p-q{
     display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;
     flex:0 0 auto
   }
   .poster.has-badge .p-seal,
   .poster:has(.p-badge) .p-seal,
-  .poster:has(.p-marca).is-on .p-seal,
-  .poster:has(.p-marca).refugio-bloom .p-seal{display:none}
+  .poster:has(.p-marca).is-on .p-seal{display:none}
 }
 
 /* Superfícies da Rede e ponte para o Guia do Passageiro */
@@ -452,7 +420,7 @@ body.artigos .refugio-grain{opacity:.05}
 .porta{
   --capa-rgb: 28,76,220;
   position: relative;
-  transition: transform .25s ease, box-shadow .25s ease, outline-color .25s ease
+  transition: box-shadow .5s ease, outline-color .5s ease
 }
 .rcard img,
 .gp-book img,
@@ -462,7 +430,7 @@ body.artigos .refugio-grain{opacity:.05}
 .entrada-card img,
 .porta img{
   filter: saturate(.75) contrast(1.18) brightness(1.16);
-  transition: filter .25s ease, transform .25s ease
+  transition: filter .5s ease
 }
 .rcard::after,
 .case::after,
@@ -502,16 +470,14 @@ body.artigos .refugio-grain{opacity:.05}
 .ponte-guia-card.refugio-bloom,
 .porta.refugio-bloom{
   z-index:4;
-  transform:scale(1.03)!important;
-  outline:2px solid rgba(var(--capa-rgb),.95);
-  outline-offset:-2px;
+  outline:2px solid rgba(var(--capa-rgb),.98);
+  outline-offset:0;
   box-shadow:
-    inset 0 0 0 2px rgba(var(--capa-rgb),.98),
-    inset 0 0 36px rgba(var(--capa-rgb),.4),
-    0 0 0 2px rgba(var(--capa-rgb),.92),
-    0 0 22px rgba(var(--capa-rgb),.75),
-    0 0 48px rgba(var(--capa-rgb),.4),
-    0 16px 36px rgba(0,0,0,.5)!important
+    0 0 0 2px rgba(var(--capa-rgb),.95),
+    0 0 18px rgba(var(--capa-rgb),.9),
+    0 0 42px rgba(var(--capa-rgb),.62),
+    0 0 72px rgba(var(--capa-rgb),.38),
+    0 16px 36px rgba(0,0,0,.5)
 }
 .rcard.refugio-bloom img,
 .gp-book.refugio-bloom img,
@@ -520,7 +486,7 @@ body.artigos .refugio-grain{opacity:.05}
 .guias-media.refugio-bloom img,
 .entrada-card.refugio-bloom img,
 .porta.refugio-bloom img{
-  filter:saturate(1.9) contrast(1.3) brightness(1.15) drop-shadow(0 0 18px rgba(var(--capa-rgb),.75))
+  filter:saturate(1.45) contrast(1.22) brightness(1.16)
 }
 @media (hover:hover) and (pointer:fine){
   .rcard:hover,
@@ -532,17 +498,7 @@ body.artigos .refugio-grain{opacity:.05}
   .entrada-card:hover,
   .ponte-guia-card:hover,
   .porta:hover{
-    z-index:4;
-    transform:scale(1.03)!important;
-    outline:2px solid rgba(var(--capa-rgb),.95);
-    outline-offset:-2px;
-    box-shadow:
-      inset 0 0 0 2px rgba(var(--capa-rgb),.98),
-      inset 0 0 36px rgba(var(--capa-rgb),.4),
-      0 0 0 2px rgba(var(--capa-rgb),.92),
-      0 0 22px rgba(var(--capa-rgb),.75),
-      0 0 48px rgba(var(--capa-rgb),.4),
-      0 16px 36px rgba(0,0,0,.5)!important
+    z-index:4
   }
   .rcard:hover img,
   .gp-book:hover img,
@@ -551,7 +507,7 @@ body.artigos .refugio-grain{opacity:.05}
   .guias-media:hover img,
   .entrada-card:hover img,
   .porta:hover img{
-    filter:saturate(1.9) contrast(1.3) brightness(1.15) drop-shadow(0 0 18px rgba(var(--capa-rgb),.75))
+    filter:saturate(1.45) contrast(1.22) brightness(1.16)
   }
 }
 
@@ -826,7 +782,7 @@ body.artigos .refugio-grain{opacity:.05}
   background:radial-gradient(circle,rgba(255,180,60,.5),rgba(255,80,20,.12) 55%,transparent 72%);
   border-radius:50%;
   transform-origin:50% 60%;
-  animation:refugio-chama-flicker 1.7s ease-in-out infinite
+  animation:refugio-chama-tremor 2.4s ease-in-out infinite
 }
 .refugio-chama i{
   position:absolute;left:50%;bottom:4px;
@@ -834,26 +790,23 @@ body.artigos .refugio-grain{opacity:.05}
   background:radial-gradient(ellipse 70% 55% at 50% 70%,#FFF6C8 0%,#FFE566 18%,#FF9A1A 46%,#E03A0A 74%,transparent 100%);
   border-radius:50% 50% 48% 48%/70% 70% 36% 36%;
   transform-origin:50% 90%;
-  animation:refugio-chama-flicker 1.7s ease-in-out infinite
+  animation:refugio-chama-tremor 2.4s ease-in-out infinite
 }
-@keyframes refugio-chama-flicker{
-  0%,100%{transform:scale(1,1) rotate(-1deg);opacity:.92}
-  45%{transform:scale(1.08,1.14) rotate(1.4deg);opacity:1}
-  72%{transform:scale(.95,1.05) rotate(-.8deg);opacity:.88}
+@keyframes refugio-chama-tremor{
+  0%,100%{transform:scale(1,1) rotate(-.4deg)}
+  50%{transform:scale(1.03,1.05) rotate(.4deg)}
 }
 .capa-lume{
-  position:absolute;inset:0;z-index:2;pointer-events:none;
+  position:absolute;inset:0;z-index:6;pointer-events:none;
   border-radius:inherit;
-  opacity:0;transform:scale(.92);
-  background:radial-gradient(ellipse 72% 62% at 50% 38%,rgba(255,230,170,.4) 0%,rgba(255,150,50,.18) 38%,rgba(200,40,10,.06) 62%,transparent 78%)
+  opacity:0;
+  background:radial-gradient(ellipse 80% 70% at 50% 40%,rgba(var(--capa-rgb),.28) 0%,rgba(var(--capa-rgb),.1) 46%,transparent 74%);
+  box-shadow:inset 0 0 0 2px rgba(var(--capa-rgb),.95),inset 0 0 36px rgba(var(--capa-rgb),.4);
+  transition:opacity .5s ease
 }
-.capa-lume.is-on{animation:capa-lume .9s ease-out forwards}
-@keyframes capa-lume{
-  0%{opacity:0;transform:scale(.9)}
-  34%{opacity:1;transform:scale(1.03)}
-  100%{opacity:0;transform:scale(1)}
-}
+.capa-lume.is-on{opacity:1}
 @media (prefers-reduced-motion:reduce){
   .refugio-chama,.capa-lume,.hero-chama{display:none!important}
   .refugio-chama i,.refugio-chama::after,.hero-chama i{animation:none!important}
+  .capa-lume{transition:none}
 }

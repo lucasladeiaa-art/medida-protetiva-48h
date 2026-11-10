@@ -20,7 +20,8 @@
       for (var si = 0; si < scripts.length; si++) {
         if (scripts[si].src && scripts[si].src.indexOf("refugio.js") >= 0) { src = scripts[si].src; break; }
       }
-      cssLink.href = src ? new URL("refugio.css", src).href : "/assets/refugio.css";
+      var href = src ? new URL("refugio.css", src).href : "/assets/refugio.css";
+      cssLink.href = href.split("?")[0] + "?v=20261110acesa";
       document.head.appendChild(cssLink);
     }
     document.body.appendChild(el("div", "refugio-fog"));
@@ -453,9 +454,17 @@
     resize();
     addEventListener("resize", resize, { passive: true });
 
-    function clearBloom() {
-      var nodes = document.querySelectorAll(".refugio-bloom");
-      for (var i = 0; i < nodes.length; i++) nodes[i].classList.remove("refugio-bloom");
+    function lightCard(card) {
+      if (!card || card.classList.contains("refugio-bloom")) return;
+      var lume = card.querySelector(".capa-lume");
+      if (!lume) {
+        lume = document.createElement("span");
+        lume.className = "capa-lume";
+        lume.setAttribute("aria-hidden", "true");
+        card.appendChild(lume);
+      }
+      card.classList.add("refugio-bloom");
+      requestAnimationFrame(function () { lume.classList.add("is-on"); });
     }
 
     function bloomAt(nx, ny, center) {
@@ -478,10 +487,7 @@
         if (d < bestD) { bestD = d; best = el; }
       }
       if (!center && bestD > reach2) best = null;
-      for (var j = 0; j < nodes.length; j++) {
-        if (nodes[j] === best) nodes[j].classList.add("refugio-bloom");
-        else if (nodes[j].classList.contains("refugio-bloom")) nodes[j].classList.remove("refugio-bloom");
-      }
+      if (best) lightCard(best);
     }
 
     function onScrollBloom() {
@@ -527,8 +533,7 @@
         if (ctx) ctx.clearRect(0, 0, W, H);
         running = false;
         raf = 0;
-        if (!coarse) clearBloom();
-        else bloomAt(W * 0.5, H * 0.48, true);
+        if (coarse) bloomAt(W * 0.5, H * 0.48, true);
         return;
       }
       raf = requestAnimationFrame(loop);
@@ -591,26 +596,22 @@
     once(".refugio-farol", "is-sweep", 0.4);
 
     function lightCovers() {
-      var nodes = document.querySelectorAll(".poster,.a-card,.loop-card,.featured,.loop-prox-card");
+      var nodes = document.querySelectorAll(capaSel);
       if (!nodes.length || !("IntersectionObserver" in window)) return;
       var io = new IntersectionObserver(function (ents) {
         ents.forEach(function (en) {
           if (!en.isIntersecting) return;
-          var card = en.target;
-          var lume = card.querySelector(".capa-lume");
-          if (!lume) {
-            lume = document.createElement("span");
-            lume.className = "capa-lume";
-            lume.setAttribute("aria-hidden", "true");
-            card.appendChild(lume);
-          }
-          requestAnimationFrame(function () { lume.classList.add("is-on"); });
-          io.unobserve(card);
+          lightCard(en.target);
+          io.unobserve(en.target);
         });
       }, { threshold: 0.22, rootMargin: "0px 0px -8% 0px" });
       for (var i = 0; i < nodes.length; i++) io.observe(nodes[i]);
     }
     lightCovers();
+    document.addEventListener("pointerover", function (e) {
+      var card = e.target && e.target.closest && e.target.closest(capaSel);
+      if (card) lightCard(card);
+    }, { passive: true });
 
     addEventListener("pointermove", function (e) { kick(e.clientX, e.clientY); }, { passive: true });
     document.addEventListener("visibilitychange", function () {
