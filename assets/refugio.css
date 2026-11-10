@@ -751,7 +751,10 @@ body.artigos .refugio-grain{opacity:.05}
   color:rgba(243,239,230,.72);
   max-width:40rem
 }
-.sala-escura .jornada{scroll-margin-top:6.5rem;margin-top:2.2rem}
+.portas,.sala-escura .jornada{scroll-margin-top:7.5rem}
+.sala-escura .jornada{margin-top:2.2rem}
+.porta.capa-queimado,.porta[data-capa="queimado"],.porta[data-tema="queimado"]{--capa-rgb:224,88,24}
+.porta.capa-esmeralda,.porta[data-capa="esmeralda"],.porta[data-tema="esmeralda"]{--capa-rgb:0,168,108}
 .sala-escura .jornada h3{
   font-family:Fraunces,Georgia,serif;font-weight:500;
   font-size:clamp(1.35rem,3vw,1.7rem);line-height:1.2;text-wrap:balance
