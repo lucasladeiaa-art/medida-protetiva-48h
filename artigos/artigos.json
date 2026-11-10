@@ -20,6 +20,36 @@
     "reading": 13
   },
   {
+    "title": "Meu CR venceu ou foi negado: o que acontece com as armas?",
+    "slug": "cac-cr-venceu-ou-foi-negado-o-que-acontece-com-as-armas",
+    "area": "cac",
+    "date": "2026-11-10",
+    "summary": "O CR do CAC vale três anos. Se a revalidação é pedida no prazo, o registro segue válido até a decisão. Se vence ou é negado, veja os prazos de cancelamento e de destinação das armas na IN DG/PF 311/2025 e no Decreto 11.615/2023.",
+    "cover": "img/cac-cr-venceu-ou-foi-negado-o-que-acontece-com-as-armas.webp",
+    "coverAlt": "Maleta fechada e uma folha em branco com uma caneta sobre uma mesa de madeira, à noite, com chuva e luzes âmbar na janela",
+    "reading": 17
+  },
+  {
+    "title": "Fui abordado transportando arma: guia de tráfego, porte de trânsito e o que pode virar crime",
+    "slug": "cac-abordado-transportando-arma-guia-trafego-porte-transito",
+    "area": "cac",
+    "date": "2026-11-10",
+    "summary": "A guia de tráfego comprova o porte de trânsito, não o porte de defesa. Veja o que ela autoriza, como a arma deve ir acondicionada e o que a Lei 10.826/2003 diz quando o transporte foge da autorização.",
+    "cover": "img/cac-abordado-transportando-arma-guia-trafego-porte-transito.webp",
+    "coverAlt": "Maleta fechada no banco de trás de um carro, à noite, com chuva nos vidros e uma rua molhada ao fundo",
+    "reading": 14
+  },
+  {
+    "title": "Minha arma foi furtada, roubada ou extraviada: o que comunicar e em quanto tempo?",
+    "slug": "cac-arma-furtada-roubada-ou-extraviada-o-que-comunicar",
+    "area": "cac",
+    "date": "2026-11-10",
+    "summary": "Furto, roubo ou extravio de arma, acessório ou munição do acervo deve ser comunicado imediatamente no Sinarm-CAC, com envio do boletim à Polícia Federal em até dez dias úteis, conforme a IN DG/PF 311/2025.",
+    "cover": "img/cac-arma-furtada-roubada-ou-extraviada-o-que-comunicar.webp",
+    "coverAlt": "Cofre aberto e vazio ao lado de uma maleta aberta e vazia, à noite, com chuva e luzes vinho na janela",
+    "reading": 12
+  },
+  {
     "title": "Depp x Heard: o mesmo casamento, dois tribunais e dois veredictos opostos",
     "slug": "depp-heard-dois-tribunais-dois-veredictos",
     "area": "mundo-em-disputa",
