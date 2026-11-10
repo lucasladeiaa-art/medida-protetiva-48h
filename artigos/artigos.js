@@ -97,6 +97,8 @@
 })();
 
 (function () {
+  if (window.__refugioLoad) return;
+  window.__refugioLoad = 1;
   function load() {
     var s = document.createElement("script");
     s.src = "../assets/refugio.js";

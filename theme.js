@@ -62,3 +62,16 @@ document.querySelectorAll('[data-cta^="whatsapp"]').forEach((el) => {
   setTimeout(() => cards[0].classList.add('is-lit'), 1800);
   setInterval(() => { if (paused || document.hidden) return; i = (i + 1) % cards.length; show(i); }, 3200);
 })();
+
+(function () {
+  if (window.__refugioLoad) return;
+  window.__refugioLoad = 1;
+  function load() {
+    var tag = document.querySelector('script[src*="theme.js"]');
+    var s = document.createElement("script");
+    s.src = tag && tag.src ? new URL("assets/refugio.js", tag.src).href : "/assets/refugio.js";
+    document.body.appendChild(s);
+  }
+  if (document.readyState === "complete") load();
+  else addEventListener("load", load);
+})();
