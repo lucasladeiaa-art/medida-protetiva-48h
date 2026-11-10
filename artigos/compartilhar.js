@@ -8,7 +8,7 @@
     var url = location.href.split('#')[0];
     var titulo = document.title || url;
     var wa = 'https://wa.me/?text=' + encodeURIComponent(titulo + '\n' + url);
-    box.innerHTML = '<p style="text-align:center;margin:1.5rem 0"><a href="' + wa + '">WhatsApp</a> · <button type="button" id="cmp-fb-copy" style="cursor:pointer">Copiar link</button></p>';
+    box.innerHTML = '<p style="text-align:center;margin:1.5rem 0"><a href="' + wa + '">Conversar</a> · <button type="button" id="cmp-fb-copy" style="cursor:pointer">Copiar link</button></p>';
     var b = document.getElementById('cmp-fb-copy');
     if (b) b.onclick = function () { copiarTexto(url); };
   }
@@ -166,7 +166,7 @@
         '<div class="cmp-destaque">' +
           '<a class="cmp-btn cmp-wa" data-rede="whatsapp" href="' + waHref + '" target="_blank" rel="noopener">' +
             '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12.5A8.5 8.5 0 1 1 11 4"/><path d="M8.2 8.6c.2-.5.4-.6.8-.6h.6c.2 0 .4.1.5.4l.9 2.1c.1.3 0 .5-.2.7l-.6.6c-.1.1-.1.3 0 .5.4.7 1.1 1.4 1.8 1.8.2.1.4.1.5 0l.6-.6c.2-.2.4-.3.7-.2l2.1.9c.3.1.4.3.4.5v.6c0 .4-.1.6-.6.8A9 9 0 0 1 8.2 8.6z"/></svg>' +
-            '<span>WhatsApp</span></a>' +
+            '<span>Conversar</span></a>' +
           '<button type="button" class="cmp-btn cmp-main" data-acao="story">' + IC_STORY + '<span>Story do Instagram</span></button>' +
           '<button type="button" class="cmp-btn" data-acao="copiar">' + IC_COPY + '<span>Copiar link</span></button>' +
         '</div>' +
