@@ -291,10 +291,12 @@ body.artigos .refugio-grain{opacity:.05}
 
 .poster{container-type:inline-size}
 .p-marca{
-  position:absolute;left:7%;right:7%;top:16%;z-index:3;pointer-events:none;
+  position:absolute;left:6%;right:6%;top:15%;z-index:3;pointer-events:none;
   margin:0;color:#fff;text-align:center;
   font-family:Fraunces,Georgia,serif;font-weight:600;font-style:italic;
-  font-size:clamp(1.15rem,15cqw,1.85rem);line-height:.95;letter-spacing:-.03em;
+  font-size:clamp(.92rem,10.5cqw,1.28rem);line-height:1.08;letter-spacing:-.02em;
+  text-wrap:balance;
+  display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;
   text-shadow:0 2px 10px rgba(0,0,0,.8),0 8px 28px rgba(0,0,0,.55),0 0 2px rgba(0,0,0,.9)
 }
 .poster .p-q{
@@ -327,41 +329,42 @@ body.artigos .refugio-grain{opacity:.05}
 .poster:has(.p-marca).is-on .p-marca,
 .poster:has(.p-marca):hover .p-marca,
 .poster:has(.p-marca).refugio-bloom .p-marca{
-  top:2.2rem;
-  font-size:clamp(1.05rem,12cqw,1.55rem);
-  line-height:1
+  top:2.15rem;
+  font-size:clamp(.88rem,9.6cqw,1.18rem);
+  line-height:1.08
 }
 .poster:has(.p-marca).is-on .p-body,
 .poster:has(.p-marca):hover .p-body,
 .poster:has(.p-marca).refugio-bloom .p-body{
-  top:5.7rem;
+  top:6.05rem;
   right:0;bottom:0;left:0;
   overflow:hidden;
-  padding-top:.7rem;
+  padding-top:.55rem;
   max-height:none
 }
 @media (max-width:699px){
   .poster:has(.p-marca).is-on .p-marca,
   .poster:has(.p-marca).refugio-bloom .p-marca{
-    top:2.45rem
+    top:2.3rem
   }
   .poster:has(.p-marca).is-on .p-body,
   .poster:has(.p-marca).refugio-bloom .p-body{
     position:absolute;
-    top:5.5rem;
+    top:5.95rem;
     right:0;bottom:0;left:0;
     padding-bottom:.85rem;
     display:flex;
     flex-direction:column;
     justify-content:flex-end;
-    gap:.35rem;
+    gap:.3rem;
     overflow:hidden
   }
   .poster:has(.p-marca).is-on .p-more,
   .poster:has(.p-marca).refugio-bloom .p-more{display:none}
   .poster:has(.p-marca).is-on .p-tease,
   .poster:has(.p-marca).refugio-bloom .p-tease{
-    max-height:3.1rem;
+    max-height:2.5rem;
+    display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;
     overflow:hidden;
     flex:0 1 auto;
     min-height:0
@@ -521,18 +524,20 @@ body.artigos .refugio-grain{opacity:.05}
 .loop-card .p-marca,
 .entrada-card .p-marca,
 .featured .p-marca{
-  position:absolute;left:7%;right:7%;top:2.7rem;z-index:3;pointer-events:none;
+  position:absolute;left:6%;right:6%;top:2.55rem;z-index:3;pointer-events:none;
   margin:0;color:#fff;text-align:center;
   font-family:Fraunces,Georgia,serif;font-weight:600;font-style:italic;
-  font-size:clamp(1.05rem,8cqw,1.7rem);line-height:.95;letter-spacing:-.03em;
+  font-size:clamp(.95rem,7.2cqw,1.28rem);line-height:1.08;letter-spacing:-.02em;
+  text-wrap:balance;
+  display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;
   text-shadow:0 2px 10px rgba(0,0,0,.8),0 8px 28px rgba(0,0,0,.55)
 }
 .a-card:has(.p-marca),
 .loop-card:has(.p-marca),
 .featured:has(.p-marca){
-  padding-top:5rem
+  padding-top:5.6rem
 }
-.entrada-card:has(.p-marca) .entrada-card-t{padding-top:4.6rem}
+.entrada-card:has(.p-marca) .entrada-card-t{padding-top:5.2rem}
 
 .entrada-rail{
   list-style:none;
@@ -563,7 +568,7 @@ body.artigos .refugio-grain{opacity:.05}
   text-wrap:balance;
   background:linear-gradient(180deg, transparent, rgba(6,7,15,.92) 55%)
 }
-.entrada-card .p-marca{font-size:clamp(1.1rem,16cqw,1.7rem);top:2.6rem}
+.entrada-card .p-marca{font-size:clamp(.95rem,12cqw,1.25rem);top:2.45rem}
 
 .row-head h3{max-width:22rem}
 
