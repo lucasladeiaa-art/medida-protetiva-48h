@@ -30,7 +30,7 @@
       var box = extra.closest(".loop-leia") || extra.parentElement;
       if (box) box.classList.add("refugio-farol");
     }
-    var capaSel = ".poster,.a-card,.loop-card,.featured,.loop-prox-card,.rcard,.case,.gp-book,.fita,.vhs,.ponte-guia-card,.entrada-card,.guias-media";
+    var capaSel = ".poster,.a-card,.loop-card,.featured,.loop-prox-card,.rcard,.case,.gp-book,.fita,.vhs,.ponte-guia-card,.entrada-card,.guias-media,.porta";
     var coarse = window.matchMedia("(hover: none), (pointer: coarse)").matches;
     var bloomTick = 0;
     var capaPals = ["ambar","queimado","vermelho","magenta","violeta","cobalto","ciano","esmeralda","lima","dourado","salmao"];

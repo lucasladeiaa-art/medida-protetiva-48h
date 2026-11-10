@@ -421,7 +421,8 @@ body.artigos .refugio-grain{opacity:.05}
 .vhs,
 .guias-media,
 .entrada-card,
-.ponte-guia-card{
+.ponte-guia-card,
+.porta{
   --capa-rgb: 28,76,220;
   position: relative;
   transition: transform .25s ease, box-shadow .25s ease, outline-color .25s ease
@@ -431,7 +432,8 @@ body.artigos .refugio-grain{opacity:.05}
 .fita img,
 .vhs img,
 .guias-media img,
-.entrada-card img{
+.entrada-card img,
+.porta img{
   filter: saturate(.75) contrast(1.18) brightness(1.16);
   transition: filter .25s ease, transform .25s ease
 }
@@ -442,7 +444,8 @@ body.artigos .refugio-grain{opacity:.05}
 .vhs::after,
 .guias-media::after,
 .entrada-card::after,
-.ponte-guia-card::after{
+.ponte-guia-card::after,
+.porta::after{
   content:""; position:absolute; inset:0; z-index:1; pointer-events:none; display:block!important;
   background:rgb(var(--capa-rgb));
   mix-blend-mode:soft-light;
@@ -457,7 +460,8 @@ body.artigos .refugio-grain{opacity:.05}
 .vhs[data-capa]::after,
 .guias-media[data-capa]::after,
 .entrada-card[data-capa]::after,
-.ponte-guia-card[data-capa]::after{opacity:.88}
+.ponte-guia-card[data-capa]::after,
+.porta[data-capa]::after{opacity:.88}
 .fita.capa-grafica::after,
 .vhs.capa-grafica::after,
 .gp-book.capa-grafica::after{opacity:.22}
@@ -468,7 +472,8 @@ body.artigos .refugio-grain{opacity:.05}
 .vhs.refugio-bloom,
 .guias-media.refugio-bloom,
 .entrada-card.refugio-bloom,
-.ponte-guia-card.refugio-bloom{
+.ponte-guia-card.refugio-bloom,
+.porta.refugio-bloom{
   z-index:4;
   transform:scale(1.03)!important;
   outline:2px solid rgba(var(--capa-rgb),.95);
@@ -486,7 +491,8 @@ body.artigos .refugio-grain{opacity:.05}
 .fita.refugio-bloom img,
 .vhs.refugio-bloom img,
 .guias-media.refugio-bloom img,
-.entrada-card.refugio-bloom img{
+.entrada-card.refugio-bloom img,
+.porta.refugio-bloom img{
   filter:saturate(1.9) contrast(1.3) brightness(1.15) drop-shadow(0 0 18px rgba(var(--capa-rgb),.75))
 }
 @media (hover:hover) and (pointer:fine){
@@ -497,7 +503,8 @@ body.artigos .refugio-grain{opacity:.05}
   .vhs:hover,
   .guias-media:hover,
   .entrada-card:hover,
-  .ponte-guia-card:hover{
+  .ponte-guia-card:hover,
+  .porta:hover{
     z-index:4;
     transform:scale(1.03)!important;
     outline:2px solid rgba(var(--capa-rgb),.95);
@@ -515,7 +522,8 @@ body.artigos .refugio-grain{opacity:.05}
   .fita:hover img,
   .vhs:hover img,
   .guias-media:hover img,
-  .entrada-card:hover img{
+  .entrada-card:hover img,
+  .porta:hover img{
     filter:saturate(1.9) contrast(1.3) brightness(1.15) drop-shadow(0 0 18px rgba(var(--capa-rgb),.75))
   }
 }
@@ -658,19 +666,119 @@ body.artigos .refugio-grain{opacity:.05}
 }
 
 @media (prefers-reduced-motion:reduce){
-  .rcard,.case,.gp-book,.fita,.vhs,.guias-media,.entrada-card,.ponte-guia-card,
+  .rcard,.case,.gp-book,.fita,.vhs,.guias-media,.entrada-card,.ponte-guia-card,.porta,
   .rcard.refugio-bloom,.case.refugio-bloom,.gp-book.refugio-bloom,.fita.refugio-bloom,
-  .vhs.refugio-bloom,.guias-media.refugio-bloom,.entrada-card.refugio-bloom,.ponte-guia-card.refugio-bloom,
-  .rcard:hover,.case:hover,.gp-book:hover,.fita:hover,.ponte-guia-card:hover{
+  .vhs.refugio-bloom,.guias-media.refugio-bloom,.entrada-card.refugio-bloom,.ponte-guia-card.refugio-bloom,.porta.refugio-bloom,
+  .rcard:hover,.case:hover,.gp-book:hover,.fita:hover,.ponte-guia-card:hover,.porta:hover{
     transform:none!important;
     box-shadow:none!important;
     outline:1px solid rgba(var(--capa-rgb),.7);
     outline-offset:-1px;
     transition:none
   }
-  .rcard img,.gp-book img,.fita img,.vhs img,.guias-media img,.entrada-card img{
+  .rcard img,.gp-book img,.fita img,.vhs img,.guias-media img,.entrada-card img,.porta img{
     filter:saturate(.75) contrast(1.18) brightness(1.16);
     transform:none;
     transition:none
   }
+}
+
+
+/* Duas jornadas na página de Medida Protetiva */
+.portas{padding:0 0 2.2rem}
+.portas .wrap{padding-top:.4rem}
+.portas-title{
+  font-family:Fraunces,Georgia,serif;font-weight:500;
+  font-size:clamp(1.55rem,3.4vw,2.1rem);line-height:1.15;
+  color:var(--tx,#f3efe6);margin:0 0 1.2rem;max-width:22rem;text-wrap:balance
+}
+.portas-grid{
+  display:grid;grid-template-columns:1fr;gap:1rem
+}
+@media (min-width:820px){
+  .portas-grid{grid-template-columns:1fr 1fr;gap:1.2rem}
+}
+.porta{
+  display:flex;flex-direction:column;justify-content:flex-end;
+  min-height:22rem;height:100%;
+  overflow:hidden;border-radius:18px;
+  text-decoration:none;color:#f3efe6;
+  background:#0b0c16;
+  isolation:isolate;
+  border:1px solid rgba(255,255,255,.08)
+}
+.porta img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0
+}
+.porta-inner{
+  position:relative;z-index:3;
+  display:grid;gap:.55rem;
+  padding:5.5rem 1.2rem 1.25rem;
+  background:linear-gradient(180deg, transparent 0%, rgba(6,7,15,.55) 28%, rgba(6,7,15,.94) 72%)
+}
+.porta-kicker{
+  font:700 .68rem/1 "Source Sans 3",system-ui,sans-serif;
+  letter-spacing:.16em;text-transform:uppercase;
+  color:rgb(var(--capa-rgb))
+}
+.porta h3{
+  margin:0;font-family:Fraunces,Georgia,serif;font-weight:500;
+  font-size:clamp(1.35rem,3vw,1.75rem);line-height:1.15;
+  color:#fff;text-wrap:balance
+}
+.porta p{
+  margin:0;font:400 .98rem/1.5 "Source Sans 3",system-ui,sans-serif;
+  color:rgba(243,239,230,.9)
+}
+.porta-go{
+  justify-self:start;
+  margin-top:.25rem;
+  font:700 .78rem/1 "Source Sans 3",system-ui,sans-serif;
+  letter-spacing:.08em;text-transform:uppercase;
+  color:#0b0c16;
+  background:rgb(var(--capa-rgb));
+  padding:.55rem .85rem;
+  border-radius:999px;
+  box-shadow:0 0 18px rgba(var(--capa-rgb),.45)
+}
+.porta:focus-visible{
+  outline:2px solid rgb(var(--capa-rgb));
+  outline-offset:3px
+}
+.portas-nota{
+  margin:1.1rem 0 0;
+  font:400 .92rem/1.5 "Source Sans 3",system-ui,sans-serif;
+  color:rgba(243,239,230,.72);
+  max-width:40rem
+}
+.sala-escura .jornada{scroll-margin-top:6.5rem;margin-top:2.2rem}
+.sala-escura .jornada h3{
+  font-family:Fraunces,Georgia,serif;font-weight:500;
+  font-size:clamp(1.35rem,3vw,1.7rem);line-height:1.2;text-wrap:balance
+}
+
+/* Ponte do Guia: faixa um pouco mais visível e acesso discreto mais acima */
+.ponte-guia--faixa{padding:0 0 2.8rem}
+.ponte-guia--faixa .wrap{padding-top:2.5rem}
+.ponte-guia--faixa .ponte-guia-card{
+  border-color:rgba(0,196,210,.55);
+  box-shadow:0 18px 44px rgba(0,0,0,.45), 0 0 28px rgba(0,196,210,.18), inset 0 0 0 1px rgba(255,255,255,.05)
+}
+.ponte-guia--faixa .ponte-guia-title{font-size:1.12rem;max-width:38rem}
+.ponte-guia-alto{
+  margin:0 auto 1.6rem;
+  padding:0 1.25rem;
+  max-width:var(--max,72rem)
+}
+.ponte-guia-alto a{
+  display:inline-block;
+  font:500 .95rem/1.45 "Source Sans 3",system-ui,sans-serif;
+  color:#8ee8f0;
+  text-decoration:none;
+  border-bottom:1px solid rgba(0,196,210,.45);
+  padding:.15rem 0
+}
+.ponte-guia-alto a:hover,.ponte-guia-alto a:focus-visible{
+  color:#e8f4f6;
+  border-bottom-color:#7ee7f0
 }

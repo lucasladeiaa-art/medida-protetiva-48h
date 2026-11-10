@@ -25,13 +25,22 @@
       '<span class="a-meta"><span>' + esc(fmtDate(a.date)) + '</span>' + (a.reading ? '<span>' + esc(a.reading) + ' min de leitura</span>' : '') + '</span>' +
       '</a></li>';
   }
+  function parseList(data) {
+    var list = Array.isArray(data) ? data : (data && Array.isArray(data.artigos) ? data.artigos : []);
+    return list.filter(function (a) { return a && a.slug && a.title && AREA[a.area]; })
+      .sort(function (x, y) { return String(y.date).localeCompare(String(x.date)); });
+  }
   function load() {
-    return fetch('artigos.json', { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : []; })
-      .then(function (list) {
-        if (!Array.isArray(list)) list = list && Array.isArray(list.artigos) ? list.artigos : [];
-        return list.filter(function (a) { return a && a.slug && a.title && AREA[a.area]; })
-          .sort(function (x, y) { return String(y.date).localeCompare(String(x.date)); });
-      }).catch(function () { return []; });
+    var urls = ["artigos.json", "/artigos/artigos.json"];
+    function tryAt(i) {
+      if (i >= urls.length) return Promise.resolve([]);
+      return fetch(urls[i], { cache: "no-cache" }).then(function (r) {
+        return r.ok ? r.json() : Promise.reject();
+      }).then(parseList).then(function (list) {
+        return list.length ? list : Promise.reject();
+      }).catch(function () { return tryAt(i + 1); });
+    }
+    return tryAt(0);
   }
   function bindRowNav(root) {
     root.querySelectorAll('[data-row]').forEach(function (row) {
@@ -53,7 +62,11 @@
       var empty = document.querySelector('[data-vazio]');
       var chips = document.querySelector('[data-chips]');
       if (!list.length) {
-        if (!listing.querySelector('[data-row]')) { empty.hidden = false; listing.hidden = true; if (featured) featured.hidden = true; }
+        if (!listing.querySelector("[data-row]") && empty) {
+          empty.hidden = false;
+          listing.hidden = true;
+          if (featured) featured.hidden = true;
+        }
         return;
       }
       var f = list[0], fa = AREA[f.area];
