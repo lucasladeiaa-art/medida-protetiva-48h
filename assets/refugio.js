@@ -300,6 +300,8 @@
       for (var r = 0; r < rails.length; r++) {
         var cards = rails[r].querySelectorAll(capaSel);
         if (cards.length < 2) continue;
+        if (rails[r].getAttribute("data-capas-ok") === String(cards.length)) continue;
+        rails[r].setAttribute("data-capas-ok", String(cards.length));
         var prefers = [];
         var c = 0;
         for (; c < cards.length; c++) prefers.push(inferCapa(capaSlug(cards[c])));
@@ -385,18 +387,27 @@
       if (slot && slot.parentNode === footer) footer.insertBefore(box, slot);
       else footer.appendChild(box);
     }
+    var painting = false;
+    var mo0 = null;
     function paintRede() {
+      if (painting) return;
+      painting = true;
+      if (mo0) mo0.disconnect();
       markTema();
       enhanceEntryLists();
       injectPonte();
       tintAll();
+      setTimeout(function () {
+        painting = false;
+        if (mo0) mo0.observe(document.body, { childList: true, subtree: true });
+      }, 0);
     }
     paintRede();
     if (window.MutationObserver) {
       var moTimer0 = 0;
-      var mo0 = new MutationObserver(function () {
-        if (moTimer0) return;
-        moTimer0 = setTimeout(function () { moTimer0 = 0; paintRede(); }, 60);
+      mo0 = new MutationObserver(function () {
+        if (painting || moTimer0) return;
+        moTimer0 = setTimeout(function () { moTimer0 = 0; paintRede(); }, 200);
       });
       mo0.observe(document.body, { childList: true, subtree: true });
     }
