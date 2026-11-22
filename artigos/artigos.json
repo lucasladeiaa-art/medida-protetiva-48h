@@ -1,5 +1,65 @@
 [
   {
+    "title": "Quem sabe o quê, e quando: o tempo de apresentar a prova",
+    "slug": "quem-sabe-o-que-e-quando-o-tempo-da-prova",
+    "area": "criminal",
+    "date": "2026-11-22",
+    "summary": "Informação assimétrica, resposta à acusação e juntada de documentos: o lance certo depende de saber o que cada lado já sabe, e de jogar sempre dentro da lei.",
+    "cover": "img/quem-sabe-o-que-e-quando-o-tempo-da-prova.webp",
+    "coverAlt": "Relógio antigo e envelope lacrado com lacre de cera ao lado de um caderno fechado, sobre mesa escura, com chuva na janela em luz roxa e azul",
+    "reading": 12
+  },
+  {
+    "title": "Sinal barato, sinal caro: por que o print solto pesa pouco e o arquivo íntegro pesa muito",
+    "slug": "sinal-barato-sinal-caro-print-ou-arquivo-integro",
+    "area": "criminal",
+    "date": "2026-11-22",
+    "summary": "A teoria da sinalização explica o que o juiz faz com uma captura de tela e com uma conversa exportada, com hash e ata notarial: acredita mais no que custa caro falsificar.",
+    "cover": "img/sinal-barato-sinal-caro-print-ou-arquivo-integro.webp",
+    "coverAlt": "Folha amassada ao lado de um disco rígido lacrado com lacre de cera e uma etiqueta em branco, sobre mesa escura, com chuva na janela em luz roxa e azul",
+    "reading": 10
+  },
+  {
+    "title": "Preservar tudo: a jogada que não piora nenhum cenário",
+    "slug": "preservar-tudo-a-jogada-que-nao-piora-nenhum-cenario",
+    "area": "criminal",
+    "date": "2026-11-22",
+    "summary": "Na teoria dos jogos, estratégia dominante é a que dá resultado igual ou melhor em qualquer cenário. Na prova digital, essa jogada tem nome: guardar. Apagar ou editar piora todos os cenários, inclusive aquele em que a mensagem pesa contra você.",
+    "cover": "img/preservar-tudo-a-jogada-que-nao-piora-nenhum-cenario.webp",
+    "coverAlt": "Celular, disco externo e saco plástico lacrado alinhados sobre mesa escura, com chuva na janela em luz roxa e azul",
+    "reading": 10
+  },
+  {
+    "title": "Pensar de trás para frente: da sentença que o juiz vai escrever à prova que você guarda hoje",
+    "slug": "pensar-de-tras-para-frente-da-sentenca-a-prova-de-hoje",
+    "area": "criminal",
+    "date": "2026-11-22",
+    "summary": "A indução retroativa resolve um jogo a partir do último lance. No processo, o último lance é a sentença. Saber o que o juiz vai precisar escrever diz o que preservar agora.",
+    "cover": "img/pensar-de-tras-para-frente-da-sentenca-a-prova-de-hoje.webp",
+    "coverAlt": "Celular com mensagens desfocadas, pendrive e folha de decisão sobre mesa escura, com chuva na janela em luz roxa e azul",
+    "reading": 9
+  },
+  {
+    "title": "Guarda e convivência: o jogo que se repete e a reputação que cada mensagem constrói",
+    "slug": "guarda-e-convivencia-o-jogo-que-se-repete",
+    "area": "familia",
+    "date": "2026-11-22",
+    "summary": "Pai e mãe separados jogam um jogo que dura anos, e cada mensagem fica registrada. A teoria dos jogos repetidos explica por que a resposta à provocação pesa mais do que a provocação, e o que muda quando há medida protetiva.",
+    "cover": "img/guarda-e-convivencia-o-jogo-que-se-repete.webp",
+    "coverAlt": "Mochila escolar e tênis infantis ao lado de um calendário e de um celular com conversa desfocada no sofá, à noite, em luz roxa e azul",
+    "reading": 10
+  },
+  {
+    "title": "Cadeia de custódia: o compromisso que se pode conferir",
+    "slug": "cadeia-de-custodia-o-compromisso-que-se-pode-conferir",
+    "area": "criminal",
+    "date": "2026-11-22",
+    "summary": "Um compromisso só é crível quando pode ser verificado. A cadeia de custódia é o compromisso do Estado de mostrar o caminho de cada vestígio, e a defesa tem o direito de conferir cada passo, inclusive na prova digital.",
+    "cover": "img/cadeia-de-custodia-o-compromisso-que-se-pode-conferir.webp",
+    "coverAlt": "Saco plástico com etiqueta ao lado de um caderno lacrado, um pendrive e um lacre de cera, sobre mesa escura, com chuva na janela em luz roxa e azul",
+    "reading": 11
+  },
+  {
     "title": "Tenho os prints da conversa. Isso vale como prova?",
     "slug": "tenho-os-prints-da-conversa-isso-vale-como-prova",
     "area": "medida-protetiva",
