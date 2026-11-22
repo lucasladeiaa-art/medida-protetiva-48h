@@ -82,8 +82,10 @@ h1 em{font-style:italic;color:var(--lamp);text-shadow:0 2px 0 #000,0 0 22px rgba
 .tab>span{display:block;transform:skewX(8deg)}
 .tab b{display:block;font:800 1rem/1 var(--ui);letter-spacing:.16em}
 .tab small{display:block;font:600 .75rem/1.2 var(--ui);letter-spacing:.04em;color:var(--dim);margin-top:.28rem}
-.tab[aria-selected=true]{background:linear-gradient(100deg,var(--pink),#b23cf0 55%,var(--violet));box-shadow:0 0 0 1px rgba(255,255,255,.35) inset,0 6px 22px rgba(255,79,168,.35)}
-.tab[aria-selected=true] small{color:#fff}
+.tabs--uma{grid-template-columns:1fr}
+.tab.sel{cursor:default}
+.tab.sel,.tab[aria-selected=true]{background:linear-gradient(100deg,var(--pink),#b23cf0 55%,var(--violet));box-shadow:0 0 0 1px rgba(255,255,255,.35) inset,0 6px 22px rgba(255,79,168,.35)}
+.tab.sel small,.tab[aria-selected=true] small{color:#fff}
 .prog{display:flex;align-items:center;gap:.7rem}
 .prog-t{font:700 .8rem/1 var(--ui);letter-spacing:.06em;white-space:nowrap}
 .prog-t strong{color:var(--lamp);font-size:1.05rem}
@@ -248,10 +250,7 @@ footer{position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:1rem 1
       <p class="sub">Cada texto trata de uma emoção e diz o que fazer. Ao ler, a peça correspondente acende ao lado do personagem.</p>
     </div>
     <div class="hud">
-      <div class="tabs" role="tablist" aria-label="Seções do inventário">
-        <button class="tab" role="tab" id="tab-emo" aria-selected="true" aria-controls="arena" data-tab="emo"><span><b>EMOÇÕES</b><small>Libertar-se</small></span></button>
-        <button class="tab" role="tab" id="tab-evo" aria-selected="false" aria-controls="arena" data-tab="evo" tabindex="-1"><span><b>EVOLUÇÃO</b><small>Estratégia e prova</small></span></button>
-      </div>
+      <div class="tabs tabs--uma"><span class="tab sel"><span><b>EMOÇÕES</b><small>11 textos</small></span></span></div>
       <div class="prog" aria-live="polite">
         <span class="prog-t" id="prog-t">Peças equipadas: <strong>0</strong> de 11</span>
         <div class="segs" id="segs" aria-hidden="true"></div>
@@ -259,7 +258,7 @@ footer{position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:1rem 1
     </div>
   </div>
 
-  <section class="arena" id="arena" role="tabpanel" aria-labelledby="tab-emo">
+  <section class="arena" id="arena" aria-label="Emoções">
     <div class="stage" id="stage">
       <span class="stage-tag" id="stage-tag">Equipado: <b>0</b></span>
       <img id="avatar" src="img/avatar-lucas-720.webp"
@@ -282,38 +281,23 @@ footer{position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:1rem 1
 </main>
 <footer>Rede de Proteção · Lucas Brito Ladeia · OAB/MA 16.091. Os textos orientam de forma geral e não substituem a análise do seu caso. O progresso fica salvo só neste aparelho. <a href="../privacidade/">Política de privacidade</a></footer>
 
-<!--
-  Como ativar um item quando o artigo for publicado:
-  1. Publique o texto em /conexao/<emocao>.html (por exemplo, vergonha.html).
-  2. Na lista D abaixo, no item correspondente, acrescente href:'<emocao>.html' (como no item MEDO: href:'medo.html').
-  3. No artigo publicado, inclua o script curto que marca a peça como equipada (ver o fim de medo.html), trocando a chave pelo k do item.
-  4. Inclua a nova URL no sitemap.xml. Itens sem href aparecem como "Em breve", sem link.
--->
 <script>
 (function(){
 var D={
 emo:[
- {k:'oculos',href:'medo.html',ic:'oculos',item:'Óculos escuros',uso:'enxergar o medo de frente',t:'Medo',full:'Medo',sub:'Da falsa acusação: o que fazer agora',sobre:'o medo da falsa acusação',why:'Apontaram o dedo para você. O que fazer nas primeiras horas, o que não fazer e por que o silêncio bem orientado protege.',mx:9,my:22,x:37,y:28},
- {k:'jaqueta',href:'vergonha.html',ic:'jaqueta',item:'Jaqueta',uso:'andar de cabeça erguida',t:'Vergonha',full:'Vergonha',sub:'Todo mundo ficou sabendo: como se portar',sobre:'a vergonha',why:'A vontade é sumir ou revidar em público. Entenda por que a vergonha vira armadilha e como erguer a cabeça sem se expor.',mx:9,my:46,x:22,y:55},
- {k:'relogio',href:'ciume.html',ic:'relogio',item:'Relógio',uso:'o tempo que o ciúme rouba',t:'Ciúme',full:'Ciúme',sub:'Quando ameaça o casamento: como frear a tempo',sobre:'o ciúme',why:'Em dez anos de profissão, vi o ciúme ser o embrião de muita coisa ruim: perseguição, medida protetiva, divórcio às pressas. Aprenda a reconhecer o embrião antes que ele cresça.',mx:62,my:95,x:78,y:85},
- {k:'luvas',href:'raiva.html',ic:'luvas',item:'Luvas',uso:'as mãos sob controle',t:'Raiva',full:'Raiva',sub:'Quando você quer revidar: o que fazer antes',sobre:'a raiva',why:'Há uma frase que você está ensaiando há dias. Veja o que acontece no segundo depois de dizê-la, e por que o golpe que você não dá é o que te protege.',mx:86,my:95,x:88,y:80},
- {k:'tenis',href:'medo-de-ser-preso.html',ic:'tenis',item:'Tênis',uso:'chão firme, sem fugir',t:'Medo de ser preso',full:'Medo de ser preso',sub:'O que é real, o que é pânico e o que fazer',sobre:'o medo de ser preso',why:'Toda viatura parece vir para a sua porta. Separe o que é real do que é pânico, e entenda por que sumir ou fugir só complica a sua situação.',mx:38,my:95,x:40,y:99},
- {k:'bone',href:'inveja.html',ic:'bone',item:'Boné',uso:'a aba que tira seus olhos da vida do outro',t:'Inveja',full:'Inveja',sub:'Quando você se compara: como parar',sobre:'a inveja',why:'Você conhece o seu lado de dentro e só vê o lado de fora dos outros. Tire os olhos da vida alheia antes que a comparação fale por você.',mx:9,my:10,x:33,y:17},
- {k:'celular',href:'panico.html',ic:'celular',item:'Celular',uso:'nada de decidir no impulso',t:'Pânico',full:'Pânico',sub:'A intimação chegou: o que fazer na primeira noite',sobre:'o pânico das primeiras horas',why:'A intimação chegou e o telefone não para. O que fazer na primeira noite e o que nunca fazer, como procurar a outra parte quando existe medida protetiva.',mx:9,my:84,x:10,y:92},
- {k:'fone',href:'solidao.html',ic:'fone',item:'Fone',uso:'uma voz para atravessar o silêncio',t:'Solidão',full:'Solidão',sub:'Amigos e família se afastaram: a quem recorrer',sobre:'a solidão',why:'Quando todos se afastam, o risco é correr para qualquer abrigo. Veja quem ainda caminha com você e como atravessar o silêncio.',mx:9,my:34,x:46,y:32},
- {k:'mochila',href:'culpa.html',ic:'mochila',item:'Mochila',uso:'carregar só o que é seu',t:'Culpa',full:'Culpa',sub:'O que é seu e o que jogaram em você',sobre:'a culpa',why:'Nem tudo o que você carrega é seu. Separe a responsabilidade que é sua do peso que puseram nas suas costas.',mx:91,my:10,x:64,y:46},
- {k:'chaves',href:'apatia.html',ic:'chaves',item:'Chaves',uso:'sair do lugar',t:'Apatia',full:'Apatia',sub:'Quando você deixa tudo acontecer: como reagir',sobre:'a apatia',why:'O cansaço chega e o divórcio começa a acontecer sozinho. Como sair da inércia antes que decidam por você.',mx:9,my:70,x:34,y:89},
- {k:'bussola',href:'recomeco.html',ic:'bussola',item:'Bússola',uso:'o rumo novo',t:'Recomeço',full:'Recomeço',sub:'Depois do processo: como levantar',sobre:'o recomeço',why:'O processo passa. Como levantar, escolher um rumo novo e não repetir o mesmo caminho.',mx:91,my:22,x:56,y:58,final:1}
+ {k:'oculos',href:'medo.html',ic:'oculos',item:'Óculos escuros',t:'Medo',full:'Medo',sub:'Da falsa acusação: o que ele faz com você e o que fazer agora',sobre:'o medo da falsa acusação',why:'Quem foi acusado costuma agir no impulso: mandar mensagem, procurar quem acusou, apagar conversas. Veja o que evitar, quais são os seus direitos e cinco passos para os próximos dias.',mx:9,my:22,x:37,y:28},
+ {k:'jaqueta',href:'vergonha.html',ic:'jaqueta',item:'Jaqueta',t:'Vergonha',full:'Vergonha',sub:'Quando todo mundo ficou sabendo: o que ela faz com você e o que fazer agora',sobre:'a vergonha',why:'Quando a família, o trabalho ou a cidade ficam sabendo, a reação comum é se isolar ou se defender em público. Veja o que essas reações podem causar no processo e o que fazer no lugar.',mx:9,my:46,x:22,y:55},
+ {k:'relogio',href:'ciume.html',ic:'relogio',item:'Relógio',t:'Ciúme',full:'Ciúme',sub:'E a traição: como os dois decidem um divórcio e o que fazer antes de decidir',sobre:'o ciúme e a traição',why:'Ciúme e traição levam a decisões rápidas sobre divórcio, filhos e bens, e às vezes a condutas que são crime, como perseguição ou descumprimento de medida protetiva. Veja o que considerar antes de decidir.',mx:62,my:95,x:78,y:85},
+ {k:'luvas',href:'raiva.html',ic:'luvas',item:'Luvas',t:'Raiva',full:'Raiva',sub:'Depois da acusação: o que ela faz com você e o que fazer antes de responder',sobre:'a raiva',why:'Depois de uma acusação, a vontade é responder na hora. Uma mensagem ou um contato feito com raiva pode ser usado contra você. Veja o que fazer antes de responder.',mx:86,my:95,x:88,y:80},
+ {k:'tenis',href:'medo-de-ser-preso.html',ic:'tenis',item:'Tênis',t:'Medo de ser preso',full:'Medo de ser preso',sub:'O que é real, o que é imaginação e o que fazer agora',sobre:'o medo de ser preso',why:'Quando cabe prisão, quais são os seus direitos e por que faltar a uma intimação ou sumir complica a sua situação.',mx:38,my:95,x:40,y:99},
+ {k:'bone',href:'inveja.html',ic:'bone',item:'Boné',t:'Inveja',full:'Inveja',sub:'Quando a vida do outro vira o seu problema: o que ela faz com você e o que fazer agora',sobre:'a inveja',why:'Comparar a sua vida com a do outro leva a mensagens, exposição nas redes e decisões tomadas por comparação. Veja o que fazer agora.',mx:9,my:10,x:33,y:17},
+ {k:'celular',href:'panico.html',ic:'celular',item:'Celular',t:'Pânico',full:'Pânico',sub:'Nas primeiras horas depois da intimação ou da medida protetiva: o que fazer agora',sobre:'o pânico das primeiras horas',why:'Chegou a intimação ou a medida protetiva. O que fazer nas primeiras horas, o que não fazer e quais documentos separar.',mx:9,my:84,x:10,y:92},
+ {k:'fone',href:'solidao.html',ic:'fone',item:'Fone',t:'Solidão',full:'Solidão',sub:'Quando os amigos sumiram: o que ela faz com você e o que fazer agora',sobre:'a solidão',why:'Quando amigos e família se afastam, o risco é buscar apoio em quem pode prejudicar o seu caso. Veja como lidar com o afastamento e a quem recorrer.',mx:9,my:34,x:46,y:32},
+ {k:'mochila',href:'culpa.html',ic:'mochila',item:'Mochila',t:'Culpa',full:'Culpa',sub:'O que é seu e o que jogaram em você: como separar e o que fazer agora',sobre:'a culpa',why:'Separe o que é responsabilidade sua do que foi atribuído a você, e veja o que fazer com cada parte.',mx:91,my:10,x:64,y:46},
+ {k:'chaves',href:'apatia.html',ic:'chaves',item:'Chaves',t:'Apatia',full:'Apatia',sub:'Quando falta força para tudo: o que ela faz com você e o primeiro passo para sair dela',sobre:'a apatia',why:'Sem força, prazos passam e decisões ficam para os outros. Veja o primeiro passo para sair da inércia e o que não pode esperar.',mx:9,my:70,x:34,y:89},
+ {k:'bussola',href:'recomeco.html',ic:'bussola',item:'Bússola',t:'Recomeço',full:'Recomeço',sub:'Depois do processo: como decidir quem você vai ser e o que fazer agora',sobre:'o recomeço',why:'Terminado o processo, o que resolver primeiro: documentos, convivência com os filhos, trabalho e rotina, e como decidir os próximos passos.',mx:91,my:22,x:56,y:58,final:1}
 ],
 evo:[
- {k:'mapa',ic:'mapa',item:'Mapa',uso:'ver o campo antes de agir',t:'Estratégia',full:'Estratégia',sub:'Os cinco fatores antes de qualquer passo',sobre:'a estratégia antes da batalha',why:'Há dois mil e quinhentos anos, um general escreveu que toda batalha se decide antes, por cinco coisas: o caminho, o céu, a terra, o líder e o método. Nenhuma delas é atacar.',mx:9,my:58,x:16,y:70},
- {k:'kit',ic:'kit',item:'Kit de prova',uso:'o celular como escudo',t:'Prova',full:'Prova',sub:'Celular: prints, áudios, datas e cópias',sobre:'a prova que está no seu celular',why:'O seu celular pode ser o seu escudo ou a arma do outro lado. Depende do que você faz com ele hoje.',lista:['Prints das conversas do celular, com data e hora visíveis','Áudios guardados como chegaram, sem editar','Registro de datas num caderno de fatos','Preservação: cópias em mais de um lugar, sem apagar nada'],nota:'Nunca acesse o aparelho de outra pessoa. Na dúvida, oriente-se antes de agir.',mx:9,my:84,x:11,y:91},
- {k:'pasta',ic:'pasta',item:'Pasta do caso',uso:'método nas mãos',t:'Método',full:'Método',sub:'A pasta do caso: cronologia, documentos e prazos',sobre:'como organizar a sua defesa',why:'Coragem sem método é só barulho. Cronologia, documentos, contatos e prazos, tudo num lugar só.',lista:['Cronologia dos fatos, com datas','Documentos e comprovantes','Nomes de quem viu o que aconteceu','Perguntas para levar à orientação técnica'],mx:9,my:46,x:24,y:60},
- {k:'chuva',ic:'chuva',item:'Guarda-chuva',uso:'proteção contra o que vem de cima',t:'Controle',full:'Controle',sub:'O que não depende de você e como lidar',sobre:'o que está fora do seu controle',why:'Você não manda na chuva, mas pode decidir se sai protegido. O tempo do processo e a pauta do fórum entram aqui.',mx:91,my:10,x:60,y:8},
- {k:'colete',ic:'colete',item:'Colete',uso:'proteger o coração',t:'Cabeça fria',full:'Cabeça fria',sub:'Como decidir sob pressão',sobre:'decidir sob pressão',why:'O general que perde a calma já perdeu metade do exército. O seu exército é você.',mx:30,my:95,x:40,y:64},
- {k:'binoculo',ic:'binoculo',item:'Binóculo',uso:'ler os sinais sem atacar',t:'Sinais',full:'Sinais',sub:'Provocação e isca: como não cair',sobre:'a provocação e a isca',why:'Quem acusa também erra, mas você só vê o erro se estiver calmo o bastante para olhar. Provocação para gerar reação gravada é isca: não engula.',mx:9,my:22,x:37,y:28},
- {k:'ampulheta',ic:'ampulheta',item:'Ampulheta',uso:'o custo do tempo',t:'Tempo',full:'Tempo',sub:'O custo de um conflito longo',sobre:'o custo de uma guerra que não acaba',why:'Há guerras que você vence e, ainda assim, perde tudo: tempo, saúde, os anos dos filhos.',mx:62,my:95,x:79,y:86},
- {k:'carteira',ic:'carteira',item:'Foto na carteira',uso:'a causa comum',t:'Filhos',full:'Filhos',sub:'O que continua depois do fim e como agir',sobre:'os filhos depois do fim',why:'Vocês podem nunca mais ser um casal, mas os seus filhos continuam no mesmo barco.',mx:91,my:22,x:57,y:60}
 ]};
 var KEY='rede-conexao-equipados',read;
 try{read=JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){read=[]}
@@ -359,7 +343,7 @@ function select(k,quiet){
   document.querySelectorAll('.mk,.ln,.dot').forEach(function(m){m.classList.toggle('pre',m.dataset.k===k&&!has(k))});
   var eq=has(k),i=list().indexOf(o)+1,pn=$('panel');
   pn.classList.toggle('eq',eq);
-  var h='<div class="p-top"><span class="p-ic">'+svg(o.ic)+'</span><div><p class="p-k">'+(tab==='emo'?'Emoções':'Evolução')+' · item '+i+' de '+list().length+(o.final?' · peça final':'')+'</p>'
+  var h='<div class="p-top"><span class="p-ic">'+svg(o.ic)+'</span><div><p class="p-k">'+'Emoções · item '+i+' de '+list().length+(o.final?' · peça final':'')+'</p>'
    +'<p class="p-item">'+o.item+'</p></div></div>'
    +'<h3>'+o.full+'</h3><p class="p-line">'+o.sub+'</p><p class="p-sobre">O que você precisa saber sobre '+o.sobre+'</p><p class="p-why">'+o.why+'</p>';
   if(o.lista){h+='<ul class="p-list">'+o.lista.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul>'}
@@ -397,10 +381,8 @@ document.addEventListener('click',function(e){
 });
 document.addEventListener('pointerover',function(e){if(!fine.matches)return;var s=e.target.closest('.slot');if(s&&s.dataset.k!==sel)select(s.dataset.k)});
 function setTab(t){
-  tab=t;document.querySelectorAll('.tab').forEach(function(b){var on=b.dataset.tab===t;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1});
-  $('arena').setAttribute('aria-labelledby','tab-'+t);render();
+  tab=t;render();
 }
-document.querySelector('.tabs').addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key==='ArrowLeft'){var t=tab==='emo'?'evo':'emo';setTab(t);$('tab-'+t).focus()}});
 desk.addEventListener('change',render);
 setTab(tab);
 })();

@@ -300,7 +300,6 @@ html:not(.js) .hook-track span:first-child { opacity: 1; transform: none; }
 .row-wa span { font-weight: 400; color: var(--mu); }
 .row-wa:hover { color: #fff; }
 
-/* Fileiras abaixo da dobra: menos trabalho de layout na primeira pintura. */
 #fileira-acusado,
 #fileira-familia,
 #fileira-cac,

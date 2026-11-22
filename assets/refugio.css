@@ -382,7 +382,6 @@ body.artigos .refugio-grain{opacity:.05}
   .poster:has(.p-marca).is-on .p-seal{display:none}
 }
 
-/* Superfícies da Rede e ponte para o Guia do Passageiro */
 [data-tema="ambar"]{--capa-rgb:255,176,28}
 [data-tema="queimado"]{--capa-rgb:224,88,24}
 [data-tema="vermelho"]{--capa-rgb:220,28,42}
@@ -667,7 +666,6 @@ body.artigos .refugio-grain{opacity:.05}
 }
 
 
-/* Duas jornadas na página de Medida Protetiva */
 .portas{padding:0 0 2.2rem}
 .portas .wrap{padding-top:.4rem}
 .portas-title{
@@ -743,7 +741,6 @@ body.artigos .refugio-grain{opacity:.05}
   font-size:clamp(1.35rem,3vw,1.7rem);line-height:1.2;text-wrap:balance
 }
 
-/* Ponte do Guia: faixa um pouco mais visível e acesso discreto mais acima */
 .ponte-guia--faixa{padding:0 0 2.8rem}
 .ponte-guia--faixa .wrap{padding-top:2.5rem}
 .ponte-guia--faixa .ponte-guia-card{

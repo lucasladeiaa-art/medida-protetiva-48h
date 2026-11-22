@@ -60,8 +60,6 @@
       });
     });
   }
-
-  /* Listagem */
   var listing = document.querySelector('[data-artigos-listagem]');
   if (listing) {
     if (listing.querySelector('[data-row]')) bindRowNav(listing);
@@ -100,8 +98,6 @@
       bindRowNav(listing);
     });
   }
-
-  /* Relacionados (página de artigo) */
   var related = document.querySelector('[data-relacionados]');
   if (related) {
     var slug = document.body.dataset.slug, area = document.body.dataset.area;
