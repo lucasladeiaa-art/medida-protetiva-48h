@@ -1,5 +1,45 @@
 [
   {
+    "title": "Tenho os prints da conversa. Isso vale como prova?",
+    "slug": "tenho-os-prints-da-conversa-isso-vale-como-prova",
+    "area": "medida-protetiva",
+    "date": "2026-11-22",
+    "summary": "O print pode valer como prova, mas raramente se sustenta sozinho. Veja o que a lei diz sobre a imagem de tela, a ata notarial e o código hash, e o que preservar desde já.",
+    "cover": "img/tenho-os-prints-da-conversa-isso-vale-como-prova.webp",
+    "coverAlt": "Celular com conversa desfocada sobre a mesa, ao lado de imagens impressas e uma lupa, à noite, com chuva na janela",
+    "reading": 7
+  },
+  {
+    "title": "Ela apagou as mensagens. E agora?",
+    "slug": "ela-apagou-as-mensagens-e-agora",
+    "area": "medida-protetiva",
+    "date": "2026-11-22",
+    "summary": "Mensagem apagada não significa prova perdida. Veja por que preservar é sempre o lance mais seguro, o que o Marco Civil diz sobre os registros e o que não fazer.",
+    "cover": "img/ela-apagou-as-mensagens-e-agora.webp",
+    "coverAlt": "Celular com mensagens desfocadas ao lado de um disco externo e de um caderno fechado, em mesa escura com chuva na janela",
+    "reading": 7
+  },
+  {
+    "title": "Posso gravar a conversa sem ela saber?",
+    "slug": "posso-gravar-a-conversa-sem-ela-saber",
+    "area": "medida-protetiva",
+    "date": "2026-11-22",
+    "summary": "Gravar a conversa de que você participa é diferente de captar a conversa dos outros. Veja o que a Lei 9.296/1996 permite, o limite que não pode ser cruzado e como preservar a gravação.",
+    "cover": "img/posso-gravar-a-conversa-sem-ela-saber.webp",
+    "coverAlt": "Celular sobre a mesa com uma onda de áudio iluminada na tela, ao lado de uma xícara e de um caderno, com chuva na janela",
+    "reading": 7
+  },
+  {
+    "title": "Perfil falso ou conversa forjada: quando entra a perícia?",
+    "slug": "perfil-falso-ou-conversa-forjada-quando-entra-a-pericia",
+    "area": "criminal",
+    "date": "2026-11-22",
+    "summary": "Quando aparece uma conversa que você não escreveu, a autenticidade passa a ser o centro da discussão. Veja quem precisa provar, como se argui a falsidade, como funciona a perícia e o que preservar.",
+    "cover": "img/perfil-falso-ou-conversa-forjada-quando-entra-a-pericia.webp",
+    "coverAlt": "Bancada escura com celular ligado por cabo a um notebook, sob uma lupa iluminada, com o ícone de um perfil na tela",
+    "reading": 7
+  },
+  {
     "title": "Medida protetiva, intimação ou divórcio: como um homem atravessa a crise e reconstrói a vida",
     "slug": "medida-protetiva-intimacao-divorcio-como-atravessar-a-crise",
     "area": "medida-protetiva",
