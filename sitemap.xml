@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lucasladeia.com.br/</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-22</lastmod>
   </url>
   <url>
     <loc>https://lucasladeia.com.br/artigos/</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-22</lastmod>
   </url>
   <url>
     <loc>https://lucasladeia.com.br/cac/</loc>
@@ -18,7 +18,7 @@
   </url>
   <url>
     <loc>https://lucasladeia.com.br/familia/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-22</lastmod>
   </url>
   <url>
     <loc>https://lucasladeia.com.br/pensao/</loc>
@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://lucasladeia.com.br/medida-protetiva/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-22</lastmod>
   </url>
   <url>
     <loc>https://lucasladeia.com.br/privacidade/</loc>
@@ -194,7 +194,7 @@
   </url>
   <url>
     <loc>https://lucasladeia.com.br/artigos/ela-me-mandou-mensagem-ou-terceiro-medida-protetiva.html</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-22</lastmod>
   </url>
   <url>
     <loc>https://lucasladeia.com.br/artigos/moro-no-exterior-preciso-voltar-brasil.html</loc>
@@ -211,5 +211,13 @@
   <url>
     <loc>https://lucasladeia.com.br/artigos/cac-arma-furtada-roubada-ou-extraviada-o-que-comunicar.html</loc>
     <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://lucasladeia.com.br/conexao/</loc>
+    <lastmod>2026-11-22</lastmod>
+  </url>
+  <url>
+    <loc>https://lucasladeia.com.br/conexao/medo.html</loc>
+    <lastmod>2026-11-22</lastmod>
   </url>
 </urlset>

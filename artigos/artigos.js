@@ -15,10 +15,14 @@
     return isNaN(d) ? '' : d.toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' });
   }
   function cover(a) { return a.cover ? a.cover : (AREA[a.area] ? AREA[a.area].fallback : '../img/medida-protetiva.webp'); }
+  function srcset(a) {
+    var c = a.cover || '';
+    return /^img\/[a-z0-9-]+\.webp$/.test(c) ? ' srcset="' + esc(c.replace(/\.webp$/, '-560.webp')) + ' 560w, ' + esc(c) + ' 760w" sizes="(min-width: 900px) 21rem, 76vw"' : '';
+  }
   function card(a, eager) {
     var area = AREA[a.area] || { label: a.area };
     return '<li><a class="a-card" href="' + esc(a.slug) + '.html">' +
-      '<img src="' + esc(cover(a)) + '" alt="" width="1200" height="675" loading="' + (eager ? 'eager' : 'lazy') + '">' +
+      '<img src="' + esc(cover(a)) + '"' + srcset(a) + ' alt="" width="1200" height="675" loading="' + (eager ? 'eager' : 'lazy') + '" decoding="async">' +
       '<span class="tag">' + esc(area.label) + '</span>' +
       '<h3>' + esc(a.title) + '</h3>' +
       (a.summary ? '<p>' + esc(a.summary) + '</p>' : '') +
@@ -74,7 +78,8 @@
         return;
       }
       var f = list[0], fa = AREA[f.area];
-      featured.innerHTML = '<a class="featured" href="' + esc(f.slug) + '.html">' +
+      var pre = featured.querySelector('.featured');
+      if (!(pre && pre.getAttribute('href') === f.slug + '.html')) featured.innerHTML = '<a class="featured" href="' + esc(f.slug) + '.html">' +
         '<img src="' + esc(cover(f)) + '" alt="" width="1600" height="900" loading="eager" fetchpriority="high">' +
         '<div class="featured-body"><div class="featured-kicker"><span class="tag">Mais recente · ' + esc(fa.label) + '</span><span>' + esc(fmtDate(f.date)) + (f.reading ? ' · ' + esc(f.reading) + ' min de leitura' : '') + '</span></div>' +
         '<h2>' + esc(f.title) + '</h2>' + (f.summary ? '<p>' + esc(f.summary) + '</p>' : '') +
@@ -88,9 +93,9 @@
         html += '<section class="row" id="area-' + area.key + '" data-row aria-labelledby="t-' + area.key + '">' +
           '<div class="row-head"><h2 id="t-' + area.key + '">' + esc(area.label) + '<small>' + items.length + (items.length === 1 ? ' artigo' : ' artigos') + '</small></h2>' +
           '<div class="row-nav"><button type="button" data-dir="-1" aria-label="Anteriores">←</button><button type="button" data-dir="1" aria-label="Próximos">→</button></div></div>' +
-          '<ul class="row-track">' + items.map(function (a, i) { return card(a, i < 3); }).join('') + '</ul></section>';
+          '<ul class="row-track">' + items.map(function (a, i) { return card(a, !html && i < 2); }).join('') + '</ul></section>';
       });
-      listing.innerHTML = html;
+      if (listing.querySelectorAll('.a-card').length !== (html.match(/class="a-card"/g) || []).length) listing.innerHTML = html;
       if (chips) { chips.innerHTML = chipHtml; chips.hidden = false; }
       bindRowNav(listing);
     });

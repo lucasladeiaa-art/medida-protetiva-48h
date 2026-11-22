@@ -3,7 +3,7 @@
   position:fixed;inset:0;pointer-events:none;border:0
 }
 .refugio-fog{
-  z-index:6;mix-blend-mode:screen;
+  z-index:6;mix-blend-mode:screen;opacity:.5;
   background:
     radial-gradient(ellipse 120% 42% at 50% -6%,rgba(236,214,255,.78) 0%,rgba(206,176,248,.42) 34%,rgba(168,132,230,.16) 58%,transparent 76%),
     radial-gradient(ellipse 56% 28% at 50% 12%,rgba(255,236,255,.36),transparent 72%),

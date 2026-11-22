@@ -31,11 +31,11 @@
     var css = document.createElement('style');
     css.id = 'busca-css';
     css.textContent = [
-      '.busca-btn{display:inline-grid;place-items:center;width:2.6rem;height:2.6rem;flex:none;padding:0;border-radius:12px;border:1px solid rgba(231,213,181,.28);background:rgba(255,255,255,.05);color:currentColor;cursor:pointer;line-height:0}',
+      '.busca-btn{display:inline-grid;place-items:center;width:2.6rem;height:2.6rem;flex:none;padding:0;border-radius:12px;border:1px solid rgba(139,92,246,.3);background:transparent;color:#D9CCFF;cursor:pointer;line-height:0}',
       '.busca-btn:hover,.busca-btn[aria-expanded="true"]{background:rgba(201,169,106,.16);border-color:rgba(201,169,106,.45)}',
       '.busca-btn:focus-visible{outline:2px solid #e2c99a;outline-offset:2px}',
       '.busca-btn svg{display:block}',
-      '.sala-escura .busca-btn,.hs .busca-btn,.home .busca-btn{color:inherit}',
+      '.sala-escura .busca-btn,.hs .busca-btn,.home .busca-btn{color:#D9CCFF}',
       '.busca-painel{position:fixed;inset:0;z-index:80;background:rgba(5,6,14,.62);padding:5.5rem .8rem 1.5rem;display:flex;align-items:flex-start;justify-content:center}',
       '.busca-painel[hidden]{display:none}',
       '.busca-caixa{width:min(36rem,100%);background:#0b0d1c;color:#f1f0ec;border:1px solid rgba(231,213,181,.22);border-radius:16px;box-shadow:0 24px 60px rgba(0,0,0,.45);padding:1rem;max-height:min(32rem,calc(100dvh - 6.5rem));overflow:auto}',
@@ -199,6 +199,7 @@
     else open();
   }
 
+  injectCss();
   btn.addEventListener('click', function (e) {
     e.preventDefault();
     toggle();
