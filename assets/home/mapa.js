@@ -8,7 +8,7 @@ crim:{n:'Direito Criminal',t:'I · Primeira margem',p:'Intimação, depoimento, 
 fam:{n:'Casa da Família',t:'II · Segunda margem',p:'Separação, guarda, convivência, pensão e partilha de bens.',a:[['Ver os textos','#fileira-familia'],['Página Família','familia/']]},
 con:{n:'Conexão',t:'III · A lamparina',p:'Comece pela emoção que você sente agora: medo, raiva, culpa, vergonha.',a:[['Entrar na Conexão','conexao/'],['Saber mais','#conexao-convite']]},
 arq:{n:'Arquivo do Baú',t:'IV · O baú',p:'Todos os artigos, guardados em um só lugar, e o Mundo em Disputa.',a:[['Ver as fileiras','#vitrine'],['Abrir o arquivo','artigos/'],['Mundo em Disputa','#fileira-disputa']]},
-ter:{n:'Terminal',t:'V · O cais',p:'Saída para o Guia do Passageiro: voo cancelado, atraso, mala extraviada e reembolso.',a:[['Seguir pelo cais','https://consumidor.lucasladeia.com.br/']],x:'Abre consumidor.lucasladeia.com.br'}
+ter:{n:'Consumidor',t:'V · O cais',p:'Guia de direitos do consumidor e do passageiro: voo cancelado ou atrasado, mala extraviada, reembolso e plano de saúde.',a:[['Abrir o guia do consumidor','https://consumidor.lucasladeia.com.br/']],x:'Abre consumidor.lucasladeia.com.br'}
 };
 function rola(h){var t=d.querySelector(h);if(!t)return;t.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});if(history.replaceState)history.replaceState(null,'',h)}
 function get(k){try{return localStorage.getItem(k)}catch(e){return null}}
@@ -34,6 +34,7 @@ function open(id,from){var c=L[id];if(!c)return;
 function close(){ficha.classList.remove('aberta');ficha.setAttribute('aria-hidden','true');if(cur)light(cur,false);cur=null;
  [].forEach.call(sec.querySelectorAll('.lugares button'),function(b){b.setAttribute('aria-pressed','false')})}
 ficha.querySelector('.f-x').addEventListener('click',close);
+d.addEventListener('pointerdown',function(e){if(cur&&!ficha.contains(e.target)&&!e.target.closest('.spot,.lugares'))close()});
 d.addEventListener('keydown',function(e){if(e.key==='Escape'&&cur)close()});
 var moved=false;
 [].forEach.call(sec.querySelectorAll('.spot'),function(s){
@@ -62,7 +63,8 @@ mundo.addEventListener('scroll',function(){queue();if(dica&&mundo.scrollLeft>20)
 w.addEventListener('scroll',queue,{passive:true});
 sec.addEventListener('pointermove',function(e){if(e.pointerType!=='mouse')return;var r=sec.getBoundingClientRect();mx=(e.clientX-r.left)/r.width*2-1;my=(e.clientY-r.top)/r.height*2-1;
  if(cabe()){alvo=Math.max(r.width*.08,Math.min(r.width*.86,e.clientX-r.left));if(dica)dica.classList.add('fora')}queue()});
-if('IntersectionObserver'in w)new IntersectionObserver(function(es){vis=es[0].isIntersecting;if(vis)queue();else if(cur)close()}).observe(sec);
+var fab=d.querySelector('.fab-wa');
+if('IntersectionObserver'in w)new IntersectionObserver(function(es){vis=es[0].isIntersecting;if(fab)fab.classList.toggle('fab-hidden',vis);if(vis)queue();else if(cur)close()}).observe(sec);
 var down=null;
 mundo.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse'||cabe())return;down={x:e.clientX,s:mundo.scrollLeft};moved=false});
 w.addEventListener('pointermove',function(e){if(!down)return;var dx=e.clientX-down.x;if(Math.abs(dx)>5){moved=true;mundo.classList.add('arrasto')}mundo.scrollLeft=down.s-dx});
