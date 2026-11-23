@@ -12,7 +12,7 @@ function meio(id){var r=spot(id).querySelector('.perg').getBoundingClientRect();
 var cur=null,vistos=[];
 function light(id,on){var s=spot(id);if(s)s.classList.toggle('on',on);var l=lbl(id);if(l)l.classList.toggle('on',on)}
 var prog=0;
-var via=null;function para(){if(via){via=null;sec.classList.remove('viajando')}}
+var via=null,rumo=null,saida=null;function para(){if(via){via=null;sec.classList.remove('viajando')}}
 function center(id,smooth,fim){if(!spot(id))return;prog=Date.now();var de=mundo.scrollLeft,ate=Math.max(0,Math.min(mundo.scrollWidth-mundo.clientWidth,de+meio(id)-bx())),dist=Math.abs(ate-de);
  if(!smooth||reduce||dist<8){para();mundo.scrollLeft=ate;if(fim)fim();return}
  var dur=Math.max(1400,Math.min(4600,dist*3.2)),t0=0,me={};via=me;sec.classList.add('viajando');
@@ -24,6 +24,7 @@ function open(id,from){if(IDS.indexOf(id)<0)return;
  if(cur&&cur!==id)light(cur,false);set(KEY,id);
  [].forEach.call(sec.querySelectorAll('.lugares button'),function(b){b.setAttribute('aria-pressed',b.dataset.go===id?'true':'false')});
  function chega(){cur=id;light(id,true);queue()}
+ saida=cur||sec.dataset.ativo||null;rumo=id;var ds=spot(id);if(ds)sobe(ds);
  if(cabe()){cur=null;alvo=meio(id);chega()}else{if(cur)cur=null;center(id,true,chega)}queue();
 }
 function close(){if(cur)light(cur,false);cur=null;queue();
@@ -52,7 +53,7 @@ function paint(){q=false;var sx=mundo.scrollLeft,py=Math.min(w.scrollY,sec.offse
  if(dica)dica.textContent=cabe()?'Mova o cursor para conduzir a barca':'Arraste para atravessar';var b=bx(),lim=Math.min(150,W*.2),near=null;
  spots.forEach(function(sp){var id=sp.dataset.id,c=meio(id),dd=Math.abs(c-b);if(dd<lim&&(!near||dd<near.d))near={id:id,d:dd}});
  if(via)near=null;var at=cur||(near&&near.id)||'',gap=Math.max(200,500*s);
- spots.forEach(function(sp){var dd=Math.abs(meio(sp.dataset.id)-b),rv=Math.max(0,Math.min(1,1-(dd-lim)/(gap*.95)));if(sp.dataset.id===at)rv=1;rv=Math.round(rv*20)/20;if(sp._rv!==rv){sp._rv=rv;sp.style.setProperty('--rev',rv)}if(rv>0)sobe(sp)});
+ spots.forEach(function(sp){var dd=Math.abs(meio(sp.dataset.id)-b),rv=Math.max(0,Math.min(1,1-(dd-lim)/(gap*.95)));if(via&&sp.dataset.id!==saida)rv=sp.dataset.id===rumo?Math.max(0,Math.min(1,1-(dd-lim*.2)/(gap*.35))):0;if(sp.dataset.id===at)rv=1;rv=Math.round(rv*20)/20;if(sp._rv!==rv){sp._rv=rv;sp.style.setProperty('--rev',rv)}if(rv>0)sobe(sp)});
  spots.forEach(function(sp){var id=sp.dataset.id,on=id===at,l=lbl(id);sp.classList.toggle('perto',on);if(l){l.classList.toggle('perto',on);var a=l.querySelector('.entrar');if(a)a.setAttribute('tabindex',on?'0':'-1')}});
  var sr=sec.getBoundingClientRect();[].forEach.call(sec.querySelectorAll('.lbl'),function(l){var r=l.querySelector('rect').getBoundingClientRect();l.classList.toggle('borda',l.dataset.for!==at&&(r.left<sr.left+4||r.right>sr.right-4))});
  if(sec.dataset.ativo!==at){if(at)sec.dataset.ativo=at;else delete sec.dataset.ativo}

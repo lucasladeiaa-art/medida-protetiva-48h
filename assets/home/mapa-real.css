@@ -112,3 +112,23 @@
 .mapa .constelacao .eg{transform-box:fill-box;transform-origin:50% 50%}
 @media (prefers-reduced-motion:reduce){.mapa .vida *,.mapa .barca.real .nucleo,.mapa .barca.real .halo-v,.mapa .constelacao *{animation:none!important}.mapa .vida .jan,.mapa .vida .chm{opacity:.6}.mapa .painel .pb{opacity:0}.mapa .painel .pa{opacity:1}.mapa .ceu i{transition:none}}
 @media (max-width:899px){.mapa .painel{display:none}}
+.mapa .barca.real svg{overflow:visible}
+.mapa .luz-con{opacity:0;transition:opacity 1.6s ease;mix-blend-mode:screen;transform:translateX(240px);pointer-events:none}
+@media (min-width:900px){.mapa .luz-con{transform:translateX(643px)}}
+.mapa[data-ativo="con"]:not(.viajando) .luz-con{opacity:1}
+.mapa .lc-b ellipse{fill:#FFF1CF;opacity:.35;animation:lc-b 2.6s ease-in-out infinite;animation-delay:var(--d);animation-play-state:paused}
+@keyframes lc-b{0%,100%{opacity:.35}50%{opacity:1}}
+.mapa.agua-ok[data-ativo="con"] .lc-b ellipse{animation-play-state:running}
+.mapa .vida-con .caminho{opacity:1}
+.mapa .painel-m{display:none}
+@media (max-width:899px){.mapa .painel-m{display:inline}}
+.mapa .painel-m rect{fill:rgba(5,8,15,.86);stroke:rgba(80,220,255,.55);stroke-width:1}
+.mapa .painel-m text{font:700 11.5px/1 ui-monospace,Menlo,Consolas,monospace;fill:#F3EEE6;letter-spacing:.02em}
+.mapa .painel-m .hr{fill:#FFD27A}
+.mapa .painel-m .pt{font-size:10.5px;fill:#7FE6FF;letter-spacing:.2em}
+.mapa .painel-m .pl{fill:#B9F3C8;animation:sir 2s steps(1,end) infinite;animation-play-state:paused}
+.mapa .painel-m .pb{opacity:0}
+.mapa .painel-m .pa,.mapa .painel-m .pb{animation:troca 10s steps(1,end) infinite;animation-play-state:paused}
+.mapa .painel-m .pb{animation-delay:-5s}
+.mapa.agua-ok[data-ativo="ter"] .painel-m *{animation-play-state:running}
+@media (prefers-reduced-motion:reduce){.mapa .lc-b ellipse,.mapa .painel-m *{animation:none!important}.mapa .lc-b ellipse{opacity:.6}.mapa .painel-m .pa{opacity:1}.mapa .painel-m .pb{opacity:0}}
