@@ -186,3 +186,17 @@
 .mapa .guia img{width:2.75rem;height:2.75rem;object-fit:cover;filter:none;box-shadow:0 0 0 1.5px rgba(243,238,230,.55),0 2px 10px rgba(0,0,0,.5)}
 @media (max-width:899px){.mapa .lbl .lt{font-size:21px;letter-spacing:.13em}.mapa .lbl .ld{font-size:13.5px}}
 .mapa .dica{color:rgba(232,226,214,.62);font-weight:500;letter-spacing:.22em;text-shadow:0 1px 8px rgba(0,0,0,.9)}
+.mapa .jogo{opacity:0;pointer-events:none;transition:opacity .8s ease;cursor:pointer;outline:none}
+.mapa .jogo .jh{fill:transparent}
+.mapa .jogo .jl{fill:#F4F8FF;transform-box:fill-box;transform-origin:50% 50%}
+.mapa .jogo .jr{fill:none;stroke:rgba(230,240,255,.55);stroke-width:1.2;transform-box:fill-box;transform-origin:50% 50%;animation:jg-anel 3.4s ease-out infinite;animation-play-state:paused}
+@keyframes jg-anel{0%{transform:scale(.6);opacity:0}25%{opacity:.9}100%{transform:scale(2.6);opacity:0}}
+.mapa[data-ativo="crim"]:not(.viajando) .jogo[data-jogo="crim"],.mapa[data-ativo="fam"]:not(.viajando) .jogo[data-jogo="fam"],.mapa[data-ativo="con"]:not(.viajando) .jogo[data-jogo="con"],.mapa[data-ativo="arq"]:not(.viajando) .jogo[data-jogo="arq"]{opacity:1;pointer-events:auto;transition-delay:2.2s}
+.mapa.agua-ok:not(.viajando) .jogo .jr{animation-play-state:running}
+.mapa .jogo:hover .jl,.mapa .jogo:focus-visible .jl{transform:scale(1.5)}
+.mapa .jogo:focus-visible .jr{stroke:#fff;animation:none;transform:scale(1.8);opacity:1}
+.mapa .painel.jogo,.mapa .painel-m.jogo{opacity:1;transition:none}
+.mapa[data-ativo="ter"]:not(.viajando) .painel.jogo,.mapa[data-ativo="ter"]:not(.viajando) .painel-m.jogo{pointer-events:auto}
+.mapa .painel-m.jogo rect,.mapa .painel.jogo rect{transition:stroke .4s}
+.mapa .painel-m.jogo:hover rect,.mapa .painel-m.jogo:focus-visible rect,.mapa .painel.jogo:hover rect,.mapa .painel.jogo:focus-visible rect{stroke:#BFF3FF;stroke-width:1.6}
+@media (prefers-reduced-motion:reduce){.mapa .jogo .jr{animation:none;opacity:.6}}

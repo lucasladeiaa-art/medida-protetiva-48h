@@ -23,13 +23,13 @@ function center(id,smooth,fim){if(!spot(id))return;prog=Date.now();var de=mundo.
 function open(id,from){if(IDS.indexOf(id)<0)return;
  if(cur&&cur!==id)light(cur,false);set(KEY,id);
  [].forEach.call(sec.querySelectorAll('.lugares button'),function(b){b.setAttribute('aria-pressed',b.dataset.go===id?'true':'false')});
- function chega(){cur=id;light(id,true);if(!reduce){sec.classList.remove('chegou');void sec.offsetWidth;sec.classList.add('chegou');clearTimeout(sec._tc);sec._tc=setTimeout(function(){sec.classList.remove('chegou')},2800)}queue()}
+ function chega(){cur=id;light(id,true);[].forEach.call(sec.querySelectorAll('.jogo'),function(g){g.setAttribute('tabindex',g.getAttribute('data-jogo')===id?'0':'-1')});if(id!=='con'&&jogos[id])(w.requestIdleCallback||setTimeout)(function(){motor(id)});if(!reduce){sec.classList.remove('chegou');void sec.offsetWidth;sec.classList.add('chegou');clearTimeout(sec._tc);sec._tc=setTimeout(function(){sec.classList.remove('chegou')},2800)}queue()}
  saida=cur||sec.dataset.ativo||null;rumo=id;var ds=spot(id);if(ds)sobe(ds);
  if(cabe()){cur=null;alvo=meio(id);chega()}else{if(cur)cur=null;center(id,true,chega)}queue();
 }
 function close(){if(cur)light(cur,false);cur=null;queue();
  [].forEach.call(sec.querySelectorAll('.lugares button'),function(b){b.setAttribute('aria-pressed','false')})}
-d.addEventListener('pointerdown',function(e){if(cur&&!e.target.closest('.spot,.lugares,.entrar'))close()});
+d.addEventListener('pointerdown',function(e){if(cur&&!e.target.closest('.spot,.lugares,.entrar,.jogo,.umbral'))close()});
 d.addEventListener('keydown',function(e){if(e.key==='Escape'&&cur)close()});
 [].forEach.call(sec.querySelectorAll('.entrar'),function(a){a.addEventListener('click',function(){var g=a.closest('.lbl');if(g)set(KEY,g.dataset.for)})});
 var moved=false;
@@ -50,7 +50,7 @@ function paint(){q=false;var sx=mundo.scrollLeft,py=Math.min(w.scrollY,sec.offse
  var cw=Math.max(W,H*1.6),mxs=mundo.scrollWidth-mundo.clientWidth,cx=mxs>4?-(sx/mxs)*(cw-W):(W-cw)/2;
  if(cw!==ultW){ultW=cw;sec.style.setProperty('--cw',Math.round(cw)+'px');desenha()}sec.style.setProperty('--cx',Math.round(cx)+'px');sec.style.setProperty('--at',Math.round(H-300*s)+'px');
  barca.style.setProperty('--bw',Math.round(240*s)+'px');barca.style.setProperty('--bb',Math.round((1000-712)*s)+'px');barca.style.setProperty('--bx',Math.round(bx())+'px');
- if(dica)dica.textContent=cabe()?'Mova o cursor para conduzir a barca':'Arraste para atravessar';var b=bx(),lim=Math.min(150,W*.2),near=null;
+ if(dica)dica.textContent=cabe()?'Mova o cursor para conduzir a barca':'Arraste para atravessar';var b=bx(),lim=Math.min(150,W*.24),near=null;
  spots.forEach(function(sp){var id=sp.dataset.id,c=meio(id),dd=Math.abs(c-b);if(dd<lim&&(!near||dd<near.d))near={id:id,d:dd}});
  if(via)near=null;var at=cur||(near&&near.id)||'',gap=Math.max(200,500*s);
  spots.forEach(function(sp){var dd=Math.abs(meio(sp.dataset.id)-b),rv=Math.max(0,Math.min(1,1-(dd-lim)/(gap*.95)));if(via&&sp.dataset.id!==saida)rv=sp.dataset.id===rumo?Math.max(0,Math.min(1,1-(dd-lim*.2)/(gap*.35))):0;if(sp.dataset.id===at)rv=1;rv=Math.round(rv*20)/20;if(sp._rv!==rv){sp._rv=rv;sp.style.setProperty('--rev',rv)}if(rv>0)sobe(sp)});
@@ -109,6 +109,6 @@ var last=get(KEY);
 if(last&&IDS.indexOf(last)>=0&&spot(last)){var pin=sec.querySelector('.pin[data-for="'+last+'"]');if(pin)pin.classList.add('vis');
  var bt=sec.querySelector('.lugares button[data-go="'+last+'"]');if(bt)bt.classList.add('ultimo');
  if(cabe())bpos=alvo=meio(last);else center(last,false)}
-var ir=sec.querySelector('.umbral');if(ir)ir.addEventListener('click',function(e){e.preventDefault();if(cur)close();ir.classList.add('aberta');setTimeout(function(){rola('#vitrine')},reduce?0:650);setTimeout(function(){ir.classList.remove('aberta')},2600)});
+var JB=(d.currentScript&&d.currentScript.src)||location.href,JG={},jogos={};function motor(id){if(!JG[id])JG[id]=import(new URL('../jogos/'+id+'.js?v=20261123j1',JB).href);return JG[id]}[].forEach.call(sec.querySelectorAll('.jogo'),function(g){var id=g.getAttribute('data-jogo');(jogos[id]=jogos[id]||[]).push(g);if(id==='con')return;function vai(e){if(cur!==id&&(sec.dataset.ativo!==id||sec.classList.contains('viajando')))return;e.preventDefault();e.stopPropagation();motor(id).then(function(m){m.default()}).catch(function(){})}g.addEventListener('click',vai);g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' ')vai(e)})});var ir=sec.querySelector('.umbral');if(ir)ir.addEventListener('click',function(e){e.preventDefault();if(cur)close();ir.classList.add('aberta');setTimeout(function(){rola('#vitrine')},reduce?0:650);setTimeout(function(){ir.classList.remove('aberta')},2600)});
 paint();
 })();
