@@ -1,7 +1,7 @@
 .mapa .palco{width:max(100%,calc(var(--mh,100svh)*2.6))}
 .mapa .L-sun,.mapa .L-far,.mapa .L-mid,.mapa .nevoa.n1{display:none}
 .mapa .spot .casa>:not(.chuva),.mapa .spot .refl{display:none}
-.mapa .cena{opacity:calc(.05 + var(--rev,0)*.95);transition:opacity .5s linear}
+.mapa .cena{opacity:calc(.02 + var(--rev,0)*var(--rev,0)*.98);transition:opacity .6s linear}
 .mapa .veu{opacity:calc(1 - var(--rev,0));transition:opacity .5s linear;pointer-events:none}
 .mapa .spot .raios,.mapa .spot .glow,.mapa .spot .banho{opacity:0}
 .mapa .spot.perto .raios,.mapa .spot.on .raios{opacity:.55}
@@ -51,3 +51,64 @@
 .mapa .lbl:not(.perto):not(.on){opacity:0;pointer-events:none}
 .mapa.fora .agua-real i,.mapa.fora .agua-real b,.mapa.fora .nev-real,.mapa.fora .peixes ellipse,.mapa.fora .vagas circle,.mapa.fora .vaga-real circle,.mapa.fora .farol-luz .giro,.mapa.fora .pisca circle,.mapa.fora .decola circle,.mapa.fora .barca.real *{animation-play-state:paused}
 @media (prefers-reduced-motion:reduce){.mapa .agua-real i,.mapa .agua-real b,.mapa .nev-real,.mapa .peixes ellipse,.mapa .vagas circle,.mapa .vaga-real circle,.mapa .farol-luz .giro,.mapa .pisca circle,.mapa .decola circle,.mapa .barca.real .cone,.mapa .barca.real .chama{animation:none!important}.mapa .cena,.mapa .veu,.mapa .barca.real svg{transition:none}.mapa .peixes ellipse{opacity:.3}}
+.mapa .ceu i{transition:opacity 2.4s ease}
+.mapa[data-ativo="crim"] .ceu .c-crim,.mapa[data-ativo="fam"] .ceu .c-fam,.mapa[data-ativo="arq"] .ceu .c-arq,.mapa[data-ativo="ter"] .ceu .c-ter{opacity:.88}
+.mapa[data-ativo="con"] .ceu .c-con{opacity:1}
+.mapa .ceu .c-con{background:radial-gradient(ellipse 46% 34% at 42% 66%,rgba(255,214,140,.42),rgba(255,190,110,.12) 50%,transparent 74%),radial-gradient(ellipse 50% 40% at 60% 45%,rgba(176,150,230,.2),transparent 70%),linear-gradient(180deg,#07060E 0%,#16122A 45%,#3A2A30 66%,transparent 74%)}
+.mapa .ceu .c-ter{background:radial-gradient(ellipse 70% 40% at 50% 70%,rgba(255,150,90,.5),rgba(214,90,150,.22) 45%,transparent 72%),radial-gradient(ellipse 50% 30% at 70% 40%,rgba(80,220,255,.14),transparent 70%),linear-gradient(180deg,#05070F 0%,#121634 45%,#2C1E3A 66%,transparent 74%)}
+.mapa .onda,.mapa .refl2{display:none}
+.mapa .lua-agua i{background:none}
+.mapa.agua-ok .lua-agua i{background:url(../../img/real/agua-mar-1600.webp) 0 0/auto 150% repeat-x;filter:brightness(2.6) contrast(1.9) saturate(.25);mix-blend-mode:screen;opacity:.5}
+.mapa .barca.real .nucleo{animation:nucleo 1.3s ease-in-out infinite}
+.mapa .barca.real .halo-v{animation:tremula 3.4s ease-in-out infinite}
+@keyframes nucleo{0%,100%{opacity:1;transform:scale(1)}35%{opacity:.86;transform:scale(.94,1.04)}70%{opacity:.97;transform:scale(1.03,.97)}}
+.mapa .barca.real .nucleo{transform-box:fill-box;transform-origin:50% 80%}
+.mapa .vida>g{opacity:0;transition:opacity 1.2s ease}
+.mapa[data-ativo="fam"] .vida-fam,.mapa[data-ativo="crim"] .vida-crim,.mapa[data-ativo="arq"] .vida-arq,.mapa[data-ativo="con"] .vida-con,.mapa[data-ativo="ter"] .vida-ter{opacity:1}
+.mapa .vida .jan,.mapa .vida .chm{animation:respira-j 4.8s ease-in-out infinite;animation-delay:var(--d);animation-play-state:paused}
+@keyframes respira-j{0%,100%{opacity:.25}45%{opacity:.85}60%{opacity:.6}}
+.mapa .vida .chm{animation-duration:2.2s}
+.mapa .folha{fill:#E9B23C;opacity:0;animation:folha var(--t,10s) linear infinite;animation-delay:calc(var(--d) * -1s);animation-play-state:paused}
+@keyframes folha{0%{opacity:0;transform:translate(0,0) rotate(0)}10%{opacity:.9}85%{opacity:.7}100%{opacity:0;transform:translate(-46px,120px) rotate(540deg)}}
+.mapa .folha{transform-box:fill-box;transform-origin:50% 50%}
+.mapa .sir-a{animation:sir 1.4s steps(1,end) infinite;animation-play-state:paused}
+.mapa .sir-v{animation:sir 1.4s steps(1,end) -.7s infinite;animation-play-state:paused}
+@keyframes sir{0%{opacity:.9}50%{opacity:.08}}
+.mapa .neon{opacity:.5;filter:none;animation:neon 6s linear infinite;animation-play-state:paused}
+@keyframes neon{0%,100%{opacity:.55}47%{opacity:.55}48%{opacity:.15}49%{opacity:.6}51%{opacity:.2}52%{opacity:.55}}
+.mapa .caminho{mix-blend-mode:screen;opacity:.75;animation:caminho 5s ease-in-out infinite alternate;animation-play-state:paused}
+@keyframes caminho{from{opacity:.55}to{opacity:.9}}
+.mapa .brilhos ellipse{fill:#FFF3D0;opacity:0;animation:brilho 2.2s ease-in-out infinite;animation-delay:var(--d);animation-play-state:paused}
+@keyframes brilho{0%,100%{opacity:0}50%{opacity:.95}}
+.mapa .strobe{fill:#fff;opacity:0;animation:strobe 1.6s linear infinite;animation-play-state:paused}
+.mapa .strobe.s2{animation-delay:-.8s}
+@keyframes strobe{0%,8%{opacity:1}12%,100%{opacity:0}}
+.mapa .beacon{fill:#FF3B3B;animation:sir 1.2s steps(1,end) infinite;animation-play-state:paused}
+.mapa .painel .poste{stroke:#1a1d26;stroke-width:4}
+.mapa .painel rect{fill:rgba(6,9,16,.9);stroke:rgba(80,220,255,.45);stroke-width:1}
+.mapa .painel text{font:600 8.5px/1 ui-monospace,Menlo,Consolas,monospace;fill:#FFD27A;letter-spacing:.04em}
+.mapa .painel .pt{font-size:10.5px;fill:#7FE6FF;letter-spacing:.18em}
+.mapa .painel .st{fill:#B9F3C8}.mapa .painel .st.at{fill:#FF8FB0}
+.mapa .painel .pb{opacity:0}
+.mapa .painel .pa,.mapa .painel .pb{animation:troca 10s steps(1,end) infinite;animation-play-state:paused}
+.mapa .painel .pb{animation-delay:-5s}
+@keyframes troca{0%{opacity:1}50%{opacity:0}}
+.mapa.agua-ok[data-ativo="crim"] .vida-crim *,.mapa.agua-ok[data-ativo="fam"] .vida-fam *,.mapa.agua-ok[data-ativo="con"] .vida-con *,.mapa.agua-ok[data-ativo="arq"] .vida-arq *,.mapa.agua-ok[data-ativo="ter"] .vida-ter *{animation-play-state:running}
+.mapa.fora .vida *{animation-play-state:paused!important}
+.mapa .constelacao{position:absolute;z-index:2;width:128px;height:63px;left:18px;top:calc(var(--ly,200px) - 6px);pointer-events:none;opacity:0;transition:opacity 1.6s ease;overflow:visible}
+.mapa .constelacao.vista{opacity:1}
+@media (max-width:899px){.mapa .constelacao{width:96px;height:47px;left:auto;right:calc(100% - var(--lx,85%) + var(--lr,38px) + 14px);top:calc(var(--ly,200px) - var(--lr,38px)*.75)}}
+@media (min-width:900px){.mapa .constelacao{width:170px;height:84px;left:calc(var(--lx,70%) + var(--lr,60px) + 70px);top:calc(var(--ly,120px) + var(--lr,60px)*.4)}}
+.mapa .constelacao line{stroke:#CFC6FF;stroke-width:.6;opacity:0;transition:opacity 1.4s ease}
+.mapa .constelacao line.acesa{opacity:.28}
+.mapa .constelacao.completa line{opacity:.55;stroke:#E8DDFF}
+.mapa .constelacao .est path{fill:#6B6A80;opacity:.35;transition:fill 1s,opacity 1s}
+.mapa .constelacao .est .eg{fill:#B9A8FF;opacity:0;transition:opacity 1s}
+.mapa .constelacao .est.acesa path{fill:#FFF6DA;opacity:1}
+.mapa .constelacao .est.acesa .eg{opacity:.28;animation:astro 4s ease-in-out infinite}
+.mapa .constelacao .est.nasce .eg{animation:nasce 2.4s ease-out 1}
+@keyframes astro{0%,100%{opacity:.18}50%{opacity:.42}}
+@keyframes nasce{0%{opacity:.9;transform:scale(2)}100%{opacity:.28;transform:scale(1)}}
+.mapa .constelacao .eg{transform-box:fill-box;transform-origin:50% 50%}
+@media (prefers-reduced-motion:reduce){.mapa .vida *,.mapa .barca.real .nucleo,.mapa .barca.real .halo-v,.mapa .constelacao *{animation:none!important}.mapa .vida .jan,.mapa .vida .chm{opacity:.6}.mapa .painel .pb{opacity:0}.mapa .painel .pa{opacity:1}.mapa .ceu i{transition:none}}
+@media (max-width:899px){.mapa .painel{display:none}}

@@ -57,6 +57,7 @@ function paint(){q=false;var sx=mundo.scrollLeft,py=Math.min(w.scrollY,sec.offse
  var sr=sec.getBoundingClientRect();[].forEach.call(sec.querySelectorAll('.lbl'),function(l){var r=l.querySelector('rect').getBoundingClientRect();l.classList.toggle('borda',l.dataset.for!==at&&(r.left<sr.left+4||r.right>sr.right-4))});
  if(sec.dataset.ativo!==at){if(at)sec.dataset.ativo=at;else delete sec.dataset.ativo}
  if(at&&vistos.indexOf(at)<0){vistos.push(at);sec.dataset.luz=vistos.length}
+ if(at&&!via)estrela(at);
 }
 function tam(src){var r=Math.min(w.devicePixelRatio||1,2),big=palco.clientWidth*r>3600&&sec.clientWidth>=900;return src.replace('%',/agua/.test(src)?(big?'1280':'640'):(big?'1280':'720'))}
 function troca(im){var ds=im.getAttribute('data-src');if(!ds)return;im.removeAttribute('data-src');var src=tam(ds);if(im.getAttribute('href')===src)return;var p=new Image();p.decoding='async';p.onload=function(){im.setAttribute('href',src)};p.src=src}
@@ -64,6 +65,10 @@ var pronto=false;function sobe(sp){if(!pronto)return;var im=sp.querySelector('im
 function base(){pronto=true;sec.classList.add('agua-ok');[].forEach.call(sec.querySelectorAll('.barca image'),troca);queue()}
 function arma(){var f=false;function v(){if(f)return;f=true;base()}setTimeout(v,2500);['pointerdown','scroll','keydown','wheel','touchstart'].forEach(function(t){w.addEventListener(t,v,{once:true,passive:true})})}
 if(d.readyState==='complete')arma();else w.addEventListener('load',arma);
+var CK='rp-constelacao',ceuV=[];try{ceuV=JSON.parse(get(CK)||'[]')||[]}catch(e){ceuV=[]}
+function astro(){var cs=sec.querySelector('.constelacao');if(!cs)return;[].forEach.call(cs.querySelectorAll('.est'),function(e){e.classList.toggle('acesa',ceuV.indexOf(e.getAttribute('data-id'))>=0)});[].forEach.call(cs.querySelectorAll('line'),function(l){l.classList.toggle('acesa',ceuV.indexOf(l.getAttribute('data-a'))>=0&&ceuV.indexOf(l.getAttribute('data-b'))>=0)});cs.classList.toggle('vista',ceuV.length>0);cs.classList.toggle('completa',ceuV.length>=5)}
+function estrela(id){if(ceuV.indexOf(id)>=0)return;ceuV.push(id);set(CK,JSON.stringify(ceuV));astro();var e=sec.querySelector('.constelacao .est[data-id="'+id+'"]');if(e){e.classList.add('nasce');setTimeout(function(){e.classList.remove('nasce')},2400)}}
+astro();
 var tela=sec.querySelector('.cosmos'),ultW=0,ceu=null;
 function desenha(){if(!tela||!ceu)return;var r=Math.min(w.devicePixelRatio||1,2),cw=ultW||sec.clientWidth,H=sec.clientHeight,ih=(ceu.naturalHeight||ceu.height)*cw/(ceu.naturalWidth||ceu.width);
  tela.width=Math.round(cw*r);tela.height=Math.round(H*r);var c=tela.getContext('2d');if(!c)return;c.drawImage(ceu,0,0,Math.round(cw*r),Math.round(ih*r));tela.classList.add('pronto')}
