@@ -213,3 +213,4 @@
 @media (min-width:900px){.mapa .mergulhar{left:2rem;bottom:1.2rem}}
 @media (prefers-reduced-motion:reduce){.mapa .mergulhar i::before,.mapa .mergulhar i::after{animation:none}}
 @media (max-width:899px){.mapa .mergulhar{padding:.35rem .5rem;justify-content:center}.mapa .mergulhar span{position:absolute;left:50%;bottom:100%;transform:translateX(-50%);opacity:0;pointer-events:none;white-space:nowrap;transition:opacity .3s}.mapa .mergulhar:focus-visible span{opacity:1}}
+#fileira-protetiva,#conexao-convite,.fechamento{content-visibility:auto;contain-intrinsic-size:auto 28rem}
