@@ -200,3 +200,16 @@
 .mapa .painel-m.jogo rect,.mapa .painel.jogo rect{transition:stroke .4s}
 .mapa .painel-m.jogo:hover rect,.mapa .painel-m.jogo:focus-visible rect,.mapa .painel.jogo:hover rect,.mapa .painel.jogo:focus-visible rect{stroke:#BFF3FF;stroke-width:1.6}
 @media (prefers-reduced-motion:reduce){.mapa .jogo .jr{animation:none;opacity:.6}}
+.mapa .mergulhar{position:absolute;z-index:8;left:max(.6rem,env(safe-area-inset-left));bottom:calc(5.9rem + env(safe-area-inset-bottom));display:flex;flex-direction:column;align-items:center;gap:.45rem;min-width:2.75rem;min-height:2.75rem;padding:.35rem .4rem;border:0;background:none;color:rgba(226,238,244,.72);cursor:pointer;-webkit-tap-highlight-color:transparent}
+.mapa .mergulhar i{position:relative;display:block;width:7px;height:7px;border-radius:50%;background:#E6F4FF;box-shadow:0 0 9px 3px rgba(170,215,245,.5)}
+.mapa .mergulhar i::before,.mapa .mergulhar i::after{content:"";position:absolute;left:50%;top:50%;width:26px;height:9px;margin:-4.5px 0 0 -13px;border-radius:50%;border:1px solid rgba(200,230,250,.4);transform:scale(.4);opacity:0;animation:mr-onda 3.6s ease-out infinite;animation-play-state:paused}
+.mapa .mergulhar i::after{animation-delay:1.8s}
+.mapa.agua-ok:not(.viajando) .mergulhar i::before,.mapa.agua-ok:not(.viajando) .mergulhar i::after{animation-play-state:running}
+.mapa .mergulhar span{font:600 .6rem/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;text-shadow:0 1px 8px rgba(0,0,0,.9)}
+.mapa .mergulhar:hover,.mapa .mergulhar:focus-visible{color:#fff;outline:none}
+.mapa .mergulhar:focus-visible span{text-decoration:underline;text-underline-offset:4px}
+.mapa .mergulhar:hover i,.mapa .mergulhar:focus-visible i{box-shadow:0 0 12px 5px rgba(190,230,255,.65)}
+@keyframes mr-onda{0%{transform:scale(.4);opacity:.0}15%{opacity:.8}100%{transform:scale(2.1);opacity:0}}
+@media (min-width:900px){.mapa .mergulhar{left:2rem;bottom:1.2rem}}
+@media (prefers-reduced-motion:reduce){.mapa .mergulhar i::before,.mapa .mergulhar i::after{animation:none}}
+@media (max-width:899px){.mapa .mergulhar{padding:.35rem .5rem;justify-content:center}.mapa .mergulhar span{position:absolute;left:50%;bottom:100%;transform:translateX(-50%);opacity:0;pointer-events:none;white-space:nowrap;transition:opacity .3s}.mapa .mergulhar:focus-visible span{opacity:1}}
