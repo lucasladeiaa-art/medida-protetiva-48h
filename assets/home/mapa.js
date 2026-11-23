@@ -58,7 +58,7 @@ function carrega(src,fim){function ok(b){ceu=b;(w.requestAnimationFrame||setTime
 function acendeLua(){var f=function(b){luaImg=b;(w.requestAnimationFrame||setTimeout)(pintaLua)};
  if(w.createImageBitmap&&w.fetch)fetch('img/ceu/lua-320.webp').then(function(r){return r.blob()}).then(function(b){return createImageBitmap(b)}).then(f).catch(function(){});
  else{var im=new Image();im.decoding='async';im.onload=function(){f(im)};im.src='img/ceu/lua-320.webp'}}
-function acende(){acendeLua();var r=Math.min(w.devicePixelRatio||1,2),need=Math.max(sec.clientWidth,sec.clientHeight*1.6)*r,feito=false;
+function acende(){acendeLua();sec.classList.add('viva');var r=Math.min(w.devicePixelRatio||1,2),need=Math.max(sec.clientWidth,sec.clientHeight*1.6)*r,feito=false;
  function mais(){if(feito)return;feito=true;carrega(need>1800?'img/ceu/cosmos-2560.webp':'img/ceu/cosmos-1600.webp')}
  carrega('img/ceu/cosmos-800.webp',function(){setTimeout(mais,6000);['pointerdown','pointermove','scroll','keydown'].forEach(function(t){w.addEventListener(t,mais,{once:true,passive:true})})})}
 if(d.readyState==='complete')setTimeout(acende,300);else w.addEventListener('load',function(){(w.requestIdleCallback||function(f){setTimeout(f,300)})(acende)});
