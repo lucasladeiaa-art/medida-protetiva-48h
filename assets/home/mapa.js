@@ -50,11 +50,14 @@ function paint(){q=false;var sx=mundo.scrollLeft,py=Math.min(w.scrollY,sec.offse
  if(at&&vistos.indexOf(at)<0){vistos.push(at);sec.dataset.luz=vistos.length}
 }
 var tela=sec.querySelector('.cosmos'),ultW=0,ceu=null;
-function desenha(){if(!tela||!ceu)return;var r=Math.min(w.devicePixelRatio||1,2),cw=ultW||sec.clientWidth,H=sec.clientHeight,ih=ceu.naturalHeight*cw/ceu.naturalWidth;
+function desenha(){if(!tela||!ceu)return;var r=Math.min(w.devicePixelRatio||1,2),cw=ultW||sec.clientWidth,H=sec.clientHeight,ih=(ceu.naturalHeight||ceu.height)*cw/(ceu.naturalWidth||ceu.width);
  tela.width=Math.round(cw*r);tela.height=Math.round(H*r);var c=tela.getContext('2d');if(!c)return;c.drawImage(ceu,0,0,Math.round(cw*r),Math.round(ih*r));tela.classList.add('pronto')}
-function carrega(src,fim){var im=new Image();im.decoding='async';im.onload=function(){ceu=im;desenha();if(fim)fim()};im.src=src}
-function acende(){var r=Math.min(w.devicePixelRatio||1,2),need=Math.max(sec.clientWidth,sec.clientHeight*1.6)*r;
- carrega('img/ceu/ceu-800.webp',function(){carrega(need>1800?'img/ceu/ceu-2560.webp':'img/ceu/ceu-1600.webp')})}
+function carrega(src,fim){function ok(b){ceu=b;(w.requestAnimationFrame||setTimeout)(function(){desenha();if(fim)fim()})}
+ if(w.createImageBitmap&&w.fetch)fetch(src).then(function(r){return r.blob()}).then(function(b){return createImageBitmap(b)}).then(ok).catch(function(){});
+ else{var im=new Image();im.decoding='async';im.onload=function(){ok(im)};im.src=src}}
+function acende(){var r=Math.min(w.devicePixelRatio||1,2),need=Math.max(sec.clientWidth,sec.clientHeight*1.6)*r,feito=false;
+ function mais(){if(feito)return;feito=true;carrega(need>1800?'img/ceu/ceu-2560.webp':'img/ceu/ceu-1600.webp')}
+ carrega('img/ceu/ceu-800.webp',function(){setTimeout(mais,6000);['pointerdown','pointermove','scroll','keydown'].forEach(function(t){w.addEventListener(t,mais,{once:true,passive:true})})})}
 if(d.readyState==='complete')setTimeout(acende,300);else w.addEventListener('load',function(){(w.requestIdleCallback||function(f){setTimeout(f,300)})(acende)});
 function queue(){if(!q&&vis){q=true;requestAnimationFrame(paint)}}
 mundo.addEventListener('scroll',function(){if(cur&&Date.now()-prog>1200)close();queue();if(dica&&mundo.scrollLeft>20)dica.classList.add('fora')},{passive:true});
