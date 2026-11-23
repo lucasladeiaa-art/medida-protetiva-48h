@@ -157,4 +157,5 @@
 .mapa .agua{transition:opacity .9s ease}
 .mapa.viajando .barca svg{animation:rema 1.5s ease-in-out infinite}
 @keyframes rema{0%,100%{transform:translate3d(0,0,0) rotate(0)}50%{transform:translate3d(6px,2px,0) rotate(-2.2deg)}}
-.mapa.viva .agua i{background-image:url(../../img/real/agua-mar-1600.webp)}
+.mapa.tocou .agua i{background-image:url(../../img/real/agua-mar-1600.webp)}
+.mapa:not(.tocou) .agua{opacity:0}

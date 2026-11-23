@@ -54,6 +54,7 @@ function bitmap(src,f){if(w.createImageBitmap&&w.fetch)fetch(src).then(function(
 function acende(){sec.classList.add('viva');bitmap('img/ceu/lua-320.webp',function(b){luaImg=b;pintaLua()});var r=Math.min(w.devicePixelRatio||1,2),need=Math.max(sec.clientWidth,sec.clientHeight)*r;
  bitmap('img/ceu/cosmos-800.webp',function(b){ceu=b;desenha();if(need>800)setTimeout(function(){bitmap(need>1800?'img/ceu/cosmos-2560.webp':'img/ceu/cosmos-1600.webp',function(b2){ceu=b2;desenha()})},1500)});
  cenas.forEach(carrega)}
+['pointerdown','touchstart','keydown','wheel','scroll'].forEach(function(t){w.addEventListener(t,function(){sec.classList.add('tocou')},{once:true,passive:true})});
 var rt=0;w.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(mede,120)});
 if('IntersectionObserver'in w)new IntersectionObserver(function(es){sec.classList.toggle('fora',!es[0].isIntersecting)}).observe(sec);
 var last=get(KEY),li=IDS.indexOf(last);if(li>0){cenas[0].classList.remove('on');idx=li;carrega(cena(li));cena(li).classList.add('on')}
