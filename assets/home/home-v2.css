@@ -192,3 +192,10 @@
 .hero-actions .btn-primary { background: #fff; color: #2A1A5E; box-shadow: 0 10px 28px rgba(0,0,0,.28); }
 .hero-actions .btn-primary:hover, .hero-actions .btn-primary:focus-visible { background: #EEEAFF; color: #1E1247; }
 .foot-voo { opacity: .8; font-size: .92em; }
+.poster { border: 1px solid rgba(232,226,214,.08); box-shadow: 0 18px 40px rgba(0,0,0,.45); }
+.poster::before { background: linear-gradient(180deg, rgba(5,6,10,.2) 0%, rgba(5,6,10,0) 30%, rgba(5,6,10,.5) 55%, rgba(5,6,10,.94) 82%, #05060A 100%); }
+.poster img { filter: saturate(.7) brightness(.8) contrast(1.05); }
+.p-go { color: #E9E1D2; }
+.p-tag { color: #E9E1D2; background: rgba(10,10,12,.55); border-color: rgba(232,226,214,.22); }
+.p-tag-i { color: #D9CBB0; }
+@media (hover: hover) { .poster:hover img { filter: saturate(.85) brightness(.92) contrast(1.05); } }

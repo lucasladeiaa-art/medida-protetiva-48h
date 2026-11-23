@@ -3,7 +3,7 @@ var V='20261123m1',IW=1280,IH=720;
 var AREA={'criminal':'Criminal','familia':'Família','medida-protetiva':'Medida protetiva','cac':'CAC','mundo-em-disputa':'Mundo em Disputa'};
 var BAUS=[[300,664],[515,640],[700,690],[880,652],[1085,694]];
 var NAUS=[
- {id:'arq',x:300,y:420,nx:300,ny:150,nome:'Arquivo do Baú',linha:'Todos os artigos, por área, guardados no casco.',href:'../../artigos/',acao:'Entrar no naufrágio'},
+ {id:'arq',x:300,y:420,nx:300,ny:150,nome:'Arquivo do Baú',linha:'Todos os textos, por área, guardados no casco.',href:'../../artigos/',acao:'Entrar no naufrágio'},
  {id:'md',x:960,y:420,nx:960,ny:190,nome:'Mundo em Disputa',linha:'Casos reais que dividiram o público, contados com a lei na mão.',href:'../../mundo-em-disputa/',acao:'Entrar no naufrágio'}
 ];
 function u(n){return new URL(n,import.meta.url).href}
@@ -43,7 +43,7 @@ export default function(){
  document.addEventListener('keydown',tecla);p.fim(function(){document.removeEventListener('keydown',tecla)});
  function fechaCarta(){if(!aberto)return;carta.classList.remove('on');if(aberto.tipo==='bau')aberto.el.classList.remove('aberto');aberto=null}
  function mostra(o){fechaCarta();aberto=o;dv.dir=o.x>dv.x?1:-1;p.dica.style.opacity='0';
-  if(o.tipo==='bau'){o.el.classList.add('aberto');var a=o.a;carta.innerHTML='<p class="mr-k"></p><h3></h3><p class="mr-r"></p><div class="mr-acoes"><a></a><button type="button">Fechar o baú</button></div>';carta.querySelector('.mr-k').textContent=(AREA[a.area]||'Artigo')+(a.date?' · '+data(a.date):'');carta.querySelector('h3').textContent=a.title;carta.querySelector('.mr-r').textContent=a.summary||'';var l=carta.querySelector('a');l.href=u('../../artigos/'+a.slug+'.html');l.textContent='Ler o artigo'}
+  if(o.tipo==='bau'){o.el.classList.add('aberto');var a=o.a;carta.innerHTML='<p class="mr-k"></p><h3></h3><p class="mr-r"></p><div class="mr-acoes"><a></a><button type="button">Fechar o baú</button></div>';carta.querySelector('.mr-k').textContent=(AREA[a.area]||'Texto')+(a.date?' · '+data(a.date):'');carta.querySelector('h3').textContent=a.title;carta.querySelector('.mr-r').textContent=a.summary||'';var l=carta.querySelector('a');l.href=u('../../artigos/'+a.slug+'.html');l.textContent='Ler o artigo'}
   else{carta.innerHTML='<p class="mr-k">Naufrágio</p><h3></h3><p class="mr-r"></p><div class="mr-acoes"><a></a><button type="button">Voltar à água</button></div>';carta.querySelector('h3').textContent=o.n.nome;carta.querySelector('.mr-r').textContent=o.n.linha;var b=carta.querySelector('a');b.href=u(o.n.href);b.textContent=o.n.acao}
   carta.querySelector('button').addEventListener('click',function(){var f=aberto&&aberto.el;fechaCarta();if(f)f.focus({preventScroll:true})});
   carta.classList.toggle('alto',o.tipo==='bau');carta.classList.add('on')}
