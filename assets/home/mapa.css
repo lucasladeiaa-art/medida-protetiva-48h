@@ -91,3 +91,61 @@
 .abertura .hero-lead{margin:0;font-size:1.05rem;line-height:1.6}
 .abertura .hero-actions{margin-top:1.2rem}
 #vitrine,.row,#conexao-convite{scroll-margin-top:calc(var(--hh) + .5rem)}
+.mapa .ceu,.mapa .tinta{position:absolute;inset:0;pointer-events:none}
+.mapa .ceu i,.mapa .tinta i{position:absolute;inset:0;opacity:0;transition:opacity 1.6s ease}
+.mapa .ceu .c-crim{background:radial-gradient(ellipse 70% 40% at 15% 62%,rgba(176,112,52,.4),transparent 70%),linear-gradient(180deg,#0C0E12 0%,#1A1A1C 45%,#3A2C1E 68%,transparent 74%)}
+.mapa .ceu .c-fam{background:radial-gradient(ellipse 55% 42% at 35% 66%,rgba(242,190,96,.5),transparent 70%),linear-gradient(180deg,#0B1412 0%,#16231C 40%,#4A3A1E 66%,transparent 74%)}
+.mapa .ceu .c-con{background:radial-gradient(ellipse 50% 40% at 52% 45%,rgba(176,150,230,.28),transparent 70%),linear-gradient(180deg,#0E0A1A 0%,#1E1734 45%,#2E2546 66%,transparent 74%)}
+.mapa .ceu .c-arq{background:radial-gradient(ellipse 45% 40% at 69% 55%,rgba(220,170,90,.3),transparent 70%),linear-gradient(180deg,#070A14 0%,#101628 45%,#22201E 66%,transparent 74%)}
+.mapa .ceu .c-ter{background:radial-gradient(ellipse 60% 45% at 92% 64%,rgba(240,140,80,.55),transparent 70%),linear-gradient(180deg,#120C16 0%,#2A1824 40%,#5A2E24 64%,transparent 74%)}
+.mapa .tinta .c-crim{background:linear-gradient(180deg,transparent 60%,rgba(120,80,40,.12))}
+.mapa .tinta .c-fam{background:linear-gradient(180deg,transparent 60%,rgba(200,160,70,.12))}
+.mapa .tinta .c-con{background:linear-gradient(180deg,transparent 55%,rgba(130,110,190,.14))}
+.mapa .tinta .c-arq{background:linear-gradient(180deg,transparent 60%,rgba(200,150,70,.1))}
+.mapa .tinta .c-ter{background:linear-gradient(180deg,transparent 58%,rgba(220,110,60,.14))}
+.mapa[data-ativo="crim"] .c-crim,.mapa[data-ativo="fam"] .c-fam,.mapa[data-ativo="con"] .c-con,.mapa[data-ativo="arq"] .c-arq,.mapa[data-ativo="ter"] .c-ter{opacity:1}
+.mapa .casa{transform-box:fill-box;transform-origin:50% 100%;transform:scale(.97);transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
+.mapa .spot.perto .casa,.mapa .spot.on .casa{transform:scale(1.09)}
+.mapa .win.quente{fill:#5A3E1C}
+.mapa .placa-txt{font:700 13px/1 var(--serif);fill:#8F7646;text-anchor:middle;letter-spacing:.18em;transition:fill .6s}
+.mapa .spot.perto .placa-txt,.mapa .spot.on .placa-txt{fill:#E8C27A}
+.mapa .lampiao .lp{opacity:.15;transition:opacity .8s}
+.mapa .spot.perto .lampiao .lp,.mapa .spot.on .lampiao .lp{opacity:.9}
+.mapa .poeira{opacity:.35;transition:opacity 1s}
+.mapa .spot.perto .poeira,.mapa .spot.on .poeira{opacity:1}
+.mapa .chuva path{stroke:#9AA6B8;stroke-width:1.4;stroke-dasharray:16 64;opacity:.12;animation:chuva .9s linear infinite paused;animation-delay:var(--d)}
+@keyframes chuva{to{stroke-dashoffset:-80}}
+.mapa .spot.perto .chuva path,.mapa .spot.on .chuva path{opacity:.45;animation-play-state:running}
+.mapa .sol{transform:translateY(46px);opacity:.45;transition:transform 2.2s cubic-bezier(.2,.7,.2,1),opacity 1.6s}
+.mapa .spot.perto .sol,.mapa .spot.on .sol{transform:translateY(-14px);opacity:1}
+.mapa .arvore .folha{transition:fill 1s}.mapa .spot.perto .arvore .folha,.mapa .spot.on .arvore .folha{fill:#4E7A3C}
+.mapa .vagalume circle{fill:#F5D27A;opacity:0;transition:opacity 1s}
+.mapa .spot.perto .vagalume circle,.mapa .spot.on .vagalume circle{opacity:.85}
+.mapa .neblina{opacity:.6;animation:neb 18s ease-in-out infinite alternate paused}
+@keyframes neb{to{transform:translateX(26px)}}
+.mapa .spot.perto .neblina,.mapa .spot.on .neblina{opacity:1;animation-play-state:running}
+.mapa .feixe{transform-box:view-box;transform-origin:820px 418px;opacity:.35;animation:gira 10s ease-in-out infinite paused}
+@keyframes gira{0%{transform:scaleX(1)}25%{transform:scaleX(.15)}50%{transform:scaleX(-1)}75%{transform:scaleX(-.15)}100%{transform:scaleX(1)}}
+.mapa .spot.perto .feixe,.mapa .spot.on .feixe{opacity:1;animation-play-state:running}
+.mapa .paginas rect{fill:#D9C79C;opacity:0;transform-box:fill-box;transform-origin:50% 50%;animation:pagina 6s ease-in-out infinite paused;animation-delay:var(--d)}
+@keyframes pagina{0%{opacity:0;transform:translateY(30px) rotate(-10deg)}20%{opacity:.85}80%{opacity:.7}100%{opacity:0;transform:translateY(-60px) rotate(24deg)}}
+.mapa .spot.perto .paginas rect,.mapa .spot.on .paginas rect{animation-play-state:running}
+.mapa .estante{opacity:0;transition:opacity .8s}.mapa .spot.perto .estante,.mapa .spot.on .estante{opacity:1}
+.mapa .entardecer{opacity:.4;transition:opacity 1.4s}.mapa .spot.perto .entardecer,.mapa .spot.on .entardecer{opacity:1}
+.mapa .aviao{opacity:.55;transition:opacity 1s;animation:voo 16s ease-in-out infinite alternate paused}
+@keyframes voo{from{transform:translate(-40px,26px)}to{transform:translate(40px,-30px)}}
+.mapa .spot.perto .aviao,.mapa .spot.on .aviao{opacity:1;animation-play-state:running}
+.mapa .nav{fill:#E9604A;animation:pisca 1.6s steps(2,jump-none) infinite paused}
+@keyframes pisca{50%{opacity:.15}}
+.mapa .pista circle{fill:#4A4436;transition:fill .6s}
+.mapa .spot.perto .pista circle,.mapa .spot.on .pista circle{fill:#F4D9A0;animation:pista 1.8s linear infinite;animation-delay:var(--d)}
+.mapa .spot.perto .nav,.mapa .spot.on .nav{animation-play-state:running}
+@keyframes pista{0%,60%,100%{opacity:.55}15%{opacity:1}}
+.mapa .lbl rect{transition:stroke .4s,fill .4s}
+.mapa .lbl .lt{transition:fill .4s}
+.mapa .lbl.perto rect,.mapa .lbl.on rect{fill:rgba(28,22,14,.92)}
+.mapa .lbl.perto .lt,.mapa .lbl.on .lt{fill:#F6E7C4}
+.mapa .lbl .ld{font:500 18px/1 var(--sans);fill:#EDE3CC;text-anchor:middle;paint-order:stroke;stroke:rgba(5,6,8,.85);stroke-width:5px;stroke-linejoin:round;opacity:0;transform:translateY(-6px);transition:opacity .6s ease,transform .6s ease}
+.mapa .lbl.perto .ld,.mapa .lbl.on .ld{opacity:1;transform:none}
+.mapa.fora *{animation-play-state:paused!important}
+@media (prefers-reduced-motion:reduce){.mapa .casa,.mapa .sol,.mapa .ceu i,.mapa .tinta i,.mapa .lbl .ld{transition:none}.mapa .chuva path,.mapa .neblina,.mapa .feixe,.mapa .paginas rect,.mapa .aviao,.mapa .nav,.mapa .pista circle{animation:none!important}.mapa .feixe{transform:none}}
