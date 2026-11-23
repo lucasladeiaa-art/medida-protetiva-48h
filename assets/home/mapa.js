@@ -23,7 +23,7 @@ function center(id,smooth,fim){if(!spot(id))return;prog=Date.now();var de=mundo.
 function open(id,from){if(IDS.indexOf(id)<0)return;
  if(cur&&cur!==id)light(cur,false);set(KEY,id);
  [].forEach.call(sec.querySelectorAll('.lugares button'),function(b){b.setAttribute('aria-pressed',b.dataset.go===id?'true':'false')});
- function chega(){cur=id;light(id,true);queue()}
+ function chega(){cur=id;light(id,true);if(!reduce){sec.classList.remove('chegou');void sec.offsetWidth;sec.classList.add('chegou');clearTimeout(sec._tc);sec._tc=setTimeout(function(){sec.classList.remove('chegou')},2800)}queue()}
  saida=cur||sec.dataset.ativo||null;rumo=id;var ds=spot(id);if(ds)sobe(ds);
  if(cabe()){cur=null;alvo=meio(id);chega()}else{if(cur)cur=null;center(id,true,chega)}queue();
 }
@@ -109,6 +109,6 @@ var last=get(KEY);
 if(last&&IDS.indexOf(last)>=0&&spot(last)){var pin=sec.querySelector('.pin[data-for="'+last+'"]');if(pin)pin.classList.add('vis');
  var bt=sec.querySelector('.lugares button[data-go="'+last+'"]');if(bt)bt.classList.add('ultimo');
  if(cabe())bpos=alvo=meio(last);else center(last,false)}
-var ir=sec.querySelector('.ir-artigos');if(ir)ir.addEventListener('click',function(e){e.preventDefault();if(cur)close();rola('#vitrine')});
+var ir=sec.querySelector('.umbral');if(ir)ir.addEventListener('click',function(e){e.preventDefault();if(cur)close();ir.classList.add('aberta');setTimeout(function(){rola('#vitrine')},reduce?0:650);setTimeout(function(){ir.classList.remove('aberta')},2600)});
 paint();
 })();
