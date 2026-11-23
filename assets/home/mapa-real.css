@@ -139,17 +139,18 @@
 .mapa .lbl .fio{fill:url(#gFio)!important;stroke:none!important;opacity:.55;transform-box:fill-box;transform-origin:50% 50%}
 .mapa .lbl .ld{font:italic 400 15px/1 var(--serif);fill:rgba(240,231,210,.82);stroke:rgba(4,5,8,.6);stroke-width:3px}
 .mapa .lbl .entrar rect{fill:transparent;stroke:none}
-.mapa .lbl .entrar .luzp{fill:#FFF0CF;transform-box:fill-box;transform-origin:50% 50%;filter:drop-shadow(0 0 5px #FFC765) drop-shadow(0 0 12px rgba(245,165,36,.6));animation:luzp 2.6s ease-in-out infinite}
+.mapa .lbl .entrar .luzp{fill:#FFF0CF;stroke:rgba(255,199,101,.35);stroke-width:5px;transform-box:fill-box;transform-origin:50% 50%;animation:luzp 2.6s ease-in-out infinite;animation-play-state:paused}
+.mapa.agua-ok .lbl.on .entrar .luzp{animation-play-state:running}
 @keyframes luzp{0%,100%{transform:scale(1);opacity:.85}50%{transform:scale(1.35);opacity:1}}
 .mapa .lbl .entrar text{font:600 12.5px/1 var(--sans);letter-spacing:.32em;text-transform:uppercase;fill:rgba(246,238,220,.86);text-anchor:middle;paint-order:stroke;stroke:rgba(4,5,8,.55);stroke-width:3px}
-.mapa .lbl .entrar:hover .luzp,.mapa .lbl .entrar:focus-visible .luzp{filter:drop-shadow(0 0 7px #FFE0A0) drop-shadow(0 0 18px rgba(245,165,36,.9))}
+.mapa .lbl .entrar:hover .luzp,.mapa .lbl .entrar:focus-visible .luzp{stroke:rgba(255,214,140,.6);stroke-width:9px}
 .mapa .lbl .entrar:focus-visible rect{stroke:rgba(255,240,210,.8);stroke-width:1.2}
 .mapa .pin{opacity:.55}
-.mapa .lbl.on .lt{animation:titulo 2.6s cubic-bezier(.2,.7,.2,1) both}
-.mapa .lbl.on .fio{animation:fio 1.6s cubic-bezier(.2,.7,.2,1) .7s both}
-.mapa .lbl.on .ld{animation:surge 1.2s ease 1.2s both}
-.mapa .lbl.on .entrar{animation:surge 1.2s ease 1.7s both}
-@keyframes titulo{0%{opacity:0;letter-spacing:.55em;filter:drop-shadow(0 0 0 rgba(255,214,150,0))}45%{opacity:1;filter:drop-shadow(0 0 16px rgba(255,226,170,.95))}100%{opacity:1;letter-spacing:.16em;filter:drop-shadow(0 0 9px rgba(255,214,150,.42))}}
+.mapa.chegou .lbl.on .lt{animation:titulo 2.6s cubic-bezier(.2,.7,.2,1) both}
+.mapa.chegou .lbl.on .fio{animation:fio 1.6s cubic-bezier(.2,.7,.2,1) .7s both}
+.mapa.chegou .lbl.on .ld{animation:surge 1.2s ease 1.2s both}
+.mapa.chegou .lbl.on .entrar{animation:surge 1.2s ease 1.7s both}
+@keyframes titulo{0%{opacity:0;letter-spacing:.55em}45%{opacity:1}100%{opacity:1;letter-spacing:.16em}}
 @keyframes fio{from{transform:scaleX(0);opacity:0}to{transform:scaleX(1);opacity:.55}}
 @keyframes surge{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 .mapa .clarao{position:absolute;inset:0;z-index:3;pointer-events:none;opacity:0;background:radial-gradient(ellipse 60% 38% at 50% 60%,rgba(255,232,190,.55),rgba(255,190,120,.18) 45%,transparent 72%)}
