@@ -55,9 +55,12 @@ function desenha(){if(!tela||!ceu)return;var r=Math.min(w.devicePixelRatio||1,2)
 function carrega(src,fim){function ok(b){ceu=b;(w.requestAnimationFrame||setTimeout)(function(){desenha();if(fim)fim()})}
  if(w.createImageBitmap&&w.fetch)fetch(src).then(function(r){return r.blob()}).then(function(b){return createImageBitmap(b)}).then(ok).catch(function(){});
  else{var im=new Image();im.decoding='async';im.onload=function(){ok(im)};im.src=src}}
-function acende(){var r=Math.min(w.devicePixelRatio||1,2),need=Math.max(sec.clientWidth,sec.clientHeight*1.6)*r,feito=false;
- function mais(){if(feito)return;feito=true;carrega(need>1800?'img/ceu/ceu-2560.webp':'img/ceu/ceu-1600.webp')}
- carrega('img/ceu/ceu-800.webp',function(){setTimeout(mais,6000);['pointerdown','pointermove','scroll','keydown'].forEach(function(t){w.addEventListener(t,mais,{once:true,passive:true})})})}
+function acendeLua(){var f=function(b){luaImg=b;(w.requestAnimationFrame||setTimeout)(pintaLua)};
+ if(w.createImageBitmap&&w.fetch)fetch('img/ceu/lua-320.webp').then(function(r){return r.blob()}).then(function(b){return createImageBitmap(b)}).then(f).catch(function(){});
+ else{var im=new Image();im.decoding='async';im.onload=function(){f(im)};im.src='img/ceu/lua-320.webp'}}
+function acende(){acendeLua();var r=Math.min(w.devicePixelRatio||1,2),need=Math.max(sec.clientWidth,sec.clientHeight*1.6)*r,feito=false;
+ function mais(){if(feito)return;feito=true;carrega(need>1800?'img/ceu/cosmos-2560.webp':'img/ceu/cosmos-1600.webp')}
+ carrega('img/ceu/cosmos-800.webp',function(){setTimeout(mais,6000);['pointerdown','pointermove','scroll','keydown'].forEach(function(t){w.addEventListener(t,mais,{once:true,passive:true})})})}
 if(d.readyState==='complete')setTimeout(acende,300);else w.addEventListener('load',function(){(w.requestIdleCallback||function(f){setTimeout(f,300)})(acende)});
 function queue(){if(!q&&vis){q=true;requestAnimationFrame(paint)}}
 mundo.addEventListener('scroll',function(){if(cur&&Date.now()-prog>1200)close();queue();if(dica&&mundo.scrollLeft>20)dica.classList.add('fora')},{passive:true});
@@ -70,8 +73,17 @@ var down=null;
 mundo.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse'||cabe())return;down={x:e.clientX,s:mundo.scrollLeft};moved=false});
 w.addEventListener('pointermove',function(e){if(!down)return;var dx=e.clientX-down.x;if(Math.abs(dx)>5){moved=true;mundo.classList.add('arrasto')}mundo.scrollLeft=down.s-dx});
 w.addEventListener('pointerup',function(){down=null;mundo.classList.remove('arrasto');setTimeout(function(){moved=false},0)});
-function size(){palco.style.setProperty('--mh',sec.clientHeight+'px');}
-size();w.addEventListener('resize',function(){size();queue()});
+var luaEl=sec.querySelector('.lua'),luaCv=luaEl&&luaEl.querySelector('canvas'),luaImg=null,luaR=0,intro=d.querySelector('.mapa-intro');
+function lua(){if(!luaEl)return;var W=sec.clientWidth,H=sec.clientHeight,sr=sec.getBoundingClientRect(),wr=intro?intro.querySelector('.wrap')||intro:null,ib=0,it=60,tr=0;
+ if(wr){var k=wr.lastElementChild||wr,a=wr.firstElementChild||wr,rg;ib=k.getBoundingClientRect().bottom-sr.top;it=a.getBoundingClientRect().top-sr.top;
+  if(d.createRange){rg=d.createRange();rg.selectNodeContents(a);tr=rg.getBoundingClientRect().right-sr.left}}
+ var r,x,y;if(W<900){r=Math.max(34,Math.min(46,W*.105));x=W-r-Math.max(12,W*.04);y=ib+r*(W<380?.35:.55)}
+ else{r=Math.max(50,Math.min(76,H*.075));x=Math.max(W*.64,tr+r+40);y=it+r}
+ sec.style.setProperty('--lx',Math.round(x)+'px');sec.style.setProperty('--ly',Math.round(y)+'px');sec.style.setProperty('--lr',Math.round(r)+'px');luaR=r;pintaLua()}
+function pintaLua(){if(!luaCv||!luaImg||!luaR)return;var q=Math.min(w.devicePixelRatio||1,2),n=Math.round(luaR*2*q);if(luaCv.width!==n){luaCv.width=n;luaCv.height=n}
+ var c=luaCv.getContext('2d');if(!c)return;c.clearRect(0,0,n,n);c.drawImage(luaImg,0,0,n,n);luaEl.classList.add('pronto')}
+function size(){palco.style.setProperty('--mh',sec.clientHeight+'px');lua()}
+size();w.addEventListener('resize',function(){size();queue()});if(d.fonts&&d.fonts.ready)d.fonts.ready.then(lua);
 var last=get(KEY);
 if(last&&IDS.indexOf(last)>=0&&spot(last)){var pin=sec.querySelector('.pin[data-for="'+last+'"]');if(pin)pin.classList.add('vis');
  var bt=sec.querySelector('.lugares button[data-go="'+last+'"]');if(bt)bt.classList.add('ultimo');
