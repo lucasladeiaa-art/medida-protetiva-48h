@@ -183,3 +183,4 @@
 @media (max-width:899px){.mapa .lugares{bottom:calc(5.9rem + env(safe-area-inset-bottom))}.mapa .dica{bottom:calc(9rem + env(safe-area-inset-bottom))}.mapa .lbl .lt{font-size:23px}}
 @media (min-width:900px){.mapa .umbral{left:auto;right:1.6rem;bottom:1rem;transform:none;flex-direction:row-reverse}.mapa .um-cena{height:7.6rem}}
 @media (prefers-reduced-motion:reduce){.mapa .lbl.on .lt,.mapa .lbl.on .fio,.mapa .lbl.on .ld,.mapa .lbl.on .entrar,.mapa .lbl .entrar .luzp,.mapa.chegou .clarao{animation:none!important}.mapa .umbral .pf,.mapa .umbral .luz,.mapa .um-cena::after{transition:none}}
+.mapa .guia img{width:2.75rem;height:2.75rem;object-fit:cover;filter:none;box-shadow:0 0 0 1.5px rgba(243,238,230,.55),0 2px 10px rgba(0,0,0,.5)}
