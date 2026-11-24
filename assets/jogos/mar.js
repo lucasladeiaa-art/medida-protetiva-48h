@@ -1,4 +1,4 @@
-import {palco} from './palco.js?v=20261123j1';
+import {palco} from './palco.js?v=20261123j3';
 var V='20261123m1',IW=1280,IH=720;
 var AREA={'criminal':'Criminal','familia':'Família','medida-protetiva':'Medida protetiva','cac':'CAC','mundo-em-disputa':'Mundo em Disputa'};
 var BAUS=[[300,664],[515,640],[700,690],[880,652],[1085,694]];
@@ -11,6 +11,13 @@ function im(n){return u('../../img/mar/'+n)}
 function css(){if(document.getElementById('mr-css'))return;var l=document.createElement('link');l.id='mr-css';l.rel='stylesheet';l.href=u('mar.css?v='+V);document.head.appendChild(l)}
 function carrega(s){return new Promise(function(ok,no){var i=new Image();i.decoding='async';i.onload=function(){ok(i)};i.onerror=no;i.src=s})}
 function data(d){var m=['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];var p=(d||'').split('-');return p.length===3?(+p[2])+' de '+m[+p[1]-1]+' de '+p[0]:''}
+var QUENTES=[
+ ['medida-protetiva-primeiras-48-horas','Recebi uma medida protetiva. O que fazer nas primeiras 48 horas?'],
+ ['tenho-os-prints-da-conversa-isso-vale-como-prova','Tenho os prints da conversa. Isso vale como prova?'],
+ ['acusado-falsamente-o-que-fazer-antes-de-depor','Fui acusado falsamente. O que fazer antes de depor?'],
+ ['convivencia-com-o-filho-como-exigir','Ela está impedindo de ver meu filho. O que faço?'],
+ ['intimado-depor-delegacia-direito-ao-silencio','Fui intimado para depor. Sou obrigado a ir? Posso ficar calado?']
+];
 export default function(){
  css();
  var p=palco({casa:'mar',rotulo:'Mergulho no fundo do rio, entre baús e naufrágios',casaNome:'O mergulho',dica:'Toque na água para nadar.'});
@@ -43,7 +50,7 @@ export default function(){
  document.addEventListener('keydown',tecla);p.fim(function(){document.removeEventListener('keydown',tecla)});
  function fechaCarta(){if(!aberto)return;carta.classList.remove('on');if(aberto.tipo==='bau')aberto.el.classList.remove('aberto');aberto=null}
  function mostra(o){fechaCarta();aberto=o;dv.dir=o.x>dv.x?1:-1;p.dica.style.opacity='0';
-  if(o.tipo==='bau'){o.el.classList.add('aberto');var a=o.a;carta.innerHTML='<p class="mr-k"></p><h3></h3><p class="mr-r"></p><div class="mr-acoes"><a></a><button type="button">Fechar o baú</button></div>';carta.querySelector('.mr-k').textContent=(AREA[a.area]||'Texto')+(a.date?' · '+data(a.date):'');carta.querySelector('h3').textContent=a.title;carta.querySelector('.mr-r').textContent=a.summary||'';var l=carta.querySelector('a');l.href=u('../../artigos/'+a.slug+'.html');l.textContent='Ler o artigo'}
+  if(o.tipo==='bau'){o.el.classList.add('aberto');var a=o.a;carta.innerHTML='<p class="mr-k"></p><h3></h3><p class="mr-r"></p><div class="mr-acoes"><a></a><button type="button">Fechar o baú</button></div>';carta.querySelector('.mr-k').textContent=(AREA[a.area]||'Texto')+(a.date?' · '+data(a.date):'');carta.querySelector('h3').textContent=a.title;carta.querySelector('.mr-r').textContent=a.summary||'';var l=carta.querySelector('a');l.href=u('../../artigos/'+a.slug+'.html');l.textContent='Ler a resposta'}
   else{carta.innerHTML='<p class="mr-k">Naufrágio</p><h3></h3><p class="mr-r"></p><div class="mr-acoes"><a></a><button type="button">Voltar à água</button></div>';carta.querySelector('h3').textContent=o.n.nome;carta.querySelector('.mr-r').textContent=o.n.linha;var b=carta.querySelector('a');b.href=u(o.n.href);b.textContent=o.n.acao}
   carta.querySelector('button').addEventListener('click',function(){var f=aberto&&aberto.el;fechaCarta();if(f)f.focus({preventScroll:true})});
   carta.classList.toggle('alto',o.tipo==='bau');carta.classList.add('on')}
@@ -56,7 +63,7 @@ export default function(){
   b.innerHTML='<img class="f" alt="" decoding="async"><img class="a" alt="" decoding="async"><i></i>';b.querySelector('.f').src=im('bau-f.webp');b.querySelector('.a').src=im('bau-a.webp');obj.appendChild(b);
   var o={tipo:'bau',a:a,el:b,x:BAUS[i][0],y:BAUS[i][1]};baus.push(o);
   b.addEventListener('click',function(e){e.stopPropagation();if(aberto===o){fechaCarta();return}vai(o,o.x-(o.x>dv.x?1:-1)*dv.w*.66,o.y-80)})});tam()}
- fetch(u('../../artigos/artigos.json')).then(function(r){return r.json()}).then(function(j){j=(j||[]).filter(function(a){return a&&a.slug&&a.title}).sort(function(a,b){return (b.date||'').localeCompare(a.date||'')});poeBaus(j)}).catch(function(){});
+ fetch(u('../../artigos/artigos.json')).then(function(r){return r.json()}).then(function(j){var m={};(j||[]).forEach(function(a){if(a&&a.slug)m[a.slug]=a});poeBaus(QUENTES.filter(function(q){return m[q[0]]}).map(function(q){var a=Object.assign({},m[q[0]]);a.title=q[1];return a}))}).catch(function(){});
  tam();addEventListener('resize',tam);p.fim(function(){vivo=false;cancelAnimationFrame(raf);removeEventListener('resize',tam)});
  if(calmo){dv.x=dv.tx;dv.y=dv.ty}
  cam=camAlvo();

@@ -1,14 +1,23 @@
-import {palco,diz} from './palco.js?v=20261123j1';
-var FR=[
- ['Silêncio é direito','Você pode ficar calado diante da autoridade. Calar não é confessar.','Constituição, art. 5º, LXIII','../../artigos/intimado-depor-delegacia-direito-ao-silencio.html'],
- ['Inocente até o fim','Ninguém é considerado culpado antes da sentença definitiva.','Constituição, art. 5º, LVII','../../artigos/prisao-preventiva-sem-condenacao.html'],
- ['Antes de responder','Intimado de medida protetiva? Não mande mensagem. Fale primeiro com seu advogado.','','../../artigos/recebi-intimacao-e-mandei-mensagem-medida-protetiva.html'],
- ['A prova some','Guarde conversas, imagens e localização hoje. Amanhã elas podem não existir.','','../../conexao/prova-como-guardar-as-conversas.html']
+import {palco,diz} from './palco.js?v=20261123j3';
+var CR=[
+ ['Fui intimado para depor. Sou obrigado a ir?','Você pode ficar calado diante da autoridade. Calar não é confessar.','Constituição, art. 5º, LXIII','../../artigos/intimado-depor-delegacia-direito-ao-silencio.html'],
+ ['Fui acusado falsamente. O que fazer antes de depor?','O que você disser agora pesa no processo inteiro. Organize os fatos antes de falar.','','../../artigos/acusado-falsamente-o-que-fazer-antes-de-depor.html'],
+ ['Recebi uma citação criminal. E agora?','A citação abre o prazo da defesa. Não deixe o tempo correr.','','../../artigos/citacao-criminal-o-que-acontece-prazo-para-defesa.html'],
+ ['A polícia levou meu celular. Pode ler tudo?','Saiba o que a busca autoriza e o que pode ser questionado.','','../../artigos/policia-levou-meu-celular-pode-acessar-minhas-conversas.html'],
+ ['Posso ser preso sem ter sido condenado?','Ninguém é considerado culpado antes da sentença definitiva.','Constituição, art. 5º, LVII','../../artigos/prisao-preventiva-sem-condenacao.html']
+];
+var PR=[
+ ['Recebi uma medida protetiva. E agora?','As primeiras 48 horas pesam muito. Veja o que fazer e o que evitar.','','../../artigos/medida-protetiva-primeiras-48-horas.html'],
+ ['Fui intimado e mandei mensagem. E agora?','Não mande mais nada. Entenda o risco e o próximo passo.','','../../artigos/recebi-intimacao-e-mandei-mensagem-medida-protetiva.html'],
+ ['Posso ver meu filho com medida protetiva?','A medida não apaga a relação com o filho, mas tem regras que precisam ser respeitadas.','','../../artigos/posso-ver-meu-filho-com-medida-protetiva.html'],
+ ['Como contestar a medida? Existe prazo?','Há caminho para apresentar a sua versão e as suas provas.','','../../artigos/como-contestar-medida-protetiva-prazo-para-defesa.html'],
+ ['Fui ameaçada hoje. Como pedir uma medida protetiva?','O pedido pode ser feito na delegacia, e o juiz precisa decidir com rapidez.','','../../artigos/fui-ameacada-como-pedir-medida-protetiva.html']
 ];
 function url(u){return new URL(u,import.meta.url).href}
 function carrega(s){return new Promise(function(ok,no){var i=new Image();i.decoding='async';i.onload=function(){ok(i)};i.onerror=no;i.src=s})}
-export default function(){
- var p=palco({casa:'crim',rotulo:'Vidro molhado diante do fórum',casaNome:'Direito Criminal',dica:'Passe o dedo no vidro.'});
+export default function(qual){
+ var prot=qual==='prot',FR=prot?PR:CR;
+ var p=palco({casa:'crim',rotulo:prot?'Vidro molhado diante da delegacia':'Vidro molhado diante do fórum',casaNome:prot?'Medida Protetiva':'Direito Criminal',dica:'Passe o dedo no vidro.'});
  var cv=document.createElement('canvas');p.cena.appendChild(cv);
  var txt=document.createElement('p');txt.className='jg-vidro-txt';txt.setAttribute('aria-hidden','true');p.el.appendChild(txt);
  var M=document.createElement('canvas'),mx=M.getContext('2d');
@@ -29,11 +38,11 @@ export default function(){
  var tf=setInterval(function(){if(!vivo){clearInterval(tf);return}
   if(!p.calmo){mx.fillStyle='rgba(0,0,0,.028)';mx.fillRect(0,0,M.width,M.height);sujo=true}
   var f=frac();
-  if(!mostrou&&f>.2){mostrou=true;var a=FR[idx%FR.length];txt.textContent=a[1];txt.classList.add('on');diz(p,'<h3>'+a[0]+'</h3>'+(a[2]?'<small>'+a[2]+'</small>':'')+'<a href="'+url(a[3])+'">Ler sobre isso</a>')}
+  if(!mostrou&&f>.2){mostrou=true;var a=FR[idx%FR.length];txt.textContent=a[0];txt.classList.add('on');diz(p,'<p>'+a[1]+'</p>'+(a[2]?'<small>'+a[2]+'</small>':'')+'<a href="'+url(a[3])+'">Ler a resposta</a>')}
   else if(mostrou&&f<.05){mostrou=false;idx++;txt.classList.remove('on');p.msg.classList.remove('on')}
  },300);
  p.fim(function(){clearInterval(tf)});
- Promise.all([carrega(p.img('crim.webp')),carrega(p.img('crim-b.webp'))]).then(function(im){
+ Promise.all([carrega(p.img(prot?'prot.webp':'crim.webp')),carrega(p.img(prot?'prot-b.webp':'crim-b.webp'))]).then(function(im){
   if(!vivo)return;
   if(!p.calmo)try{gl=cv.getContext('webgl',{antialias:false,alpha:false,powerPreference:'low-power'})}catch(e){gl=null}
   if(gl&&shader(im))return;

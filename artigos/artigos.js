@@ -113,15 +113,3 @@
     });
   }
 })();
-
-(function () {
-  if (window.__refugioLoad) return;
-  window.__refugioLoad = 1;
-  function load() {
-    var s = document.createElement("script");
-    s.src = "../assets/refugio.js?v=20261110acesa";
-    document.body.appendChild(s);
-  }
-  if (document.readyState === "complete") load();
-  else addEventListener("load", load);
-})();

@@ -1,12 +1,13 @@
-import {palco,diz} from './palco.js?v=20261123j1';
+import {palco,diz} from './palco.js?v=20261123j3';
+var G='https://consumidor.lucasladeia.com.br/artigos/';
 var D=[
- ['ATRASO 1H','COMUNICAÇÃO','INTERNET E FONE','A partir de 1 hora de atraso, a companhia deve oferecer meios de comunicação.'],
- ['ATRASO 2H','ALIMENTAÇÃO','VOUCHER/REFEIÇÃO','A partir de 2 horas, alimentação adequada ao horário e à espera.'],
- ['ATRASO 4H','HOSPEDAGEM','VOO OU REEMBOLSO','A partir de 4 horas, você escolhe: outro voo, reembolso ou outro meio de transporte. Se houver pernoite, hospedagem e traslado.'],
- ['CANCELADO','REACOMODAÇÃO','OU REEMBOLSO','Voo cancelado: outro voo, reembolso integral ou outro meio de transporte, à sua escolha.'],
- ['BAGAGEM','EXTRAVIADA','7 DIAS NACIONAL','A companhia tem até 7 dias, em voo nacional, e 21 dias, em internacional, para devolver a mala.'],
- ['DESISTÊNCIA','EM ATÉ 24H','SEM MULTA','Compra feita com 7 dias ou mais de antecedência do voo pode ser desfeita em 24 horas, sem custo.'],
- ['OVERBOOKING','COMPENSAÇÃO','IMEDIATA','Impedido de embarcar por excesso de vendas: compensação imediata, além de reacomodação ou reembolso.']
+ ['ATRASO 1H','COMUNICAÇÃO','INTERNET E FONE','Voo atrasou mais de 1 hora?','A companhia deve garantir meios de comunicação.','quais-sao-os-direitos-do-passageiro-em-atraso-ou-cancelamento-de-voo'],
+ ['ATRASO 2H','ALIMENTAÇÃO','VOUCHER/REFEIÇÃO','O atraso passou de 2 horas?','Você tem direito a alimentação adequada ao horário e à espera.','quais-sao-os-direitos-do-passageiro-em-atraso-ou-cancelamento-de-voo'],
+ ['ATRASO 4H','HOSPEDAGEM','VOO OU REEMBOLSO','Mais de 4 horas esperando no aeroporto?','Você escolhe: outro voo, reembolso ou outro transporte. Se houver pernoite, hospedagem e traslado.','quais-sao-os-direitos-do-passageiro-em-atraso-ou-cancelamento-de-voo'],
+ ['CANCELADO','REACOMODAÇÃO','OU REEMBOLSO','Seu voo foi cancelado?','Outro voo, reembolso integral ou outro transporte, à sua escolha.','meu-voo-foi-cancelado-quais-sao-meus-direitos'],
+ ['BAGAGEM','EXTRAVIADA','7 DIAS NACIONAL','Sua mala não chegou?','A companhia tem até 7 dias, em voo nacional, e 21 dias, em internacional, para devolver.','minha-mala-nao-chegou-quanto-tempo-a-companhia-tem-para-devolver'],
+ ['DESISTÊNCIA','EM ATÉ 24H','SEM MULTA','Comprou a passagem e se arrependeu?','Compra feita com 7 dias ou mais de antecedência pode ser desfeita em 24 horas, sem custo.','posso-desistir-da-passagem-aerea-em-24-horas-sem-multa'],
+ ['OVERBOOKING','COMPENSAÇÃO','IMEDIATA','Impediram você de embarcar?','Por excesso de vendas, há compensação imediata, além de outro voo ou reembolso.','overbooking-fui-impedido-de-embarcar-quais-sao-meus-direitos']
 ];
 var COL=16,AZ='ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789ÇÃÉÊÍÓÚ ';
 export default function(){
@@ -21,7 +22,7 @@ export default function(){
   var alvo=(d[0].padEnd(COL)+d[1].padEnd(COL)+d[2].padEnd(COL)).split('');
   cel.forEach(function(s,k){var fim=alvo[k]||' ';if(p.calmo){s.textContent=fim;return}var n=4+Math.floor(Math.random()*6)+(k%COL)*.4|0;
    for(var j=0;j<=n;j++)(function(j){tm.push(setTimeout(function(){s.textContent=j===n?fim:AZ[Math.random()*AZ.length|0];s.classList.remove('vira');void s.offsetWidth;s.classList.add('vira')},j*70+(k%COL)*18+Math.floor(k/COL)*60))})(j)});
-  diz(p,'<p>'+d[3]+'</p><small>Resolução ANAC nº 400/2016</small><a href="https://consumidor.lucasladeia.com.br/" rel="noopener">Abrir o guia</a>');p.dica.style.opacity='0'}
+  diz(p,'<h3>'+d[0]+'</h3><p>'+d[3]+'</p><small>'+d[4]+' Resolução ANAC nº 400/2016.</small><a href="'+G+d[5]+'.html" rel="noopener">Ler a resposta completa</a>');p.dica.style.opacity='0'}
  b.addEventListener('click',mostra);
  setTimeout(mostra,p.calmo?0:700);
  return p;
