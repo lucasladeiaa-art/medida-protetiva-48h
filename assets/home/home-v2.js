@@ -78,7 +78,7 @@
     rail.addEventListener('scroll', function () { requestAnimationFrame(upd); }, { passive: true }); upd();
     w.addEventListener('resize', upd);
   }
-  d.querySelectorAll('.row').forEach(arrows);
+  (w.requestIdleCallback || function (f) { setTimeout(f, 200); })(function () { d.querySelectorAll('.row').forEach(arrows); });
 
 
   var KEY = 'rp-continue', rowC = d.getElementById('fileira-continue'), railC = d.getElementById('continueRail');

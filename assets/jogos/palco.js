@@ -1,4 +1,4 @@
-var V='20261123j3';
+var V='20261124j5';
 var calmo=matchMedia('(prefers-reduced-motion: reduce)').matches;
 function css(){if(document.getElementById('jg-css'))return;var l=document.createElement('link');l.id='jg-css';l.rel='stylesheet';l.href=new URL('jogos.css?v='+V,import.meta.url).href;document.head.appendChild(l)}
 export function palco(o){

@@ -1,7 +1,7 @@
-import {palco} from './palco.js?v=20261123j3';
-var V='20261123m2',IW=1280,IH=720;
+import {palco} from './palco.js?v=20261124j5';
+var V='20261124m4',IW=1280,IH=720;
 var AREA={'criminal':'Criminal','familia':'Família','medida-protetiva':'Medida protetiva','cac':'CAC','mundo-em-disputa':'Mundo em Disputa'};
-var BAUS=[[300,664],[515,640],[700,690],[880,652],[1085,694]];
+var BAUS=[[170,690],[340,660],[525,640],[705,690],[885,652],[1090,694]];
 var NAUS=[
  {id:'arq',x:300,y:420,nx:300,ny:150,nome:'Arquivo do Baú',linha:'Todos os textos, por área, guardados no casco.',href:'../../artigos/',acao:'Entrar no naufrágio'},
  {id:'md',x:960,y:420,nx:960,ny:190,nome:'Mundo em Disputa',linha:'Casos reais que dividiram o público, contados com a lei na mão.',href:'../../mundo-em-disputa/',acao:'Entrar no naufrágio'}
@@ -18,7 +18,30 @@ var QUENTES=[
  ['convivencia-com-o-filho-como-exigir','Ela está impedindo de ver meu filho. O que faço?'],
  ['intimado-depor-delegacia-direito-ao-silencio','Fui intimado para depor. Sou obrigado a ir? Posso ficar calado?']
 ];
-export default function(){
+var DICAS={
+ prot:['Intimado de uma medida protetiva?','Cumpra todas as restrições desde já, inclusive a de não mandar recado por terceiros, e guarde a decisão com a data da intimação.'],
+ crim:['Intimado para depor?','A Constituição garante o direito de permanecer calado (art. 5º, LXIII). Antes de falar, leia a intimação e saiba em que condição você foi chamado.'],
+ fam:['Pensão fixada se paga mesmo durante a briga pela guarda.','Pague por transferência identificada e guarde cada comprovante.'],
+ con:['Antes de responder a uma mensagem difícil, espere.','O que se escreve no impulso pode virar prova no processo.'],
+ arq:['Em todo caso famoso, separe três camadas.','O que foi alegado, o que foi decidido e o que está comprovado.'],
+ ter:['Voo atrasado ou cancelado?','Pela Resolução 400 da ANAC: comunicação a partir de 1 hora de espera, alimentação a partir de 2 horas e hospedagem, se houver pernoite, a partir de 4 horas.']};
+var GP='https://consumidor.lucasladeia.com.br/artigos/';
+var EXTRA={
+ ter:[
+  {k:'Guia do Passageiro',title:'Voo cancelado: quais são meus direitos?',summary:'Reacomodação, reembolso, alimentação, hotel e o que fazer ali mesmo, no aeroporto.',href:GP+'meu-voo-foi-cancelado-quais-sao-meus-direitos.html'},
+  {k:'Guia do Passageiro',title:'Overbooking: impedido de embarcar, quais os direitos?',summary:'Compensação imediata, reacomodação, reembolso e assistência material.',href:GP+'overbooking-fui-impedido-de-embarcar-quais-sao-meus-direitos.html'},
+  {k:'Guia do Passageiro',title:'Mala extraviada ou danificada: o que fazer no aeroporto',summary:'O que registrar antes de sair do aeroporto e os prazos no voo nacional e no internacional.',href:GP+'mala-extraviada-ou-danificada-o-que-fazer-no-aeroporto.html'},
+  {k:'Consumidor',title:'Plano de saúde negou tratamento prescrito: e agora?',summary:'A negativa precisa vir por escrito, com o fundamento e o número de protocolo.',href:GP+'plano-de-saude-negou-tratamento-exame-ou-cirurgia-prescritos.html'},
+  {k:'Consumidor',title:'Nome em cadastro por dívida que eu não reconheço: o que fazer?',summary:'O cadastro precisa ser verdadeiro e comunicado por escrito antes da inscrição.',href:GP+'meu-nome-foi-incluido-em-cadastro-por-divida-que-nao-reconheco.html'},
+  {k:'Guia do Passageiro',title:'Compromisso perdido por atraso: indenização',summary:'Lucros cessantes e perda de uma chance: o que diferencia as duas e que provas reunir.',href:GP+'voo-atrasado-compromisso-perdido-indenizacao.html'}],
+ con:[
+  {k:'Conexão',title:'Medo da falsa acusação: o que fazer agora',summary:'O que o medo faz com quem foi acusado e o primeiro passo para atravessá-lo.',href:u('../../conexao/medo.html')},
+  {k:'Conexão',title:'Raiva: o que fazer antes de responder',summary:'O impulso de responder agora e o preço que ele cobra no processo.',href:u('../../conexao/raiva.html')},
+  {k:'Conexão',title:'Ciúme e traição: o que fazer antes de decidir o divórcio',summary:'Decidir com a cabeça fria, antes de qualquer passo jurídico.',href:u('../../conexao/ciume.html')},
+  {k:'Conexão',title:'Medo de ser preso: o que é real e o que fazer agora',summary:'Separar o que é risco real do que é pânico.',href:u('../../conexao/medo-de-ser-preso.html')},
+  {k:'Conexão',title:'Vergonha: quando todo mundo ficou sabendo',summary:'Como atravessar a exposição sem piorar a situação.',href:u('../../conexao/vergonha.html')},
+  {k:'Conexão',title:'Recomeço: depois do processo',summary:'O que fazer quando a fase mais dura passou.',href:u('../../conexao/recomeco.html')}]};
+export default function(PARADA){
  css();
  var p=palco({casa:'mar',rotulo:'Mergulho no fundo do rio, entre baús e naufrágios',casaNome:'O mergulho',dica:'Toque na água para nadar.'});
  var calmo=p.calmo,el=p.el,cena=p.cena;
@@ -50,7 +73,7 @@ export default function(){
  document.addEventListener('keydown',tecla);p.fim(function(){document.removeEventListener('keydown',tecla)});
  function fechaCarta(){if(!aberto)return;carta.classList.remove('on');if(aberto.tipo==='bau')aberto.el.classList.remove('aberto');aberto=null}
  function mostra(o){fechaCarta();aberto=o;dv.dir=o.x>dv.x?1:-1;p.dica.style.opacity='0';
-  if(o.tipo==='bau'){o.el.classList.add('aberto');var a=o.a;carta.innerHTML='<p class="mr-k"></p><h3></h3><p class="mr-r"></p><div class="mr-acoes"><a></a><button type="button">Fechar o baú</button></div>';carta.querySelector('.mr-k').textContent=(AREA[a.area]||'Texto')+(a.date?' · '+data(a.date):'');carta.querySelector('h3').textContent=a.title;carta.querySelector('.mr-r').textContent=a.summary||'';var l=carta.querySelector('a');l.href=u('../../artigos/'+a.slug+'.html');l.textContent='Ler a resposta'}
+  if(o.tipo==='bau'){o.el.classList.add('aberto');var a=o.a;carta.innerHTML='<p class="mr-k"></p><h3></h3><p class="mr-r"></p><div class="mr-acoes"><a></a><button type="button">Fechar o baú</button></div>';carta.querySelector('.mr-k').textContent=a.k||((AREA[a.area]||'Texto')+(a.date?' · '+data(a.date):''));carta.querySelector('h3').textContent=a.title;carta.querySelector('.mr-r').textContent=a.summary||'';var l=carta.querySelector('a');if(a.tipo){l.remove()}else{l.href=a.href||u('../../artigos/'+a.slug+'.html');l.textContent='Ler a resposta'}if(a.tipo==='siri')siri(o);if(a.tipo==='vazio')puff(o)}
   else{carta.innerHTML='<p class="mr-k">Naufrágio</p><h3></h3><p class="mr-r"></p><div class="mr-acoes"><a></a><button type="button">Voltar à água</button></div>';carta.querySelector('h3').textContent=o.n.nome;carta.querySelector('.mr-r').textContent=o.n.linha;var b=carta.querySelector('a');b.href=u(o.n.href);b.textContent=o.n.acao}
   carta.querySelector('button').addEventListener('click',function(){var f=aberto&&aberto.el;fechaCarta();if(f)f.focus({preventScroll:true})});
   carta.classList.toggle('alto',o.tipo==='bau');carta.classList.add('on')}
@@ -59,12 +82,25 @@ export default function(){
   var nm=document.createElement('button');nm.type='button';nm.className='mr-nome';nm.setAttribute('aria-label','Abrir: '+n.nome);nm.textContent=n.nome;obj.appendChild(nm);
   var o={tipo:'nau',n:n,el:b,nm:nm,x:n.x,y:n.y,nx:n.nx,ny:n.ny};naus.push(o);
   function abreNau(e){e.stopPropagation();vai(o,n.x+(n.x<640?140:-140),n.y-40);mostra(o)}b.addEventListener('click',abreNau);nm.addEventListener('click',abreNau)});
- function poeBaus(lista){lista.slice(0,BAUS.length).forEach(function(a,i){var b=document.createElement('button');b.type='button';b.className='mr-bau';b.setAttribute('aria-label','Abrir o baú: '+a.title);
+ function poeBaus(lista){lista.slice(0,BAUS.length).forEach(function(a,i){var b=document.createElement('button');b.type='button';b.className='mr-bau';b.setAttribute('aria-label',a.tipo?'Abrir um baú misterioso':'Abrir o baú: '+a.title);
   b.innerHTML='<img class="f" alt="" decoding="async"><img class="a" alt="" decoding="async"><i></i>';b.querySelector('.f').src=im('bau-f.webp');b.querySelector('.a').src=im('bau-a.webp');obj.appendChild(b);
   var o={tipo:'bau',a:a,el:b,x:BAUS[i][0],y:BAUS[i][1]};baus.push(o);
   b.addEventListener('click',function(e){e.stopPropagation();if(aberto===o){fechaCarta();return}vai(o,o.x-(o.x>dv.x?1:-1)*dv.w*.66,o.y-80);mostra(o)})});tam()}
- fetch(u('../../artigos/artigos.json')).then(function(r){return r.json()}).then(function(j){var m={};(j||[]).forEach(function(a){if(a&&a.slug)m[a.slug]=a});poeBaus(QUENTES.filter(function(q){return m[q[0]]}).map(function(q){var a=Object.assign({},m[q[0]]);a.title=q[1];return a}))}).catch(function(){});
- tam();addEventListener('resize',tam);p.fim(function(){vivo=false;cancelAnimationFrame(raf);removeEventListener('resize',tam)});
+ function mistura(l){for(var i=l.length-1;i>0;i--){var r=Math.random()*(i+1)|0,x=l[i];l[i]=l[r];l[r]=x}return l}
+var PAR=PARADA||'prot',DICA=DICAS[PAR]||DICAS.prot;
+function monta(arts){var l=mistura(arts.slice()).slice(0,3);l.push({tipo:'vazio',k:'Puff!',title:'Nada aqui, só areia e bolhas.',summary:'Continue procurando.'});l.push({tipo:'dica',k:'Diquinha relâmpago',title:DICA[0],summary:DICA[1]});l.push({tipo:'siri',k:'Puff!',title:'Só um siri de guarda aqui.',summary:'Tente outro baú.'});poeBaus(mistura(l))}
+if(EXTRA[PAR])monta(EXTRA[PAR]);
+else fetch(u('../../artigos/artigos.json')).then(function(r){return r.json()}).then(function(j){var area={prot:'medida-protetiva',crim:'criminal',fam:'familia',arq:'mundo-em-disputa'}[PAR]||'medida-protetiva';var l=(j||[]).filter(function(a){return a&&a.slug&&a.area===area});if(PAR==='arq'&&l.length<4)l=l.concat((j||[]).filter(function(a){return a.slug==='caso-nvidia-cadeia-de-custodia-prova-digital'&&a.area!==area}));monta(l)}).catch(function(){});
+function puff(o){for(var i=0;i<5;i++){var b=document.createElement('i');b.className='mr-bolha';b.setAttribute('aria-hidden','true');b.style.left=(o.x*k+(i-2)*7)+'px';b.style.top=(o.y-14)*k+'px';b.style.animationDelay=(i*.12)+'s';obj.appendChild(b);setTimeout(function(e){e.remove()},2200,b)}}
+function siri(o){var s=document.createElementNS('http://www.w3.org/2000/svg','svg');s.setAttribute('viewBox','0 0 40 26');s.setAttribute('class','mr-siri');s.setAttribute('aria-hidden','true');
+ s.innerHTML='<g fill="#B8492E"><ellipse cx="20" cy="15" rx="10" ry="6.5"/><path d="M8 10q-6-2-5-8 3 1 3 4 2-3 4-2-1 4-2 6zM32 10q6-2 5-8-3 1-3 4-2-3-4-2 1 4 2 6z"/><path d="M11 18l-6 5M12 20l-4 5M29 18l6 5M28 20l4 5" stroke="#B8492E" stroke-width="1.6"/></g><circle cx="16.5" cy="10" r="1.4" fill="#111"/><circle cx="23.5" cy="10" r="1.4" fill="#111"/>';
+ s.style.left=o.x*k+'px';s.style.top=(o.y-30)*k+'px';s.style.width=Math.max(34,46*k)+'px';obj.appendChild(s);
+ for(var z=0;z<14;z++)bolhas.push({x:o.x+Math.random()*40-20,y:o.y-30,r:1.4+Math.random()*3,v:50+Math.random()*50,f:Math.random()*6});
+ var dx=(dv.x-o.x)*k*.55,dy=(dv.y-o.y+40)*k*.55;s.style.setProperty('--dx',dx+'px');s.style.setProperty('--dy',dy+'px');
+ requestAnimationFrame(function(){s.classList.add('sai')});
+ if(!calmo)setTimeout(function(){mg.classList.remove('mr-belisca');void mg.offsetWidth;mg.classList.add('mr-belisca');dv.vx-=(o.x>dv.x?1:-1)*120},900);
+ setTimeout(function(){s.classList.add('volta')},2200);setTimeout(function(){s.remove()},3600)}
+tam();addEventListener('resize',tam);p.fim(function(){vivo=false;cancelAnimationFrame(raf);removeEventListener('resize',tam)});
  if(calmo){dv.x=dv.tx;dv.y=dv.ty}
  cam=camAlvo();
  var peixes=[],neve=[],bolhas=[],sustos=[];

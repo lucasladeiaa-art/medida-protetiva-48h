@@ -1,4 +1,4 @@
-import {palco,diz} from './palco.js?v=20261123j3';
+import {palco,diz} from './palco.js?v=20261124j5';
 var CR=[
  ['Fui intimado para depor. Sou obrigado a ir?','Você pode ficar calado diante da autoridade. Calar não é confessar.','Constituição, art. 5º, LXIII','../../artigos/intimado-depor-delegacia-direito-ao-silencio.html'],
  ['Fui acusado falsamente. O que fazer antes de depor?','O que você disser agora pesa no processo inteiro. Organize os fatos antes de falar.','','../../artigos/acusado-falsamente-o-que-fazer-antes-de-depor.html'],

@@ -146,3 +146,37 @@
 
 
 }
+
+/* eventos do ceu por parada */
+.mapa .alvorada{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,10,24,.55) 0,rgba(6,10,24,0) 96px),linear-gradient(180deg,#3f7cc4 0%,#6fa3d8 18%,#a9cbe8 34%,#e8d6b8 50%,#f3bd88 62%,#cf9468 80%);opacity:0;transition:opacity 1.8s ease}
+.mapa[data-ativo="ter"] .alvorada{opacity:1}
+.mapa[data-ativo="ter"] .cosmos,.mapa[data-ativo="ter"] .cintila,.mapa[data-ativo="ter"] .constelacao{opacity:0!important;transition:opacity 1.8s ease}
+.mapa .lua canvas{transition:opacity 2s ease}
+.mapa .lua::after{content:"";position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 44% 40%,#FFFBE8 0,#FFE08A 42%,#FFC24F 72%,#F3A13A 100%);box-shadow:0 0 22px 6px rgba(255,214,120,.6),0 0 70px 26px rgba(255,186,90,.28);opacity:0;transform:scale(.92);transition:opacity 2s ease,transform 2s ease;pointer-events:none}
+.mapa[data-ativo="ter"] .lua{opacity:1!important}
+.mapa[data-ativo="ter"] .lua canvas{opacity:0}
+.mapa[data-ativo="ter"] .lua::after{opacity:1;transform:none}
+.mapa[data-ativo="ter"] .lua::before{background:radial-gradient(circle,rgba(255,226,150,.38) 0,rgba(255,200,110,.18) 22%,rgba(255,180,90,.06) 42%,transparent 62%)}
+.mapa .ceu-ev{position:absolute;inset:0;z-index:3;pointer-events:none;overflow:hidden}
+.mapa .ceu-ev i{position:absolute;display:block;opacity:0}
+.mapa .ceu-ev .rel{left:0;right:0;top:0;height:38%;background:radial-gradient(ellipse 50% 70% at 28% 0,rgba(196,206,255,.34),rgba(150,165,240,.1) 45%,transparent 72%)}
+.mapa[data-ativo="prot"]:not(.viajando) .ceu-ev .rel{animation:ev-rel 15s linear infinite 4s}
+@keyframes ev-rel{0%,90%{opacity:0}91%{opacity:.85}92%{opacity:.1}93.5%{opacity:.6}96%,100%{opacity:0}}
+.mapa .ceu-ev .cad{left:12%;top:11%;width:140px;height:1.5px;border-radius:2px;background:linear-gradient(90deg,rgba(255,255,255,0),rgba(240,244,255,.95));transform:rotate(17deg)}
+.mapa[data-ativo="crim"]:not(.viajando) .ceu-ev .cad{animation:ev-cad 12s ease-in infinite 2.5s}
+@keyframes ev-cad{0%,86%{opacity:0;transform:translate3d(0,0,0) rotate(17deg)}87%{opacity:1}93%{opacity:0;transform:translate3d(300px,92px,0) rotate(17deg)}100%{opacity:0;transform:translate3d(300px,92px,0) rotate(17deg)}}
+.mapa .ceu-ev .vg{width:3px;height:3px;border-radius:50%;background:#F7E7A1;box-shadow:0 0 6px 2px rgba(247,226,140,.55)}
+.mapa .ceu-ev .v1{left:9%;top:36%}.mapa .ceu-ev .v2{left:18%;top:42%}.mapa .ceu-ev .v3{left:24%;top:33%}.mapa .ceu-ev .v4{left:79%;top:38%}.mapa .ceu-ev .v5{left:87%;top:31%}.mapa .ceu-ev .v6{left:92%;top:43%}
+.mapa[data-ativo="fam"]:not(.viajando) .ceu-ev .vg{animation:ev-vg 5.5s ease-in-out infinite alternate}
+.mapa .ceu-ev .v2{animation-delay:-1.4s!important;animation-duration:6.6s!important}.mapa .ceu-ev .v3{animation-delay:-3s!important}.mapa .ceu-ev .v4{animation-delay:-2.2s!important;animation-duration:7s!important}.mapa .ceu-ev .v5{animation-delay:-4.1s!important}.mapa .ceu-ev .v6{animation-delay:-.7s!important;animation-duration:6.2s!important}
+@keyframes ev-vg{0%{opacity:0;transform:translate3d(0,0,0)}35%{opacity:.95}70%{opacity:.25;transform:translate3d(9px,-12px,0)}100%{opacity:.8;transform:translate3d(-6px,-20px,0)}}
+.mapa[data-ativo="con"]:not(.viajando) .constelacao{animation:ev-pulsa 4.8s ease-in-out infinite}
+@keyframes ev-pulsa{0%,100%{filter:none}50%{filter:brightness(1.45) drop-shadow(0 0 5px rgba(200,190,255,.75))}}
+.mapa .ceu-ev .ovni{left:0;top:13%;width:16px;height:4px;border-radius:50%;background:radial-gradient(ellipse at 50% 35%,#dfe6f1,#6c7487 70%);box-shadow:0 0 6px rgba(200,215,240,.35)}
+.mapa .ceu-ev .ovni::after{content:"";position:absolute;left:5px;top:-2px;width:6px;height:3px;border-radius:6px 6px 0 0;background:rgba(190,205,230,.7)}
+.mapa[data-ativo="arq"]:not(.viajando) .ceu-ev .ovni{animation:ev-ovni 34s linear infinite 5s}
+@keyframes ev-ovni{0%{opacity:0;transform:translate3d(-30px,0,0)}3%{opacity:.5}20%{transform:translate3d(45vw,-6px,0)}22%{transform:translate3d(46vw,-7px,0)}36%{opacity:.5}38%{opacity:0;transform:translate3d(105vw,4px,0)}100%{opacity:0;transform:translate3d(105vw,4px,0)}}
+.mapa .ceu-ev .rastro{left:6%;top:13%;width:0;height:1.5px;border-radius:2px;background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.8));transform:rotate(-7deg);transform-origin:0 50%}
+.mapa[data-ativo="ter"]:not(.viajando) .ceu-ev .rastro{animation:ev-rastro 18s ease-out infinite 2s}
+@keyframes ev-rastro{0%{opacity:0;width:0}4%{opacity:.85}45%{width:58%;opacity:.7}80%{opacity:0;width:60%}100%{opacity:0;width:60%}}
+@media (prefers-reduced-motion:reduce){.mapa .ceu-ev i,.mapa[data-ativo="con"] .constelacao{animation:none!important}}

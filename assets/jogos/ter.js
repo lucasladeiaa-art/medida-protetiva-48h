@@ -1,4 +1,4 @@
-import {palco,diz} from './palco.js?v=20261123j3';
+import {palco,diz} from './palco.js?v=20261124j5';
 var G='https://consumidor.lucasladeia.com.br/artigos/';
 var D=[
  ['ATRASO 1H','COMUNICAÇÃO','INTERNET E FONE','Voo atrasou mais de 1 hora?','A companhia deve garantir meios de comunicação.','quais-sao-os-direitos-do-passageiro-em-atraso-ou-cancelamento-de-voo'],

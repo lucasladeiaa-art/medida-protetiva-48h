@@ -41,3 +41,13 @@
 @media (prefers-reduced-motion:reduce){.mr-bau img,.mr-nome,.mr-carta,.mr-bau::after{transition:none}.mr-bau i,.mr-nau i,.mr-bau.perto i{animation:none}}
 
 /* tesouros sempre visiveis e tocaveis */.mr-bau img{filter:brightness(calc(.95 + var(--luz)*.35)) saturate(.85)}.mr-bau i{width:10px;height:10px;margin:-5px;opacity:.9;animation:mr-pulso 2.6s ease-in-out infinite}.mr-bau::before{content:'';position:absolute;left:-14%;right:-14%;top:-10%;bottom:-6%;border-radius:50%;background:radial-gradient(ellipse at 50% 60%,rgba(255,205,130,.32),transparent 68%);animation:mr-pulso 3.4s ease-in-out infinite;pointer-events:none}.mr-nau{width:5rem;height:5rem;margin:-2.5rem 0 0 -2.5rem;border:1px solid rgba(200,235,255,.45);background:radial-gradient(circle,rgba(170,220,255,.18),transparent 70%)}.mr-nau i{width:12px;height:12px;margin:-6px}.mr-nome{appearance:none;border:1px solid rgba(200,235,255,.4);background:rgba(3,16,26,.55);padding:.6rem .9rem;border-radius:999px;opacity:.92;filter:none;pointer-events:auto;cursor:pointer;z-index:4;font-size:clamp(.78rem,3.2vw,1.1rem);letter-spacing:.22em}.mr-nome.perto{opacity:1;letter-spacing:.24em;background:rgba(3,16,26,.75)}.mr-nome:focus-visible{outline:1.5px solid #EAF6FF;outline-offset:3px}
+
+.mr-siri{position:absolute;z-index:6;height:auto;margin-left:-23px;opacity:0;transform:translate3d(0,10px,0) scale(.6);transition:transform .8s cubic-bezier(.3,1.4,.5,1),opacity .4s;pointer-events:none;filter:drop-shadow(0 2px 3px rgba(0,0,0,.5))}
+.mr-siri.sai{opacity:1;transform:translate3d(var(--dx,0),var(--dy,-20px),0) scale(1)}
+.mr-siri.volta{opacity:0;transform:translate3d(0,14px,0) scale(.5);transition:transform 1.2s ease-in,opacity 1.2s ease-in}
+.mr-belisca{animation:mr-belisca .55s ease-in-out}
+@keyframes mr-belisca{0%,100%{translate:0 0}20%{translate:-7px -2px}40%{translate:6px 1px}60%{translate:-4px 0}80%{translate:3px 0}}
+@media (prefers-reduced-motion:reduce){.mr-siri{transition:opacity .3s!important}.mr-siri.sai{transform:none}.mr-belisca{animation:none!important}}
+.mr-bolha{position:absolute;z-index:6;width:7px;height:7px;margin-left:-3px;border:1px solid rgba(220,240,255,.8);border-radius:50%;opacity:0;pointer-events:none;animation:mr-sobe 1.8s ease-out forwards}
+@keyframes mr-sobe{0%{opacity:0;transform:translate3d(0,0,0) scale(.5)}20%{opacity:.9}100%{opacity:0;transform:translate3d(0,-70px,0) scale(1.2)}}
+@media (prefers-reduced-motion:reduce){.mr-bolha{animation:none;display:none}}

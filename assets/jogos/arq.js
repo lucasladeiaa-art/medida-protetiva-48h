@@ -1,4 +1,4 @@
-import {palco} from './palco.js?v=20261123j3';
+import {palco} from './palco.js?v=20261124j5';
 var L=[[125,220],[228,316],[322,413],[418,510],[515,608],[612,700]],Y0=508,Y1=842,IW=768,IH=1024;
 var C=[
  ['Confessaram um crime sob tortura. O “morto” voltou vivo.','Irmãos Naves · Araguari (MG), 1937','Sebastião e Joaquim Naves confessaram, sob tortura, a morte de um primo. Foram condenados. Em 1952, o suposto morto voltou vivo à cidade.','Confissão arrancada não é prova.','intimado-depor-delegacia-direito-ao-silencio','Fui intimado para depor. Sou obrigado a ir?'],

@@ -64,3 +64,8 @@ html.jg-aberto,html.jg-aberto body{overflow:hidden}
 .jg-papel a.lk{display:block;margin-top:.8rem;font:600 1rem/1.35 var(--serif,Georgia,serif);color:#3A240C;text-decoration:underline;text-decoration-color:rgba(74,51,21,.45);text-underline-offset:4px}
 .jg-papel a.lk:hover,.jg-papel a.lk:focus-visible{color:#1E1306;outline:none}
 .jg-papel a.lk+button{display:block}
+
+.jg-jan .jg-som{position:absolute;left:8%;right:8%;bottom:0;height:88%;width:84%;fill:#2A1608;opacity:0;filter:blur(.7px);mix-blend-mode:multiply;transition:opacity 2s ease 1s;pointer-events:none}
+.jg-jan.acesa .jg-som{opacity:.66;animation:jg-som 7s ease-in-out 3s infinite alternate}
+@keyframes jg-som{to{transform:translateX(4%)}}
+@media (prefers-reduced-motion:reduce){.jg-jan .jg-som{animation:none!important;transition:none!important}}

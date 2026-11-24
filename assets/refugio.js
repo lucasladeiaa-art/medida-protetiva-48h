@@ -79,11 +79,23 @@
       "pg-cac":"dourado",
       "caso-nvidia-cadeia-de-custodia-prova-digital":"ciano",
       "depp-heard-dois-tribunais-dois-veredictos":"magenta",
+      "murdoch-o-fundo-irrevogavel-e-a-heranca-que-o-pai-quis-reescrever":"dourado",
+      "karen-read-a-busca-no-celular-entre-2h27-e-6h24":"cobalto",
+      "scarlett-johansson-a-voz-que-ela-recusou-emprestar":"ambar",
+      "principe-harry-e-a-caixa-postal-invadida-pelos-tabloides":"lima",
+      "britney-spears-13-anos-sob-curatela-e-quem-decide-pela-vida-de-um-adulto":"violeta",
+      "taylor-swift-e-os-deepfakes-quando-a-imagem-falsa-tem-o-seu-rosto":"magenta",
       "pg-disputa":"dourado"
     };
     var capaGrafica = {
       "caso-nvidia-cadeia-de-custodia-prova-digital": 1,
       "depp-heard-dois-tribunais-dois-veredictos": 1,
+      "murdoch-o-fundo-irrevogavel-e-a-heranca-que-o-pai-quis-reescrever": 1,
+      "karen-read-a-busca-no-celular-entre-2h27-e-6h24": 1,
+      "scarlett-johansson-a-voz-que-ela-recusou-emprestar": 1,
+      "principe-harry-e-a-caixa-postal-invadida-pelos-tabloides": 1,
+      "britney-spears-13-anos-sob-curatela-e-quem-decide-pela-vida-de-um-adulto": 1,
+      "taylor-swift-e-os-deepfakes-quando-a-imagem-falsa-tem-o-seu-rosto": 1,
       "pg-disputa": 1, "pg-cac": 1, "pg-48h": 1, "pg-protetiva": 1, "pg-familia": 1
     };
     var capaRotulo = {
@@ -130,10 +142,22 @@
       "pg-cac":"E o meu acervo?",
       "caso-nvidia-cadeia-de-custodia-prova-digital":"A prova digital está intacta?",
       "depp-heard-dois-tribunais-dois-veredictos":"Por que os veredictos divergem?",
+      "murdoch-o-fundo-irrevogavel-e-a-heranca-que-o-pai-quis-reescrever":"Dá para desfazer o irrevogável?",
+      "karen-read-a-busca-no-celular-entre-2h27-e-6h24":"Que horas foi a busca?",
+      "scarlett-johansson-a-voz-que-ela-recusou-emprestar":"A voz é dela?",
+      "principe-harry-e-a-caixa-postal-invadida-pelos-tabloides":"Quem ouviu a caixa postal?",
+      "britney-spears-13-anos-sob-curatela-e-quem-decide-pela-vida-de-um-adulto":"Quem decide por um adulto?",
+      "taylor-swift-e-os-deepfakes-quando-a-imagem-falsa-tem-o-seu-rosto":"E se fosse com você?",
       "pg-disputa":"O que mudaria no Brasil?"
     };
     var capaNovo = {
       "ela-me-mandou-mensagem-ou-terceiro-medida-protetiva":1,
+      "murdoch-o-fundo-irrevogavel-e-a-heranca-que-o-pai-quis-reescrever":1,
+      "karen-read-a-busca-no-celular-entre-2h27-e-6h24":1,
+      "scarlett-johansson-a-voz-que-ela-recusou-emprestar":1,
+      "principe-harry-e-a-caixa-postal-invadida-pelos-tabloides":1,
+      "britney-spears-13-anos-sob-curatela-e-quem-decide-pela-vida-de-um-adulto":1,
+      "taylor-swift-e-os-deepfakes-quando-a-imagem-falsa-tem-o-seu-rosto":1,
       "depp-heard-dois-tribunais-dois-veredictos":1,
       "caso-nvidia-cadeia-de-custodia-prova-digital":1
     };

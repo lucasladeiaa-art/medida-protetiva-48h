@@ -1,5 +1,119 @@
 [
   {
+    "title": "Taylor Swift e os deepfakes: quando a imagem falsa tem o seu rosto",
+    "slug": "taylor-swift-e-os-deepfakes-quando-a-imagem-falsa-tem-o-seu-rosto",
+    "area": "mundo-em-disputa",
+    "date": "2026-11-23",
+    "summary": "Em janeiro de 2024, imagens sexuais falsas da cantora, criadas por inteligência artificial, se espalharam pelo X. Uma delas foi vista 47 milhões de vezes antes de sair do ar. O que a lei brasileira prevê para montagens desse tipo e por que a pena aumenta na violência psicológica contra a mulher com uso de IA.",
+    "cover": "img/taylor-swift-e-os-deepfakes-quando-a-imagem-falsa-tem-o-seu-rosto.webp",
+    "coverAlt": "Celular virado sobre uma mesa escura ao lado de um espelho de mão que reflete apenas uma silhueta pixelada, com chuva na janela",
+    "reading": 3,
+    "linha": "B",
+    "tagline": "Nenhuma foto foi tirada. O dano foi real.",
+    "posterTitle": "Rosto Falso",
+    "related": [
+      "o-print-nao-basta-ata-notarial-e-codigo-hash",
+      "como-preservar-conversas-e-documentar-ameacas",
+      "fui-ameacada-como-pedir-medida-protetiva"
+    ],
+    "ordem": 7
+  },
+  {
+    "title": "Britney Spears: 13 anos sob curatela e a pergunta sobre quem decide pela vida de um adulto",
+    "slug": "britney-spears-13-anos-sob-curatela-e-quem-decide-pela-vida-de-um-adulto",
+    "area": "mundo-em-disputa",
+    "date": "2026-11-23",
+    "summary": "De 2008 a 2021, a cantora não decidiu sozinha sobre o próprio dinheiro, a carreira e partes íntimas da vida. Uma juíza de Los Angeles encerrou o arranjo em novembro de 2021. O que a lei brasileira permite, e o que não alcança, quando uma família pede a curatela de um adulto.",
+    "cover": "img/britney-spears-13-anos-sob-curatela-e-quem-decide-pela-vida-de-um-adulto.webp",
+    "coverAlt": "Camarim vazio à noite, com espelho de lâmpadas, um microfone, uma pilha de autos amarrada e uma gaiola de porta aberta",
+    "reading": 3,
+    "linha": "C",
+    "tagline": "Treze anos de curatela. Trinta minutos de audiência.",
+    "posterTitle": "Livre",
+    "related": [
+      "convivencia-com-o-filho-como-exigir",
+      "uniao-estavel-sem-contrato-o-que-acontece-com-o-patrimonio",
+      "comunhao-parcial-o-que-entra-na-partilha"
+    ],
+    "ordem": 6
+  },
+  {
+    "title": "Príncipe Harry contra os tabloides: a caixa postal invadida e o preço da intimidade",
+    "slug": "principe-harry-e-a-caixa-postal-invadida-pelos-tabloides",
+    "area": "mundo-em-disputa",
+    "date": "2026-11-23",
+    "summary": "Em dezembro de 2023, a Justiça inglesa concluiu que o grupo do Daily Mirror obteve ilegalmente informações sobre o príncipe Harry em 15 reportagens, com invasão de telefone. O que o caso diz sobre sigilo das comunicações e o que prevê a lei brasileira.",
+    "cover": "img/principe-harry-e-a-caixa-postal-invadida-pelos-tabloides.webp",
+    "coverAlt": "Celular antigo sobre jornais dobrados numa mesa de madeira à noite, ao lado de um gravador e de uma luminária verde, com Londres sob chuva na janela",
+    "reading": 3,
+    "linha": "B",
+    "tagline": "Quinze reportagens, uma caixa postal e uma Corte que disse basta.",
+    "posterTitle": "Caixa Postal",
+    "related": [
+      "como-preservar-conversas-e-documentar-ameacas",
+      "a-mensagem-apagou-no-meu-celular-da-para-recuperar",
+      "tenho-os-prints-da-conversa-isso-vale-como-prova"
+    ],
+    "ordem": 5
+  },
+  {
+    "title": "Scarlett Johansson e a voz que ela recusou emprestar à inteligência artificial",
+    "slug": "scarlett-johansson-a-voz-que-ela-recusou-emprestar",
+    "area": "mundo-em-disputa",
+    "date": "2026-11-23",
+    "summary": "Ela disse não. Meses depois, uma das vozes do novo ChatGPT soava, segundo ela, “assustadoramente parecida” com a sua. A OpenAI negou a imitação e suspendeu a voz. O que a lei brasileira protege quando a semelhança é a sua.",
+    "cover": "img/scarlett-johansson-a-voz-que-ela-recusou-emprestar.webp",
+    "coverAlt": "Cabine de gravação escura com um microfone de estúdio, um caderno fechado sobre a mesa e um celular exibindo uma onda sonora",
+    "reading": 3,
+    "linha": "B",
+    "tagline": "Ela disse não. A voz apareceu mesmo assim.",
+    "posterTitle": "Sky",
+    "related": [
+      "posso-gravar-a-conversa-sem-ela-saber",
+      "perfil-falso-ou-conversa-forjada-quando-entra-a-pericia",
+      "tenho-os-prints-da-conversa-isso-vale-como-prova"
+    ],
+    "ordem": 4
+  },
+  {
+    "title": "Karen Read: uma busca no celular, dois horários e um júri que absolveu",
+    "slug": "karen-read-a-busca-no-celular-entre-2h27-e-6h24",
+    "area": "mundo-em-disputa",
+    "date": "2026-11-23",
+    "summary": "Uma busca escrita com erro, “hos long to die in cold”, ocupou o centro de um julgamento por homicídio nos Estados Unidos. A defesa dizia 2h27. A perita da acusação dizia 6h24. O que o caso ensina sobre prova digital e o que diria a lei brasileira.",
+    "cover": "img/karen-read-a-busca-no-celular-entre-2h27-e-6h24.webp",
+    "coverAlt": "Celular caído na neve à noite, com a tela acesa, e luzes de viatura desfocadas ao fundo",
+    "reading": 4,
+    "linha": "A",
+    "tagline": "Um celular, dois horários, uma vida em julgamento.",
+    "posterTitle": "2h27",
+    "related": [
+      "o-print-nao-basta-ata-notarial-e-codigo-hash",
+      "perfil-falso-ou-conversa-forjada-quando-entra-a-pericia",
+      "acusado-falsamente-o-que-fazer-antes-de-depor"
+    ],
+    "ordem": 3
+  },
+  {
+    "title": "Murdoch: o pai que tentou reescrever a herança irrevogável dos quatro filhos",
+    "slug": "murdoch-o-fundo-irrevogavel-e-a-heranca-que-o-pai-quis-reescrever",
+    "area": "mundo-em-disputa",
+    "date": "2026-11-23",
+    "summary": "Rupert Murdoch quis mudar um fundo familiar irrevogável para deixar só um filho no comando da Fox News. Um comissário de Nevada viu má-fé, e a família terminou num acordo bilionário. O que a lei brasileira diz sobre herança, legítima e planejamento em vida.",
+    "cover": "img/murdoch-o-fundo-irrevogavel-e-a-heranca-que-o-pai-quis-reescrever.webp",
+    "coverAlt": "Mesa longa de reunião à noite, com cadeiras vazias e um livro de couro lacrado com cera vermelha sob uma luminária, e a cidade sob chuva na janela",
+    "reading": 3,
+    "linha": "C",
+    "tagline": "Um patriarca, quatro herdeiros e um papel que dizia irrevogável.",
+    "posterTitle": "Irrevogável",
+    "related": [
+      "comunhao-parcial-o-que-entra-na-partilha",
+      "uniao-estavel-sem-contrato-o-que-acontece-com-o-patrimonio",
+      "convivencia-com-o-filho-como-exigir"
+    ],
+    "ordem": 2
+  },
+  {
     "title": "Gravar o ambiente no próprio celular. Isso vale como prova?",
     "slug": "gravar-o-ambiente-no-celular-vale-como-prova",
     "area": "criminal",
