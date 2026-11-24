@@ -1,63 +1,153 @@
 [
   {
+    "title": "Gravar o ambiente no próprio celular. Isso vale como prova?",
+    "slug": "gravar-o-ambiente-no-celular-vale-como-prova",
+    "area": "criminal",
+    "date": "2026-11-23",
+    "summary": "A gravação ambiental feita por quem participa da conversa pode ser lícita. Veja o que o STF decide, quais cuidados tomar e o que nunca gravar.",
+    "cover": "img/gravar-o-ambiente-no-celular-vale-como-prova.webp",
+    "coverAlt": "Celular sobre uma mesa de madeira à noite, com uma onda de áudio iluminada na tela e um ponto vermelho, ao lado de uma janela com chuva e uma cadeira vazia ao fundo",
+    "reading": 2
+  },
+  {
+    "title": "A mensagem apagou no meu celular. Dá para recuperar antes que suma de vez?",
+    "slug": "a-mensagem-apagou-no-meu-celular-da-para-recuperar",
+    "area": "criminal",
+    "date": "2026-11-23",
+    "summary": "Quando o texto some do seu aparelho, ainda pode restar backup, notificação ou cópia. Veja o que preservar — e o que não mexer — antes que desapareça.",
+    "cover": "img/a-mensagem-apagou-no-meu-celular-da-para-recuperar.webp",
+    "coverAlt": "Mesa escura à noite com um caderno fechado, um disco rígido e um celular com a tela de conversa desfocada, sob uma luminária e chuva na janela",
+    "reading": 2
+  },
+  {
+    "title": "Não havia câmeras no local. Como demonstrar onde eu estava?",
+    "slug": "nao-havia-cameras-no-local-como-demonstrar-onde-eu-estava",
+    "area": "criminal",
+    "date": "2026-11-23",
+    "summary": "Sem filme no local, ainda é possível reconstruir a linha do tempo com deslocamentos, compras, portaria e testemunhas — e conferir se alguma câmera existe por perto.",
+    "cover": "img/nao-havia-cameras-no-local-como-demonstrar-onde-eu-estava.webp",
+    "coverAlt": "Mesa à noite com um comprovante virado, um cartão, chaves, um relógio e um caderno fechado, diante de uma janela com chuva e uma rua molhada ao fundo",
+    "reading": 2
+  },
+  {
+    "title": "Fui acusado hoje. O que preservar nas primeiras 24 horas?",
+    "slug": "fui-acusado-hoje-o-que-preservar-nas-primeiras-24-horas",
+    "area": "criminal",
+    "date": "2026-11-23",
+    "summary": "Nas primeiras horas depois de uma acusação, o impulso de reagir pode destruir prova. Um checklist do que guardar — e do que não tocar — nesse intervalo.",
+    "cover": "img/fui-acusado-hoje-o-que-preservar-nas-primeiras-24-horas.webp",
+    "coverAlt": "Mesa à noite com um envelope lacrado, um celular virado para baixo, um caderno fechado e um relógio, ao lado de uma janela com chuva",
+    "reading": 2
+  },
+  {
+    "title": "O print não basta. Quando usar ata notarial e o código hash?",
+    "slug": "o-print-nao-basta-ata-notarial-e-codigo-hash",
+    "area": "criminal",
+    "date": "2026-11-23",
+    "summary": "Quando a imagem de tela é contestada, a ata notarial e o hash ajudam a demonstrar que o arquivo existia e não foi mexido. Veja quando e como usá-los.",
+    "cover": "img/o-print-nao-basta-ata-notarial-e-codigo-hash.webp",
+    "coverAlt": "Mesa de madeira à noite com envelopes lacrados com cera, um pendrive, uma lupa de latão e uma pasta de couro, sob luminária e chuva na janela",
+    "reading": 2
+  },
+  {
+    "title": "O dano já aconteceu. O que documentar para pedir indenização?",
+    "slug": "o-dano-ja-aconteceu-o-que-documentar-para-pedir-indenizacao",
+    "area": "criminal",
+    "date": "2026-11-23",
+    "summary": "Quando o prejuízo material, moral ou à imagem já ocorreu, o pedido começa pelo que se consegue documentar agora: recibos, publicações, cronologia e nexo.",
+    "cover": "img/o-dano-ja-aconteceu-o-que-documentar-para-pedir-indenizacao.webp",
+    "coverAlt": "Mesa à noite com uma pasta parda, uns óculos, uma pilha de papéis em branco e um envelope, sob luminária e chuva na janela",
+    "reading": 2
+  },
+  {
+    "title": "Meu áudio foi cortado. Como demonstrar o que veio antes e depois?",
+    "slug": "meu-audio-foi-cortado-como-demonstrar-o-antes-e-o-depois",
+    "area": "criminal",
+    "date": "2026-11-23",
+    "summary": "Um trecho isolado pode inverter o sentido de um áudio. Veja como guardar o recorte, localizar o arquivo inteiro e demonstrar o que veio antes e depois.",
+    "cover": "img/meu-audio-foi-cortado-como-demonstrar-o-antes-e-o-depois.webp",
+    "coverAlt": "Mesa de madeira à noite com um fone de ouvido, um celular com uma onda de áudio na tela e um gravador, diante de uma janela com chuva",
+    "reading": 2
+  },
+  {
+    "title": "A conversa está no celular de outra pessoa. Posso pedir a preservação?",
+    "slug": "a-conversa-esta-no-celular-de-outra-pessoa-posso-pedir-a-preservacao",
+    "area": "criminal",
+    "date": "2026-11-23",
+    "summary": "Quando o que importa está no aparelho de outra pessoa, o caminho lícito é pedir a preservação — não abrir, não pedir senha e não invadir o telefone alheio.",
+    "cover": "img/a-conversa-esta-no-celular-de-outra-pessoa-posso-pedir-a-preservacao.webp",
+    "coverAlt": "Mesa à noite com dois celulares, um mais próximo e outro ao fundo fora de foco, com uma cadeira vazia, uma luminária e chuva na janela",
+    "reading": 2
+  },
+  {
+    "title": "A câmera registrou o fato, mas o estabelecimento não quer entregar as imagens. O que fazer?",
+    "slug": "a-camera-registrou-o-fato-e-o-estabelecimento-nao-entrega-as-imagens",
+    "area": "criminal",
+    "date": "2026-11-23",
+    "summary": "Lojas, prédios e portarias apagam imagens em poucos dias. Veja como pedir a preservação por escrito e o que fazer quando a entrega é recusada.",
+    "cover": "img/a-camera-registrou-o-fato-e-o-estabelecimento-nao-entrega-as-imagens.webp",
+    "coverAlt": "Fachada fechada de um estabelecimento à noite, com o chão molhado, a porta de aço descida e uma câmera de segurança sob o beiral",
+    "reading": 2
+  },
+  {
     "title": "Quem sabe o quê, e quando: o tempo de apresentar a prova",
     "slug": "quem-sabe-o-que-e-quando-o-tempo-da-prova",
     "area": "criminal",
     "date": "2026-11-22",
-    "summary": "Informação assimétrica, resposta à acusação e juntada de documentos: o lance certo depende de saber o que cada lado já sabe, e de jogar sempre dentro da lei.",
+    "summary": "No processo penal e no processo civil, o momento de juntar documentos e de arrolar testemunhas está na lei. Saber o que já está nos autos, e o que ainda não está, evita perder o prazo e evita atalhos ilícitos.",
     "cover": "img/quem-sabe-o-que-e-quando-o-tempo-da-prova.webp",
     "coverAlt": "Relógio antigo e envelope lacrado com lacre de cera ao lado de um caderno fechado, sobre mesa escura, com chuva na janela em luz roxa e azul",
-    "reading": 12
+    "reading": 9
   },
   {
-    "title": "Sinal barato, sinal caro: por que o print solto pesa pouco e o arquivo íntegro pesa muito",
+    "title": "Por que o print solto pesa pouco e o arquivo íntegro pesa muito",
     "slug": "sinal-barato-sinal-caro-print-ou-arquivo-integro",
     "area": "criminal",
     "date": "2026-11-22",
-    "summary": "A teoria da sinalização explica o que o juiz faz com uma captura de tela e com uma conversa exportada, com hash e ata notarial: acredita mais no que custa caro falsificar.",
+    "summary": "A captura de tela pode servir como indício, mas, quando é impugnada, sozinha não demonstra conformidade com o original. A conversa exportada na íntegra, com hash, ata notarial e o aparelho disponível, resiste melhor ao contraditório.",
     "cover": "img/sinal-barato-sinal-caro-print-ou-arquivo-integro.webp",
     "coverAlt": "Folha amassada ao lado de um disco rígido lacrado com lacre de cera e uma etiqueta em branco, sobre mesa escura, com chuva na janela em luz roxa e azul",
-    "reading": 10
+    "reading": 7
   },
   {
-    "title": "Preservar tudo: a jogada que não piora nenhum cenário",
+    "title": "Preservar tudo: por que apagar ou editar piora qualquer cenário",
     "slug": "preservar-tudo-a-jogada-que-nao-piora-nenhum-cenario",
     "area": "criminal",
     "date": "2026-11-22",
-    "summary": "Na teoria dos jogos, estratégia dominante é a que dá resultado igual ou melhor em qualquer cenário. Na prova digital, essa jogada tem nome: guardar. Apagar ou editar piora todos os cenários, inclusive aquele em que a mensagem pesa contra você.",
+    "summary": "Apagar ou editar uma conversa não apaga a outra ponta e pode criar um problema novo: a lacuna, o risco de fraude processual e a perda de credibilidade. Guardar o material íntegro não obriga a apresentar tudo.",
     "cover": "img/preservar-tudo-a-jogada-que-nao-piora-nenhum-cenario.webp",
     "coverAlt": "Celular, disco externo e saco plástico lacrado alinhados sobre mesa escura, com chuva na janela em luz roxa e azul",
-    "reading": 10
+    "reading": 8
   },
   {
     "title": "Pensar de trás para frente: da sentença que o juiz vai escrever à prova que você guarda hoje",
     "slug": "pensar-de-tras-para-frente-da-sentenca-a-prova-de-hoje",
     "area": "criminal",
     "date": "2026-11-22",
-    "summary": "A indução retroativa resolve um jogo a partir do último lance. No processo, o último lance é a sentença. Saber o que o juiz vai precisar escrever diz o que preservar agora.",
+    "summary": "A sentença precisa ser fundamentada e, no processo penal, apoiada em prova submetida ao contraditório. Pensar a partir do que o juiz precisará afirmar mostra o que preservar hoje, e o que pode desaparecer primeiro.",
     "cover": "img/pensar-de-tras-para-frente-da-sentenca-a-prova-de-hoje.webp",
     "coverAlt": "Celular com mensagens desfocadas, pendrive e folha de decisão sobre mesa escura, com chuva na janela em luz roxa e azul",
-    "reading": 9
+    "reading": 7
   },
   {
-    "title": "Guarda e convivência: o jogo que se repete e a reputação que cada mensagem constrói",
+    "title": "Guarda e convivência: a reputação que cada mensagem constrói",
     "slug": "guarda-e-convivencia-o-jogo-que-se-repete",
     "area": "familia",
     "date": "2026-11-22",
-    "summary": "Pai e mãe separados jogam um jogo que dura anos, e cada mensagem fica registrada. A teoria dos jogos repetidos explica por que a resposta à provocação pesa mais do que a provocação, e o que muda quando há medida protetiva.",
+    "summary": "Em ações de guarda e convivência, a lei olha o padrão de comportamento ao longo do tempo. Cada mensagem fica no registro. A provocação fala de quem a enviou; a resposta, de quem a escreveu. Se há medida protetiva que proíbe contato, a mensagem não se envia.",
     "cover": "img/guarda-e-convivencia-o-jogo-que-se-repete.webp",
     "coverAlt": "Mochila escolar e tênis infantis ao lado de um calendário e de um celular com conversa desfocada no sofá, à noite, em luz roxa e azul",
-    "reading": 10
+    "reading": 7
   },
   {
     "title": "Cadeia de custódia: o compromisso que se pode conferir",
     "slug": "cadeia-de-custodia-o-compromisso-que-se-pode-conferir",
     "area": "criminal",
     "date": "2026-11-22",
-    "summary": "Um compromisso só é crível quando pode ser verificado. A cadeia de custódia é o compromisso do Estado de mostrar o caminho de cada vestígio, e a defesa tem o direito de conferir cada passo, inclusive na prova digital.",
+    "summary": "A cadeia de custódia é o conjunto de procedimentos que documenta o caminho do vestígio, da coleta ao descarte. A defesa tem o direito de conferir lacres, hashes e registros. Uma falha não anula automaticamente a prova: o efeito depende do caso.",
     "cover": "img/cadeia-de-custodia-o-compromisso-que-se-pode-conferir.webp",
     "coverAlt": "Saco plástico com etiqueta ao lado de um caderno lacrado, um pendrive e um lacre de cera, sobre mesa escura, com chuva na janela em luz roxa e azul",
-    "reading": 11
+    "reading": 8
   },
   {
     "title": "Tenho os prints da conversa. Isso vale como prova?",
@@ -74,7 +164,7 @@
     "slug": "ela-apagou-as-mensagens-e-agora",
     "area": "medida-protetiva",
     "date": "2026-11-22",
-    "summary": "Mensagem apagada não significa prova perdida. Veja por que preservar é sempre o lance mais seguro, o que o Marco Civil diz sobre os registros e o que não fazer.",
+    "summary": "Mensagem apagada não significa prova perdida. Veja por que preservar o que ainda está no aparelho é o caminho mais seguro, o que o Marco Civil diz sobre os registros e o que não fazer.",
     "cover": "img/ela-apagou-as-mensagens-e-agora.webp",
     "coverAlt": "Celular com mensagens desfocadas ao lado de um disco externo e de um caderno fechado, em mesa escura com chuva na janela",
     "reading": 7

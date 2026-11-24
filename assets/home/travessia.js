@@ -4,6 +4,7 @@ var reduce=w.matchMedia&&w.matchMedia('(prefers-reduced-motion: reduce)').matche
 var cenas=[].slice.call(sec.querySelectorAll('.cena')),IDS=cenas.map(function(c){return c.dataset.id});
 var nav=[].slice.call(sec.querySelectorAll('.lugares button[data-go]'));
 var porta=sec.querySelector('.umbral'),placa=porta.querySelector('small'),brincar=sec.querySelector('.brincar'),bt=brincar.querySelector('span'),hud=sec.querySelector('.hud'),topo=d.querySelector('header');
+var barcaImg=sec.querySelector('.barca image.rl');if(barcaImg&&barcaImg.getAttribute('data-src')){barcaImg.setAttribute('href',barcaImg.getAttribute('data-src'));barcaImg.removeAttribute('data-src')}
 var KEY='rp-travessia-ultima',CK='rp-constelacao',idx=0,via=0,tc=0;
 function get(k){try{return localStorage.getItem(k)}catch(e){return null}}
 function set(k,v){try{localStorage.setItem(k,v)}catch(e){}}

@@ -365,3 +365,16 @@ body.artigo { background: var(--bg); }
   color: #fff;
   border-bottom-color: var(--champagne);
 }
+
+
+/* Cartão prático para o leitor salvar no celular */
+.aba-celular{margin:2.4rem 0 0;display:flex;justify-content:center}
+.aba-celular-frame{position:relative;width:min(22.75rem,100%);padding:1.15rem 1.15rem 1.05rem;border-radius:1.7rem;background:linear-gradient(180deg,rgba(32,24,16,.94),rgba(12,9,7,.98));border:1px solid rgba(231,213,181,.22);box-shadow:0 0 0 7px rgba(10,8,6,.55),0 22px 44px rgba(0,0,0,.48),inset 0 1px 0 rgba(231,213,181,.12)}
+.aba-celular-frame::before{content:"";display:block;width:3.8rem;height:.26rem;margin:0 auto .85rem;border-radius:999px;background:rgba(231,213,181,.22)}
+.aba-celular-kicker{margin:0 0 .3rem;text-align:center;font:600 .68rem/1 var(--font-body);letter-spacing:.2em;text-transform:uppercase;color:var(--champagne)}
+.aba-celular-title{margin:0 0 .95rem;text-align:center;font-family:var(--font-display);font-weight:500;font-size:1.22rem;line-height:1.2;color:var(--cream);text-wrap:balance}
+.aba-celular-passos{margin:0;padding:0;list-style:none;counter-reset:passo}
+.aba-celular-passos li{position:relative;margin:0;padding:.72rem 0 .72rem 2.25rem;border-top:1px solid rgba(231,213,181,.1);color:var(--text);font-size:.98rem;line-height:1.45}
+.aba-celular-passos li::before{counter-increment:passo;content:counter(passo);position:absolute;left:0;top:.72rem;width:1.5rem;height:1.5rem;border-radius:50%;border:1px solid rgba(201,169,106,.45);color:var(--gold);font:600 .72rem/1.5rem var(--font-body);text-align:center}
+.aba-celular-foot{margin:.85rem 0 0;text-align:center;font-size:.72rem;letter-spacing:.06em;color:var(--muted)}
+@media print{.aba-celular{break-inside:avoid}}
