@@ -1,5 +1,5 @@
 import {palco} from './palco.js?v=20261123j3';
-var V='20261123m1',IW=1280,IH=720;
+var V='20261123m2',IW=1280,IH=720;
 var AREA={'criminal':'Criminal','familia':'Família','medida-protetiva':'Medida protetiva','cac':'CAC','mundo-em-disputa':'Mundo em Disputa'};
 var BAUS=[[300,664],[515,640],[700,690],[880,652],[1085,694]];
 var NAUS=[
@@ -56,13 +56,13 @@ export default function(){
   carta.classList.toggle('alto',o.tipo==='bau');carta.classList.add('on')}
  function vai(o,x,y){dv.tx=x;dv.ty=y;limita();dv.alvo=o;p.dica.style.opacity='0';if(calmo){dv.x=dv.tx;dv.y=dv.ty}}
  NAUS.forEach(function(n){var b=document.createElement('button');b.type='button';b.className='mr-nau';b.setAttribute('aria-label','Naufrágio: '+n.nome);b.innerHTML='<i></i>';obj.appendChild(b);
-  var nm=document.createElement('p');nm.className='mr-nome';nm.setAttribute('aria-hidden','true');nm.textContent=n.nome;obj.appendChild(nm);
+  var nm=document.createElement('button');nm.type='button';nm.className='mr-nome';nm.setAttribute('aria-label','Abrir: '+n.nome);nm.textContent=n.nome;obj.appendChild(nm);
   var o={tipo:'nau',n:n,el:b,nm:nm,x:n.x,y:n.y,nx:n.nx,ny:n.ny};naus.push(o);
-  b.addEventListener('click',function(e){e.stopPropagation();vai(o,n.x+(n.x<640?140:-140),n.y-40)})});
+  function abreNau(e){e.stopPropagation();vai(o,n.x+(n.x<640?140:-140),n.y-40);mostra(o)}b.addEventListener('click',abreNau);nm.addEventListener('click',abreNau)});
  function poeBaus(lista){lista.slice(0,BAUS.length).forEach(function(a,i){var b=document.createElement('button');b.type='button';b.className='mr-bau';b.setAttribute('aria-label','Abrir o baú: '+a.title);
   b.innerHTML='<img class="f" alt="" decoding="async"><img class="a" alt="" decoding="async"><i></i>';b.querySelector('.f').src=im('bau-f.webp');b.querySelector('.a').src=im('bau-a.webp');obj.appendChild(b);
   var o={tipo:'bau',a:a,el:b,x:BAUS[i][0],y:BAUS[i][1]};baus.push(o);
-  b.addEventListener('click',function(e){e.stopPropagation();if(aberto===o){fechaCarta();return}vai(o,o.x-(o.x>dv.x?1:-1)*dv.w*.66,o.y-80)})});tam()}
+  b.addEventListener('click',function(e){e.stopPropagation();if(aberto===o){fechaCarta();return}vai(o,o.x-(o.x>dv.x?1:-1)*dv.w*.66,o.y-80);mostra(o)})});tam()}
  fetch(u('../../artigos/artigos.json')).then(function(r){return r.json()}).then(function(j){var m={};(j||[]).forEach(function(a){if(a&&a.slug)m[a.slug]=a});poeBaus(QUENTES.filter(function(q){return m[q[0]]}).map(function(q){var a=Object.assign({},m[q[0]]);a.title=q[1];return a}))}).catch(function(){});
  tam();addEventListener('resize',tam);p.fim(function(){vivo=false;cancelAnimationFrame(raf);removeEventListener('resize',tam)});
  if(calmo){dv.x=dv.tx;dv.y=dv.ty}

@@ -140,9 +140,9 @@
 .mapa .brincar>span,.mapa .mergulhar>span{color:inherit}
 
 
-.mapa[data-ativo="crim"] .lua{top:calc(var(--ly,22%) - var(--lr,40px) - 1.85rem)}
-.mapa[data-ativo="crim"] .constelacao{top:calc(var(--ly,200px) - var(--lr,38px)*.75 - 1.85rem)}
+
+
 @media (min-width:900px){
- .mapa[data-ativo="crim"] .lua{top:calc(var(--ly,22%) - var(--lr,40px) - 1.2rem)}
- .mapa[data-ativo="crim"] .constelacao{top:calc(var(--ly,200px) - var(--lr,38px)*.75 - 1.2rem)}
+
+
 }
